@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset='utf-8' />
+	<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+	<title>Rockaway Relief - New York</title>
+	<meta name='description' content='' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<link rel='stylesheet' href='/css/style.css' />
+
+
+</head>
+<body class="loading">
+	<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+	<![endif]-->
+
+
+	<header>
+		<div class="inner">
+			<h1 id="logo"><a href="#">Rockaway Relief</a></h1>
+			<div id="menu-toggle"></div>
+			<nav>
+				<a href="#situation">The Situation</a><a href="#volunteer">Volunteer</a><a href="#who-we-are">Who We Are</a><a href="#faq">FAQs</a><a href="#thank-you">Thanks</a>
+			</nav>
+		</div>
+	</header>
+
+	<div id="content">
+
+		<section id="intro">
+			<h1>The Rockaways Are Devastated and They Need Your Help.</h1>
+
+			<p class="button"><a href="http://rockawayrelief2012.eventbrite.com/" target="_blank">RSVP to Volunteer</a></p>
+
+			<div id="slideshow-wrapper">
+				<div id="slideshow"></div>
+			</div>
+
+		</section>
+
+		<section id="situation">
+			<h1>The Situation</h1>
+			<h2>Current State of the Rockaways</h2>
+
+			<div class="description">
+				<p>The peninsula situated along the Atlantic Ocean in the borough of Queens was devastated by a large storm surge from Hurricane Sandy this October.</p>
+
+				<p>Relatively isolated from the more populated metropolis, the community has been struggling to receive the proper recovery and aid it needs. The majority of residents are without power, electricity or heat. Many homes are destroyed, and along with them, decades’ worth of belongings and memories lost.</p>
+
+				<p>With nighttime freezing temperatures and a lack of on-the-ground manpower, the culturally and historically rich region is in dire need.</p>
+			</div>
+
+		</section>
+
+		<section id="volunteer">
+			<h1>Volunteer</h1>
+			<h2>How You Can Help</h2>
+
+			<div class="content-wrapper">
+				<div class="content">
+
+					<div class="main">
+						<p>On November 4th, a few of us rented a 15-passenger van and ventured to the Rockaways to volunteer and witness the devastation firsthand. From seeing the piles of debris, overturned cars and flooded homes lining the streets, one thing was clear:</p>
+						<p><em>More than anything, the Rockaways need volunteers to lend their time, hands and hearts to help this tight-knit community rebuild and recover.</em></p>
+					</div>
+
+					<aside>
+						<h3>Volunteer to Help</h3>
+
+
+						<p>Every weekend, we will be recruiting 200+ volunteers and transport them to the Rockaways. Please click below to view available dates. Tickets for each week are released every Tuesday.</p>
+
+						<p>Each volunteer is asked to pay $5 to secure their seats, with all proceeds going towards supplies for clean-up.</p>
+
+
+<!-- 						<p>For the coming weekend, our goal is to recruit 180 volunteers and transport them to the Rockaways --- 90 on Saturday the 17th and 90 on Sunday the 18th.</p>
+
+						<p>Each volunteer is asked to pay <em>$5</em> to secure their seats, with all proceeds going towards supplies for clean-up.</p>
+ -->
+						<p class="button"><a href="http://rockawayrelief2012.eventbrite.com/" target="_blank">Volunteer this Weekend</a></p>
+					</aside>
+
+				</div>
+			</div>
+
+		</section>
+
+		<section id="who-we-are">
+			<h1>Who We Are</h1>
+
+			<div class="content-wrapper">
+				<div class="content">
+
+
+					<p>We're <em>not</em> a non-profit or charity organization.</p>
+
+					<p>We are local New Yorkers working in tech, design, fashion, restaurant, entertainment and hospitality industries who want to empower others like us to help our neighbors when they need it most.</p>
+
+					<div id="sponsors-wrapper">
+						<ul id="sponsors">
+							<li><a class="gin-lane" href="//ginlanemedia.com" target="_blank">Gin Lane</a>
+							<li><a class="smile" href="//thesmilenyc.com" target="_blank">The Smile</a>
+							<li><a class="whitmans" href="//whitmansnyc.com" target="_blank">Whitmans</a>
+							<li><a class="saturdays" href="//saturdaysnyc.com" target="_blank">Saturdays Surf NYC</a>
+							<li><a class="raise-cache" href="//raisecache.com" target="_blank">Raise Cache</a>
+							<li><a class="cantora" href="//cantora.com" target="_blank">Cantora</a>
+							<li><a class="oc" href="//openingceremony.us" target="_blank">Opening Ceramony</a>
+							<li><a class="lola" href="//lolanewyork.com" target="_blank">LOLA New York</a>
+						</ul>
+					</div>
+
+					<div id="what-we-will-be-doing">
+						<div class="wrapper">
+							<div class="inner">
+
+								<div id="rockawaybeach_photo"></div>
+
+								<p>We will be working with <a href="//facebook.com/LavaGirlSurf" target="_blank">Lava Girl Surf</a> at <a href="//nycurchin.com/dropoff-at-the-spot/" target="_blank">The Spot on 87th Street</a> &amp; <a href="//wavesforwater.org" target="_blank">Waves for Water</a> who have assembled a community-run volunteer, donation and outreach command center to help clean out buildings, repair homes and deliver food, supplies, clothing and medicine to people in need.</p>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+		<section id="faq">
+			<h1>FAQs</h1>
+			<h2>Frequently Asked Questions</h2>
+			<div class="content-wrapper">
+				<div class="content">
+					<dl>
+						<dt>Why are you doing this? 
+						<dd>The Rockaways are fairly isolated, and even with the help from FEMA and the Red Cross (who, in many cases, cannot go onto or in residents properties to help out), residents still need manpower to help distribute goods and help clear out their homes.
+						<br/>
+						<br/>We know there is a huge demand in the New York community to volunteer, but many find it hard to commute to Rockaway. Rockaway Relief wants to enable our local community to reach out and do something.
+
+						<dt>Can't I just donate? 
+						<dd>For both the Rockaways, Staten Island and extremely affected areas - manpower is the best way to help out the residents immediately if you are in or near New York City. 
+							<br/>
+							<br/>If you cannot help in person, please direct all donations to: <a href="//wavesforwater.org" target="_blank">wavesforwater.org</a>
+
+						<dt>What if I’m not in New York or can’t make it? 
+						<dd>Please see a list of charities to donate to <a href="//rockawayhelp.com/monetary-donations/" target="_blank">here</a>. Depending on the needs of the community, we are considering holding additional volunteer days for more weekends in November.
+
+						<dt>Do the Rockway residents need supplies? 
+						<dd>Yes. It’s getting colder and many residents are in need of warm blankets and winter clothing for adults, children and infants. They also need supplies to help with the lack of electricity like batteries, flashlights, candles, and matches, as well as supplies to help with the clean-up efforts like face masks, work gloves, shovels, rags and garbage bags. For more ideas for needed supplies, visit Occupy Sandy’s registry <a href="http://www.amazon.com/registry/wedding/32TAA123PJR42" target="_blank">here</a>.
+
+						<dt>Where do we meet and at what times?
+						<dd>The pick-up and drop-off point is at <a href="//thesmilenyc.com" target="_blank">The Smile</a> at 26 Bond Street in Manhattan.
+							<ul>
+								<li>Departure for Rockaways check-in begins at 8:30AM. Vans leave at 9AM SHARP.
+								<li>Return to Manhattan check-in begins at 3:15PM. Vans leave at 3:30PM SHARP.
+							</ul>
+
+							We will not wait for no shows.
+
+						<dt>How long is the trip to the Rockaways?
+						<dd>The trip will be around 45 minutes driving in each direction.
+
+						<dt>What should I wear?
+						<dd>Dress for cold weather, and wear clothing you don't mind getting wet and dirty:
+							<ul>
+								<li>Cold-weather jacket
+								<li>Cold-weather hat
+								<li>Rubber or work boots
+								<li>Warm sweater or sweatshirt
+								<li>Warm socks
+								<li>Jeans or waterproof pants
+							</ul>
+
+						<dt>What should I bring?
+						<dd>
+							<ul>
+								<li>Flashlight or headlamp
+								<li>Dust or surgical mask
+								<li>Rubber or latex gloves
+								<li>Strong work gloves (good ones like <a href="//sierratradingpost.com/carhartt-suede-work-gloves-with-safety-cuffs-insulated-for-men~p~4647v/" target="_blank">these</a>, recommended)
+								<li>Water
+								<li>Lunch 
+								<li>Snacks
+							</ul>
+
+						<dt>What will I be doing?
+						<dd>
+							We will be receiving more detailed instructions closer to the weekend. Needs shift on a daily basis, and another storm is set to hit on Wednesday and Thursday. To follow the day-to-day needs, follow Lava Girl’s <a href="//facebook.com/LavaGirlSurf" target="_blank">Facebook updates</a>.
+							<br/>
+							<br/>In general, work may include:
+							<ul>
+								<li>Clearing out basements and houses of damaged furniture and belongings
+								<li>Distributing food, water, clothing and other supplies to residents 
+								<li>Receiving and sorting donated goods
+								<li>Canvassing door-to-door 
+								<li>Manual labor like cutting trees/branches, house repairs, and digging
+								<li>Passing out flyers to residents
+							</ul>
+
+						<dt>Do you need drivers?
+						<dd>Yes! We need drivers to drive back and forth between Manhattan and Rockaway at least twice. If you are interested in driving, please email us at hello@ginlanemedia.com with “Driver” in the subject line. You must possess a valid driver’s license. 
+
+						<dt>Is it safe?
+						<dd>Certain areas are more affected than others. If you do not feel comfortable going into basements or walking up 12 flights of stairs, you can seek out other opportunities to help.
+
+						<dt>What about supplies?
+						<dd>Supply needs shift on a day-to-day basis. To monitor what’s needed, check out Lava Girl's <a href="//facebook.com/LavaGirlSurf" target="_blank">Facebook updates</a> and <a href="//596acres.org">596 Acres</a>.
+
+						<dt>Is this the only weekend you will be doing this?
+						<dd>Depending on resources, we may hold additional volunteer opportunities on weekends. Updates will be posted here.
+
+						<dt>The list is full! How can I or my company organize something like this on my own?
+						<dd>
+							<ol>
+								<li>Pick a day and recruit a team
+								<li>Select a location to help out and contact them ahead of time, if possible. 
+								<li>Reserve a car, van or truck.
+								<li>Gear up. Bring supplies such as:
+									<ul>
+										<li>Dust or surgical masks
+										<li>Flashlights or headlamps
+										<li>Work gloves
+										<li>Rubber boots
+										<li>Garbage bags
+										<li>Shovels
+										<li>Bleach
+										<li>Rags
+										<li>Mops
+									</ul>
+								<li>Once there, you may need to break up into smaller teams to spread the effort. Make sure to have a designated meeting time and place as there is no working cellular service available in the area.
+								<li>Because there is no electricity in the Rockaways, your party should plan on leaving by 4:30pm before sunset.
+							</ol>
+
+						<dt>Which organizations can I work with or send donations to?
+						<dd>
+							See below for a list or Rockaway volunteer and donation resources.
+							<ul>
+								<li><a href="//rockawayhelp.com/how-can-i-help/" target="_blank">Rockaway Help</a>
+								<li><a href="//facebook.com/LavaGirlSurf" target="_blank">Rockaway Beach Surf Club / Lava Girl Surf</a>
+								<li><a href="//nycservice.org" target="_blank">NYC Service</a>
+								<li><a href="//interoccupy.net/occupysandy/" target="_blank">Occupy Sandy</a>
+								<li><a href="//wavesforwater.org" target="_blank">Waves For Water</a>
+								<li><a href="//596acres.org" target="_blank">596 Acres</a>
+							</ul>
+					</dl>
+				</div>
+			</div>
+		</section>
+
+		<section id="thank-you">
+			<h1>Thank You.</h1>
+			<h2>to Contributors &amp; Supporters</h2>
+
+			<ul>
+				<li>
+					<a class="rockaway-beach-surf-club" href="" target="_blank">Rockaway Beach Surf Club</a>
+				<li>
+					<a class="lava-girl-surf" href="" target="_blank">Lava Girl Surf</a>
+				<li>
+					<a class="eventbrite" href="" target="_blank">Eventbrite</a>
+			</ul>
+
+		</section>
+
+	</div>
+
+
+<!--   <iframe  src="http://www.eventbrite.com/tickets-external?eid=4779939929&ref=etckt&v=2" frameborder="0" height="352" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+ -->
+
+	<script type="text/javascript" src="//use.typekit.net/jue4vja.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js'></script>
+	<script type='text/javascript'>
+		//<![CDATA[
+			window.jQuery || document.write('<script src="/js/jquery-1.8.2.min.js"><\/script>');
+		//]]>
+	</script>
+	<script src='/js/script.min.js'></script>
+
+	<script type='text/javascript'>
+		//<![CDATA[
+			var _gaq=[['_setAccount','UA-36136428-1'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		//]]>
+	</script>
+</body>

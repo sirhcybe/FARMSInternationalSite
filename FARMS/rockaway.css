@@ -1,0 +1,582 @@
+/* line 21, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+body {
+  margin: 0;
+  -webkit-transition: opacity 500ms ease; }
+  /* line 25, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  body.loading {
+    opacity: 0; }
+
+/* line 30, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+h1 {
+  font: 32px/1.18 "adobe-garamond-pro";
+  font-weight: normal; }
+  @media only screen and (min-width: 769px) {
+    /* line 30, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    h1 {
+      font-size: 54px; } }
+
+/* line 40, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+a {
+  color: #4594ff;
+  -webkit-transition: color 800ms ease;
+  text-decoration: none; }
+  /* line 44, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  a:hover {
+    color: #231f20;
+    -webkit-transition: color 400ms ease; }
+
+/* line 50, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+p.button {
+  text-align: center; }
+  /* line 52, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  p.button a {
+    background: #4594ff;
+    color: white;
+    display: block;
+    font: 16px/1 "futura-pt", sans-serif;
+    letter-spacing: 2px;
+    font-weight: norml;
+    margin: auto;
+    max-width: 270px;
+    text-transform: uppercase;
+    text-decoration: none;
+    opacity: .99;
+    -webkit-transition: opacity 800ms ease;
+    padding: 1em; }
+    @media only screen and (min-width: 769px) {
+      /* line 52, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      p.button a {
+        font-size: 21px;
+        max-width: 300px; } }
+    /* line 71, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    p.button a:hover {
+      opacity: .85;
+      -webkit-transition: opacity 400ms ease; }
+
+/* line 78, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+header {
+  border-bottom: 1px solid #ebebeb;
+  margin: auto;
+  overflow: hidden; }
+  @media only screen and (min-width: 769px) {
+    /* line 78, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    header {
+      background: rgba(255, 255, 255, 0.89);
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 999; } }
+  /* line 95, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  header .inner {
+    overflow: hidden; }
+    @media only screen and (min-width: 769px) {
+      /* line 95, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      header .inner {
+        margin: auto;
+        max-width: 960px; } }
+  /* line 105, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  header h1#logo {
+    background-image: url("/img/logo.png");
+    background-size: 34px;
+    margin: 15px 20px 10px;
+    padding-left: 47px;
+    background-repeat: no-repeat;
+    float: left;
+    font: normal 400 20px/34px "futura-pt", sans-serif;
+    letter-spacing: 1px;
+    text-align: left; }
+    @media only screen and (min-width: 769px) {
+      /* line 105, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      header h1#logo {
+        background-image: url("/img/logo-desktop.png");
+        background-size: 46px;
+        font-size: 26px;
+        line-height: 46px;
+        margin: 30px 0 30px 25px;
+        padding-left: 64px; } }
+    @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+      /* line 105, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      header h1#logo {
+        background-image: url("/img/logo@2x.png"); } }
+      @media only screen and (-moz-min-device-pixel-ratio: 2) and (min-width: 769px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 769px), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 769px), only screen and (min-device-pixel-ratio: 2) and (min-width: 769px) {
+        /* line 105, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+        header h1#logo {
+          background-image: url("/img/logo@2x-desktop.png"); } }
+    /* line 134, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    header h1#logo a {
+      color: #231f20; }
+      /* line 136, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      header h1#logo a:hover {
+        color: #4594ff; }
+  /* line 142, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  header #menu-toggle {
+    float: right;
+    background-image: url("/img/toggle.png");
+    background-size: 16px;
+    cursor: pointer;
+    margin: 22px 21px 0 0;
+    width: 16px;
+    height: 16px; }
+    @media only screen and (min-width: 769px) {
+      /* line 142, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      header #menu-toggle {
+        display: none; } }
+    @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+      /* line 142, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      header #menu-toggle {
+        background-image: url("/img/toggle@2x.png"); } }
+  /* line 157, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  header nav {
+    clear: both;
+    display: none;
+    font-family: "futura-pt",sans-serif;
+    letter-spacing: 2px;
+    font-size: 15px;
+    line-height: 1;
+    margin: 30px 0 0;
+    text-align: right; }
+    /* line 166, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    header nav.active {
+      display: block; }
+    @media only screen and (min-width: 769px) {
+      /* line 157, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      header nav {
+        clear: none;
+        display: block;
+        font-size: 15px; } }
+    /* line 177, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    header nav a {
+      border-top: 1px solid #ebebeb;
+      color: #231f20;
+      display: block;
+      padding: 18px 19px;
+      text-align: left;
+      text-decoration: none;
+      text-transform: uppercase; }
+      /* line 185, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      header nav a:hover, header nav a.current {
+        color: #4594ff; }
+      @media only screen and (min-width: 769px) {
+        /* line 177, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+        header nav a {
+          border-top: none;
+          display: inline-block; } }
+
+/* line 199, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section {
+  border-bottom: 1px solid #ebebeb;
+  clear: both;
+  overflow: hidden; }
+  /* line 200, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section:nth-child(odd) {
+    background: whitesmoke; }
+  /* line 203, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section:first-child {
+    background: white; }
+  @media only screen and (min-width: 769px) {
+    /* line 199, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section {
+      padding: 105px 0 105px; } }
+  /* line 212, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section .content-wrapper {
+    margin: auto;
+    max-width: 960px; }
+  /* line 216, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section .content {
+    margin: 0 25px; }
+  /* line 220, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section h1 {
+    margin: 25px 25px 0;
+    text-align: center;
+    max-width: 678px; }
+    @media only screen and (min-width: 769px) {
+      /* line 220, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      section h1 {
+        margin: 25px auto 0; } }
+  /* line 228, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section h2 {
+    font: 13px/1 "futura-pt", sans-serif;
+    letter-spacing: 2px;
+    color: #4594ff;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 auto 3.5em; }
+  /* line 240, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section h3 {
+    text-align: center;
+    font: 24px/1 "Adobe Garamond Pro"; }
+    @media only screen and (min-width: 769px) {
+      /* line 240, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      section h3 {
+        font-size: 28px; } }
+  /* line 248, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section p, section dd {
+    color: #7e7e7e;
+    font: 18px/1.66 "Adobe Garamond Pro";
+    margin: 1em 25px; }
+    @media only screen and (min-width: 769px) {
+      /* line 248, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      section p, section dd {
+        font-size: 22px;
+        margin: 1em auto;
+        max-width: 960px; } }
+    /* line 257, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section p em, section dd em {
+      color: #231f20;
+      font-size: larger;
+      font-style: normal;
+      font-weight: 300; }
+
+/* line 267, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+iframe {
+  height: 1045px;
+  width: 320px; }
+
+/* line 271, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+#slideshow-wrapper {
+  height: auto;
+  overflow: hidden;
+  margin-top: 22px; }
+  @media only screen and (min-width: 769px) {
+    /* line 271, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    #slideshow-wrapper {
+      height: auto;
+      margin-top: 62px; } }
+
+/* line 282, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+#slideshow {
+  -webkit-transition: all 500ms ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  text-align: left;
+  width: 9999px;
+  height: auto;
+  overflow: hidden;
+  position: relative; }
+  /* line 291, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  #slideshow .slide {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 200px; }
+    @media only screen and (min-width: 769px) {
+      /* line 291, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      #slideshow .slide {
+        width: 400px; } }
+    /* line 299, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    #slideshow .slide:hover .caption {
+      opacity: 1;
+      -webkit-transition: opacity 400ms ease; }
+  /* line 305, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  #slideshow img {
+    display: block;
+    width: auto;
+    height: 200px; }
+    /* line 309, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    #slideshow img.current {
+      opacity: 1; }
+    @media only screen and (min-width: 769px) {
+      /* line 305, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      #slideshow img {
+        height: 400px; } }
+  /* line 317, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  #slideshow .caption {
+    background: rgba(71, 148, 255, 0.75);
+    font: 16px/1 "futura-pt", sans-serif;
+    letter-spacing: normal;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: white;
+    display: block;
+    font-size: 14px;
+    line-height: 1.33;
+    padding: 18px;
+    opacity: 0;
+    -webkit-transition: opacity 800ms ease; }
+
+/* line 336, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#intro {
+  padding-bottom: 0; }
+  @media only screen and (min-width: 769px) {
+    /* line 340, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#intro h1 {
+      margin-top: 65px; }
+    /* line 343, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#intro .button {
+      margin: 30px auto 0; } }
+  /* line 347, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#intro .footnote {
+    font-size: inherit;
+    font-style: italic;
+    text-align: center;
+    margin-top: 25px;
+    margin-right: 150px; }
+
+/* line 357, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#situation {
+  background: white url("/img/map.png") no-repeat right -170px;
+  background-size: auto 445px;
+  margin: auto;
+  max-width: 960px; }
+  @media only screen and (min-width: 769px) {
+    /* line 357, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#situation {
+      background: white url("/img/map.png") no-repeat right bottom; } }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 357, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#situation {
+      background-image: url("/img/map@2x.png"); } }
+  /* line 371, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#situation .description {
+    margin-bottom: 75px;
+    margin-top: 170px; }
+    @media only screen and (min-width: 769px) {
+      /* line 371, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      section#situation .description {
+        margin-top: 0; } }
+  /* line 379, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#situation p {
+    margin: 1em 25px 1em 25px;
+    text-align: left; }
+    @media only screen and (min-width: 769px) {
+      /* line 379, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+      section#situation p {
+        max-width: 450px; } }
+
+@media only screen and (min-width: 769px) {
+  /* line 392, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#volunteer p {
+    margin: 1em auto;
+    max-width: 511px;
+    text-align: left; }
+  /* line 397, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#volunteer p.button {
+    text-align: center; } }
+/* line 402, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#volunteer h3 {
+  border-top: 1px solid #ebebeb;
+  padding-top: 1em; }
+  @media only screen and (min-width: 769px) {
+    /* line 402, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#volunteer h3 {
+      border-top: none;
+      padding-top: 0; } }
+@media only screen and (min-width: 769px) {
+  /* line 411, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#volunteer .main {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 1em; } }
+@media only screen and (min-width: 769px) {
+  /* line 420, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#volunteer aside {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 1em; } }
+
+/* line 432, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are p {
+  max-width: 511px; }
+/* line 436, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are p:nth-child(3) {
+  color: #231f20; }
+/* line 439, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are em {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold; }
+/* line 445, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are #sponsors-wrapper {
+  margin: auto;
+  max-width: 960px;
+  text-align: center; }
+/* line 450, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are ul#sponsors {
+  border-bottom: 1px solid #ebebeb;
+  display: inline-block;
+  margin: 0 25px 50px;
+  max-width: 668px;
+  padding-left: 0;
+  text-align: center; }
+  /* line 457, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#who-we-are ul#sponsors li {
+    display: inline-block;
+    vertical-align: middle; }
+  /* line 461, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#who-we-are ul#sponsors a {
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    padding: 1em;
+    text-indent: -9999px;
+    width: 111px;
+    height: 111px;
+    background-size: 119px 119px;
+    -webkit-transition: opacity 800ms ease; }
+    /* line 471, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#who-we-are ul#sponsors a:hover {
+      opacity: .65;
+      -webkit-transition: opacity 400ms ease; }
+/* line 478, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are .cantora {
+  background-image: url("/img/logos/logo_cantora.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 478, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#who-we-are .cantora {
+      background-image: url("/img/logos/logo_cantora@2x.png"); } }
+/* line 484, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are .gin-lane {
+  background-image: url("/img/logos/logo_ginlane.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 484, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#who-we-are .gin-lane {
+      background-image: url("/img/logos/logo_ginlane@2x.png"); } }
+/* line 490, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are .raise-cache {
+  background-image: url("/img/logos/logo_raisecache.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 490, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#who-we-are .raise-cache {
+      background-image: url("/img/logos/logo_raisecache@2x.png"); } }
+/* line 496, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are .saturdays {
+  background-image: url("/img/logos/logo_saturdays.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 496, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#who-we-are .saturdays {
+      background-image: url("/img/logos/logo_saturdays@2x.png"); } }
+/* line 502, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are .oc {
+  background-image: url("/img/logos/logo_oc.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 502, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#who-we-are .oc {
+      background-image: url("/img/logos/logo_oc@2x.png"); } }
+/* line 509, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are .lola {
+  background-image: url("/img/logos/logo_lola.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 509, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#who-we-are .lola {
+      background-image: url("/img/logos/logo_lola@2x.png"); } }
+/* line 516, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are .smile {
+  background-image: url("/img/logos/logo_smile.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 516, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#who-we-are .smile {
+      background-image: url("/img/logos/logo_smile@2x.png"); } }
+/* line 522, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#who-we-are .whitmans {
+  background-image: url("/img/logos/logo_whitmans.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 522, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#who-we-are .whitmans {
+      background-image: url("/img/logos/logo_whitmans@2x.png"); } }
+
+/* line 531, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+#what-we-will-be-doing .wrapper {
+  max-width: 960px;
+  margin: auto; }
+  @media only screen and (min-width: 769px) {
+    /* line 531, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    #what-we-will-be-doing .wrapper {
+      display: table; } }
+/* line 538, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+#what-we-will-be-doing .inner {
+  margin: 25px auto; }
+/* line 541, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+#what-we-will-be-doing #rockawaybeach_photo {
+  margin: auto;
+  max-width: 362px;
+  height: 238px;
+  background: url("/img/rockawaybeach_photo.jpg") no-repeat center;
+  background-size: cover; }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 541, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    #what-we-will-be-doing #rockawaybeach_photo {
+      background-image: url("/img/rockawaybeach_photo@2x.jpg"); } }
+@media only screen and (min-width: 769px) {
+  /* line 554, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  #what-we-will-be-doing .inner {
+    display: table-row;
+    margin: 25px 150px; }
+  /* line 558, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  #what-we-will-be-doing #rockawaybeach_photo {
+    display: table-cell;
+    width: 485px;
+    height: 350px;
+    background-size: 485px 350px; }
+  /* line 564, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  #what-we-will-be-doing p {
+    display: table-cell;
+    padding-left: 1em;
+    vertical-align: middle; } }
+
+/* line 574, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#faq dl {
+  margin: 1em auto;
+  max-width: 960px;
+  text-align: left; }
+  /* line 578, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#faq dl dt {
+    color: #231f20;
+    font: 28px/1 "adobe-garamond-pro";
+    margin: 2em 0 .5em; }
+    /* line 582, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#faq dl dt:first-child {
+      margin-top: 0; }
+  /* line 586, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#faq dl dd {
+    color: #7e7e7e;
+    margin-left: 0;
+    max-width: auto; }
+
+/* line 598, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#thank-you ul {
+  padding-left: 0;
+  text-align: center; }
+  /* line 601, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#thank-you ul li {
+    display: inline-block;
+    vertical-align: middle; }
+  /* line 605, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+  section#thank-you ul a {
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    padding: 1em;
+    text-indent: -9999px;
+    width: 225px;
+    height: 225px;
+    background-size: 225px 225px;
+    -webkit-transition: opacity 800ms ease; }
+    /* line 615, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#thank-you ul a:hover {
+      opacity: .65;
+      -webkit-transition: opacity 400ms ease; }
+/* line 625, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#thank-you .rockaway-beach-surf-club {
+  background-image: url("/img/thank-you/logo_rockawaybeachsurfclub.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 625, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#thank-you .rockaway-beach-surf-club {
+      background-image: url("/img/thank-you/logo_rockawaybeachsurfclub@2x.png"); } }
+/* line 632, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#thank-you .lava-girl-surf {
+  background-image: url("/img/thank-you/logo_lavagirlsurf.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 632, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#thank-you .lava-girl-surf {
+      background-image: url("/img/thank-you/logo_lavagirlsurf@2x.png"); } }
+/* line 639, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+section#thank-you .eventbrite {
+  background-image: url("/img/thank-you/logo_eventbrite.png"); }
+  @media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    /* line 639, /Users/michaelburtonray/Sites/rockawayrelief/css/style.scss */
+    section#thank-you .eventbrite {
+      background-image: url("/img/thank-you/logo_eventbrite@2x.png"); } }
