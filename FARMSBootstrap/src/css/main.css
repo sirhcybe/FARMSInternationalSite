@@ -94,6 +94,19 @@ body{
 	height:3.5rem;
 	vertical-align: middle;
 	margin-right:1em;
+    display: inline;
+}
+#logoname{
+}
+.navbar{
+    background-color: white;
+}
+.navbar a {
+    color:black;
+}
+.nav.navbar-nav li a {
+    height: 80px;
+    line-height: 50px;
 }
 
 #media{
@@ -109,7 +122,10 @@ body{
 	display:inline-block;
 	vertical-align: top;
 }
-
+.navbar-brand{
+    height:80px;
+    width:400px;
+}
 
 
 
