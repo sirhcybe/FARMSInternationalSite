@@ -166,12 +166,143 @@ body{
     ),url("../img/cuba_car_cropped.png");
     background-position: center;
 }
+.country_section.cuba h2 {
+    font-size:100pt;
+}
+.bangladesh {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.bangladesh h2 {
+    font-size:50pt;
+}
+.cambodia {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.cambodia h2 {
+    font-size:60pt;
+}
+.haiti {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.haiti h2 {
+    font-size:100pt;
+}
+.moldova {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.moldova h2 {
+    font-size:60pt;
+}
+.nagaland {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.nagaland h2 {
+    font-size:30pt;
+}
+.nepal {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.nepal h2 {
+    font-size:100pt;
+}
+.philippines {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.philippines h2 {
+    font-size:50pt;
+}
+.rwanda {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.rwanda h2 {
+    font-size:70pt;
+}
+.thailand {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.thailand h2 {
+    font-size:70pt;
+}
+.senegal {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.senegal h2 {
+    font-size:70pt;
+}
+.vietnam {
+	background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url("../img/cuba_car_cropped.png");
+    background-position: center;
+}
+.country_section.vietnam h2 {
+    font-size:70pt;
+}
 .country_section{
     color:white;
     text-alignment:center;
+	margin-top: .5em;
+	margin-bottom: .5em;
 }
-.country_section h2 {
-    font-size:100pt;
+.country_section p {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+.country_section ul {
+	list-style-type: none;
+}
+.country_section a:link {
+	color:white;
+}
+.country_section a:visited {
+	color:white;
+}
+.country_section a:hover {
+	color:white;
+}
+.country_section a:active {
+	color:white;
 }
 .navbar-brand{
     height:80px;
