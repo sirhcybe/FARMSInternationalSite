@@ -90,11 +90,23 @@ textarea {
 body{
 	padding-top: 50px;
 }
+.contrast-color{
+	background-color: rgba(7, 135, 116, 0.77);
+}
+.light-color{
+	background-color: #70c19e;
+}
+.bright-color{
+	background-color: #099107;
+}
+.middle-color{
+	background-color: #327E04;
+}
 #logo {
 	height:3.5rem;
 	vertical-align: middle;
 	margin-right:1em;
-    display: inline;
+  display: inline;
 }
 #logoname{
     color: #1b4f1f;
@@ -146,12 +158,32 @@ body{
     background-color: #1b4f1f;
 }
 
+.main-section{
+  margin-top: 1em;
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+.main-section:before {
+  display: block; 
+  content: " "; 
+  margin-top: -150px; 
+  height: 150px; 
+  visibility: hidden; 
+}
+
+.main-section h1 {
+  font-size: 35pt;
+}
+
 #media{
 	margin-top:5em;
 	vertical-align: top;
 	text-align: center;
 }
-
+#media div {
+	margin-left: 1.5em;
+	margin-right:1.5em;
+}
 #video{
 	display:inline-block;
 }
@@ -159,6 +191,23 @@ body{
 	display:inline-block;
 	vertical-align: top;
 }
+#donate{
+	display: inline-block;
+	width: 11em;
+}
+
+.special-edition-cell {
+  text-align: center;
+  margin:.5em;
+  padding:1em;
+  border-radius: 5px;
+  color: black;
+}
+.special-edition-cell .glyphicon {
+  font-size: 30pt;
+  padding-bottom: 10px;
+}
+
 .cuba{
     background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
@@ -203,7 +252,7 @@ body{
 	background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
-    ),url("../img/cuba_car_cropped.png");
+    ),url("../img/moldova_background.png");
     background-position: center;
 }
 .country_section.moldova h2 {
@@ -308,9 +357,32 @@ body{
     height:80px;
     max-width:400px;
 }
-
-
-
+#get-involved {
+    margin-top: 5em;
+}
+.get-involved-cell{
+	margin:.5em;
+	padding:1em;
+    border-radius: 5px;
+}
+.get-involved-cell h2{
+  font-family: 'Patua One';
+  margin-top: 0;
+}
+.get-involved-cell a{
+    color: #b6ff8b;
+}
+a.donate-btn {
+  color: black;
+  font-weight: bold;
+}
+#contact-us {
+    margin-top:5em;
+}
+footer {
+  padding:2em;
+  margin-top: 3em;
+}
 
 
 
