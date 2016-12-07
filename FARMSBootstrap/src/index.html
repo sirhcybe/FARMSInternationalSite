@@ -65,11 +65,11 @@
 		</nav>
 
 		<div class="container">
-			<section id="media">
-				<div id="video">
+			<section id="media" class="row">
+				<div id="video" class="col-md-6">
 					<iframe src="http://player.vimeo.com/video/27291439?byline=0&amp;portrait=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 				</div>
-				<div id="social-media">
+				<div id="social-media" class="col-md-4">
 					<a class="twitter-timeline" href="https://twitter.com/FARMSDoingGood" data-widget-id="343489355320545280">Tweets by @FARMSDoingGood</a>
 					<script>
 						! function(d, s, id) {
@@ -83,8 +83,8 @@
 						}(document, "script", "twitter-wjs");
 					</script>
 				</div>
-				<div id="donate">
-					<p>FARMS only works because people like you support us:</p>
+				<div id="donate" class="col-md-2">
+					<p>FARMS only works because people like you support us</p>
 					<a class="btn btn-success btn-lg" href="#" role="button">Donate Now</a>
 				</div>
 			</section>
@@ -511,26 +511,32 @@
 						<div class="form-group col-md-12">
 							<div class="checkbox">
 								<label>
+									<input value="I want to subscribe to the email newsletter &amp; Updates" checked name="FORM_YES____" type="checkbox">
+									I want to subscribe to email newsletter and updates
+								</label>
+							</div>
+							<div class="checkbox">
+								<label>
 									<input value="Free Newsletter &quot;Doing Good That Is Good&quot;" name="FORM_YES" type="checkbox">
-									Free Newsletter "Doing Good That Is Good"
+									I want to subscribe to mailings of our the "Doing Good That Is Good" newsletter
 								</label>
 							</div>
 							<div class="checkbox">
 								<label>
 									<input value="Free DVD of ministry and information packet" name="FORM_YES_" type="checkbox">
-									Free DVD of ministry and information packet
+									I want a ministry information packet (includes DVD)
 								</label>
 							</div>
 							<div class="checkbox">
 								<label>
 									<input value="Estate stewardship opportunities" name="FORM_YES__" type="checkbox">
-									Estate stewardship opportunities
+									I want information about estate stewardship opportunities
 								</label>
 							</div>
 							<div class="checkbox">
 								<label>
 									<input value="Information on holding a &quot;FARMS Coffee&quot;" name="FORM_YES___" type="checkbox">
-									Information on holding a "FARMS Coffee"
+									I want information on holding a "FARMS Coffee"
 								</label>
 							</div>
 							<div class="checkbox">
@@ -543,12 +549,6 @@
 								<label>
 									<input value="I want to join the FARMS prayer team" name="FORM_YES__" type="checkbox">
 									I want to join the FARMS prayer team
-								</label>
-							</div>
-							<div class="checkbox">
-								<label>
-									<input value="I want to subscribe to email newsletter &amp; Updates" name="FORM_YES____" type="checkbox">
-									I want to subscribe to email newsletter and updates
 								</label>
 							</div>
 						</div>
