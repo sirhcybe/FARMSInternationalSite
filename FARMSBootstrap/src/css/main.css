@@ -252,8 +252,9 @@
 	background-image: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-    ),url("../img/cuba_car_cropped.png");
+    ),url("../img/haiti.png");
   background-position: center;
+  background-repeat: no-repeat;
 }
 .country_section.haiti h2 {
   font-size:100pt;
@@ -303,7 +304,6 @@
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
     ),url("../img/cuba_car_cropped.png");
-  background-position: center;
 }
 .country_section.rwanda h2 {
   font-size:70pt;
@@ -314,6 +314,7 @@
     rgba(0, 0, 0, 0.5)
     ),url("../img/thailand.png");
   background-position: center;
+  background-repeat: no-repeat;
 }
 .country_section.thailand h2 {
   font-size:70pt;
@@ -350,9 +351,10 @@
 }
 .country_section{
   color:white;
-  text-alignment:center;
   margin-top: .5em;
   margin-bottom: .5em;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .country_section p {
 	margin-top: .5em;
@@ -373,6 +375,26 @@
 .country_section a:active {
 	color:white;
 }
+.country_section .panel {
+  background-color: rgba(0,0,0,0.5);
+}
+/*
+.country_section .panel .collapse a:link {
+	color:black;
+}
+.country_section .panel .collapse a:visited {
+	color:black;
+}
+.country_section .panel .collapse a:hover {
+	color:black;
+}
+.country_section .panel .collapse a:active {
+	color:black;
+}
+*/
+.country_section .panel-group {
+  margin-top: 1em;
+}
 .navbar-brand{
   height:80px;
   max-width:400px;
@@ -391,6 +413,12 @@
 }
 .get-involved-cell a{
   color: #b6ff8b;
+}
+#spread-the-word {
+  font-size: 14pt;
+}
+#stay-informed {
+  font-size: 16pt;
 }
 a.donate-btn {
   color: black;
