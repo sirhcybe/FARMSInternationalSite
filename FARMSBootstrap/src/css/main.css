@@ -343,7 +343,7 @@
 	background-image: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-    ),url("../img/cuba_car_cropped.png");
+    ),url("../img/ecuador.png");
   background-position: center;
 }
 .country_section.ecuador h2 {
@@ -394,6 +394,10 @@
 */
 .country_section .panel-group {
   margin-top: 1em;
+  border-top: auto;
+}
+.country_section .panel-group .panel-heading+.panel-collapse>.panel-body {
+  border-top: inherit;
 }
 .navbar-brand{
   height:80px;
