@@ -9,13 +9,17 @@
 	<title>FARMS International</title>
 
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<!-- Place favicon.ico in the root directory -->
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	
+	<!-- build:css css/combined.css -->
 	<link rel="stylesheet" href="css/jquery.fancybox.min.css" type="text/css" media="screen" />	
 	<link rel="stylesheet" href="css/main.css">
+	<!-- endbuild -->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -958,13 +962,16 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 		<!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+		
+		<!-- build:js scripts/combined.js -->
 		<!-- Add fancyBox -->
 		<script type="text/javascript" src="js/vendor/jquery.fancybox.min.js"></script>
 
 		<script src="js/plugins.js"></script>
+		<!-- endbuild -->
+
 		<script>
 			$('.country-title').textfill(100);
 			window.onresize = function() {$('.country-title').textfill(100);};

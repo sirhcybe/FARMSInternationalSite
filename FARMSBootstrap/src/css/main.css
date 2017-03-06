@@ -238,7 +238,7 @@ body {
 }
 
 .cuba {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba.png");
   background-position: center;
 }
 
@@ -275,7 +275,7 @@ body {
 }
 
 .moldova {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/moldova_background.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/moldova.png");
   background-position: center;
 }
 

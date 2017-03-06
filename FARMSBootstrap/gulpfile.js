@@ -2,6 +2,12 @@ var fs = require('fs');
 var path = require('path');
 
 var gulp = require('gulp');
+var pump = require('pump');
+var concat = require('gulp-concat');
+var useref = require('gulp-useref'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    minifyCss = require('gulp-clean-css');
 
 // Load all gulp plugins automatically
 // and attach them to the `plugins` object
@@ -65,11 +71,12 @@ gulp.task('clean', function (done) {
 });
 
 gulp.task('copy', [
-    'copy:index.html',
-    'copy:jquery',
+    'copy:html',
+    'copy:js',
     'copy:license',
     'copy:main.css',
     'copy:misc',
+    'copy:img',
     'copy:normalize'
 ]);
 
@@ -85,11 +92,26 @@ gulp.task('copy:index.html', function () {
                .pipe(gulp.dest(dirs.dist));
 });
 
-gulp.task('copy:jquery', function () {
-    return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
-               .pipe(plugins.rename('jquery-' + pkg.devDependencies.jquery + '.min.js'))
-               .pipe(gulp.dest(dirs.dist + '/js/vendor'));
+gulp.task('copy:html', function () {
+    return gulp.src(dirs.src + '/*.html')
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(gulp.dest(dirs.dist));
 });
+
+//gulp.task('copy:jquery', function () {
+//    return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
+//               .pipe(plugins.rename('jquery-' + pkg.devDependencies.jquery + '.min.js'))
+//               .pipe(gulp.dest(dirs.dist + '/js/vendor'));
+//});
+
+//gulp.task('copy:js', function (cb) {
+//  return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'src/js/**/*.js'])
+//    .pipe(concat('scripts.min.js'))
+//    .pipe(plugins.uglify())
+//    .pipe(gulp.dest('dist/js'));
+//});
 
 gulp.task('copy:license', function () {
     return gulp.src('LICENSE.txt')
@@ -111,11 +133,23 @@ gulp.task('copy:main.css', function () {
                .pipe(gulp.dest(dirs.dist + '/css'));
 });
 
+gulp.task('copy:img', function () {
+    return gulp.src([dirs.src + '/img/*']).pipe(gulp.dest(dirs.dist + '/img'));
+});
+
 gulp.task('copy:misc', function () {
     return gulp.src([
 
         // Copy all files
-        dirs.src + '/**/*',
+        dirs.src + '/404.html',
+        dirs.src + '/apple-touch-icon.png',
+        dirs.src + '/favicon.ico',
+        dirs.src + '/favicon.png',
+        dirs.src + '/giving.html',
+        dirs.src + '/tile.png',
+        dirs.src + '/tile-wide.png',
+        dirs.src + '/browserconfig.xml',
+        dirs.src + '/crossdomain.xml',
 
         // Exclude the following files
         // (other tasks will handle the copying of these files)
@@ -161,7 +195,7 @@ gulp.task('archive', function (done) {
 
 gulp.task('build', function (done) {
     runSequence(
-        ['clean', 'lint:js'],
+        ['clean'],
         'copy',
     done);
 });
