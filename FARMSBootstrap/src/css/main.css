@@ -4,15 +4,17 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
-   html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-  }
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -22,16 +24,17 @@
  * Customize the background color to match your design.
  */
 
- ::selection {
+::selection {
   background: #b3d4fc;
   text-shadow: none;
 }
+
 
 /*
  * A better looking default horizontal rule
  */
 
- hr {
+hr {
   display: block;
   height: 1px;
   border: 0;
@@ -40,344 +43,356 @@
   padding: 0;
 }
 
+
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
- audio,
- canvas,
- iframe,
- img,
- svg,
- video {
+audio, canvas, iframe, img, svg, video {
   vertical-align: middle;
 }
+
 
 /*
  * Remove default fieldset styles.
  */
 
- fieldset {
+fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
+
 /*
  * Allow only vertical resizing of textareas.
  */
 
- textarea {
+textarea {
   resize: vertical;
 }
+
 
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
 
-   .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-  }
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-   body{
-     padding-top: 50px;
-   }
-   .contrast-color{
-     background-color: rgba(7, 135, 116, 0.77);
-   }
-   .light-color{
-     background-color: #70c19e;
-   }
-   .bright-color{
-     background-color: #099107;
-   }
-   .middle-color{
-     background-color: #327E04;
-   }
-   #logo {
-     height:3.5rem;
-     vertical-align: middle;
-     margin-right:1em;
-     display: inline;
-   }
-   #logoname{
-    color: #1b4f1f;
-  }
-  .navbar{
-    background-color: white;
-    box-shadow: 0px 5px 5px gray;
-  }
-  .navbar a {
-    color:#1b4f1f;
-  }
 
-  #video iframe{
-    width:100%;
-    height:26em;
-  }
-  #donate {
-    padding-top:2em;
-    font-size: 20pt;
-  }
-  .special-editions h2 {
-      font-size: 24px;
-  }
-  .special-editions h3 {
-      font-size: 18px;
-  }
+body {
+  padding-top: 50px;
+}
 
-  @media (min-width: 768px) {
-    /*nav .container {
+.contrast-color {
+  background-color: rgba(7, 135, 116, 0.77);
+}
+
+.light-color {
+  background-color: #70c19e;
+}
+
+.bright-color {
+  background-color: #099107;
+}
+
+.middle-color {
+  background-color: #327E04;
+}
+
+#logo {
+  height: 3.5rem;
+  vertical-align: middle;
+  margin-right: 1em;
+  display: inline;
+}
+
+#logoname {
+  color: #1b4f1f;
+}
+
+.navbar {
+  background-color: white;
+  box-shadow: 0px 5px 5px gray;
+}
+
+.navbar a {
+  color: #1b4f1f;
+}
+
+#video iframe {
+  width: 100%;
+  height: 26em;
+}
+
+#donate {
+  padding-top: 2em;
+  font-size: 20pt;
+}
+
+.special-editions h2 {
+  font-size: 24px;
+}
+
+.special-editions h3 {
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  /*nav .container {
         width:inherit;
         }*/
-        .nav.navbar-nav li a {
-          height: 80px;
-          line-height: 50px;
-          padding-left: 10px;
-          padding-right: 10px;
-        }
-        #social-media iframe {
-          height:26em !important;
-        }
-      }
-
-      @media (min-width: 992px) {
-        nav .container {
-          width:970px;
-        }
-        .nav.navbar-nav li a {
-          padding-left: 15px;
-          padding-right: 15px;
-        }
-        #donate {
-          height:26em;
-          padding-top:8em;
-          font-size: inherit;
-        }
-        .donate-text {
-          font-size: 1.4rem;
-          font-weight: bold;
-        }
-      }
-
-      .navbar-toggle {
-        height:64px;
-      }
-      .navbar-toggle .icon-bar {
-        background-color: #1b4f1f;
-      }
-
-      .main-section{
-        margin-top: 1em;
-        font-family: 'Noto Sans', sans-serif !important;
-      }
-
-      .main-section:before {
-        display: block; 
-        content: " "; 
-        margin-top: -150px; 
-        height: 150px; 
-        visibility: hidden; 
-      }
-
-      .main-section h1 {
-        font-size: 35pt;
-      }
-
-      #media{
-       margin-top:5em;
-       vertical-align: top;
-       text-align: center;
-     }
-     #social-media{
-       vertical-align: top;
-     }
-     .vcenter{
-      display: inline-block;
-      vertical-align: middle;
-      float: none;
-    }
-
-    .special-edition-cell {
-      text-align: center;
-      margin:.5em;
-      padding:1em;
-      border-radius: 5px;
-      color: black;
-    }
-    .special-edition-cell .glyphicon {
-      font-size: 30pt;
-      padding-bottom: 10px;
-    }
-
-    .cuba{
-      background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-        ),url("../img/cuba_car_cropped.png");
-      background-position: center;
-    }
-    .country_section.cuba h2 {
-      font-size:100pt;
-    }
-    .bangladesh {
-     background-image: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-      ),url("../img/bangladesh.png");
-     background-position: center;
-   }
-   .country_section.bangladesh h2 {
-    font-size:50pt;
+  .nav.navbar-nav li a {
+    height: 80px;
+    line-height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  .cambodia {
-   background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/cuba_car_cropped.png");
-   background-position: center;
- }
- .country_section.cambodia h2 {
-  font-size:60pt;
+  #social-media iframe {
+    height: 26em !important;
+  }
 }
+
+@media (min-width: 992px) {
+  nav .container {
+    width: 970px;
+  }
+  .nav.navbar-nav li a {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #donate {
+    height: 26em;
+    padding-top: 8em;
+    font-size: inherit;
+  }
+  .donate-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}
+
+.navbar-toggle {
+  height: 64px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #1b4f1f;
+}
+
+.main-section {
+  margin-top: 1em;
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+.main-section:before {
+  display: block;
+  content: " ";
+  margin-top: -150px;
+  height: 150px;
+  visibility: hidden;
+}
+
+.main-section h1 {
+  font-size: 35pt;
+}
+
+#media {
+  margin-top: 5em;
+  vertical-align: top;
+  text-align: center;
+}
+
+#social-media {
+  vertical-align: top;
+}
+
+.vcenter {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.special-edition-cell {
+  text-align: center;
+  margin: .5em;
+  padding: 1em;
+  border-radius: 5px;
+  color: black;
+}
+
+.special-edition-cell .glyphicon {
+  font-size: 30pt;
+  padding-bottom: 10px;
+}
+
+.cuba {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
+  background-position: center;
+}
+
+.country_section.cuba h2 {
+  font-size: 100pt;
+}
+
+.bangladesh {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bangladesh.png");
+  background-position: center;
+}
+
+.country_section.bangladesh h2 {
+  font-size: 50pt;
+}
+
+.cambodia {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
+  background-position: center;
+}
+
+.country_section.cambodia h2 {
+  font-size: 60pt;
+}
+
 .haiti {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/haiti.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/haiti.png");
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .country_section.haiti h2 {
-  font-size:100pt;
+  font-size: 100pt;
 }
+
 .moldova {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/moldova_background.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/moldova_background.png");
   background-position: center;
 }
+
 .country_section.moldova h2 {
-  font-size:60pt;
+  font-size: 60pt;
 }
+
 .nagaland {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/nagaland.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/nagaland.png");
   background-position: center;
 }
+
 .country_section.nagaland h2 {
-  font-size:30pt;
+  font-size: 30pt;
 }
+
 .nepal {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
   background-position: center;
 }
+
 .country_section.nepal h2 {
-  font-size:100pt;
+  font-size: 100pt;
 }
+
 .philippines {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/Philippenes.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Philippenes.png");
   background-position: center;
 }
+
 .country_section.philippines h2 {
-  font-size:50pt;
+  font-size: 50pt;
 }
+
 .rwanda {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
 }
+
 .country_section.rwanda h2 {
-  font-size:70pt;
+  font-size: 70pt;
 }
+
 .thailand {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/thailand.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/thailand.png");
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .country_section.thailand h2 {
-  font-size:70pt;
+  font-size: 70pt;
 }
+
 .senegal {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
   background-position: center;
 }
+
 .country_section.senegal h2 {
-  font-size:70pt;
+  font-size: 70pt;
 }
+
 .vietnam {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
   background-position: center;
 }
+
 .country_section.vietnam h2 {
-  font-size:70pt;
+  font-size: 70pt;
 }
+
 .ecuador {
-	background-image: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-    ),url("../img/ecuador.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/ecuador.png");
   background-position: center;
 }
+
 .country_section.ecuador h2 {
-  font-size:70pt;
+  font-size: 70pt;
 }
-.country_section{
-  color:white;
+
+.country_section {
+  color: white;
   margin-top: .5em;
   margin-bottom: .5em;
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .country_section p {
-	margin-top: .5em;
-	margin-bottom: .5em;
+  margin-top: .5em;
+  margin-bottom: .5em;
 }
+
 .country_section ul {
-	list-style-type: none;
+  list-style-type: none;
 }
+
 .country_section a:link {
-	color:white;
+  color: white;
 }
+
 .country_section a:visited {
-	color:white;
+  color: white;
 }
+
 .country_section a:hover {
-	color:white;
+  color: white;
 }
+
 .country_section a:active {
-	color:white;
+  color: white;
 }
+
 .country_section .panel {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
+
 /*
 .country_section .panel .collapse a:link {
 	color:black;
@@ -392,76 +407,83 @@
 	color:black;
 }
 */
+
 .country_section .panel-group {
   margin-top: 1em;
   border-top: auto;
 }
+
 .country_section .panel-group .panel-heading+.panel-collapse>.panel-body {
   border-top: inherit;
 }
-.navbar-brand{
-  height:80px;
-  max-width:400px;
+
+.navbar-brand {
+  height: 80px;
+  max-width: 400px;
 }
+
 #get-involved {
   margin-top: 5em;
 }
-.get-involved-cell{
-	margin:.5em;
-	padding:1em;
+
+.get-involved-cell {
+  margin: .5em;
+  padding: 1em;
   border-radius: 5px;
 }
-.get-involved-cell h2{
+
+.get-involved-cell h2 {
   font-family: 'Patua One';
   margin-top: 0;
 }
-.get-involved-cell a{
+
+.get-involved-cell a {
   color: #b6ff8b;
 }
+
 #spread-the-word {
   font-size: 14pt;
 }
+
 #stay-informed {
   font-size: 16pt;
 }
+
 a.donate-btn {
   color: black;
   font-weight: bold;
 }
+
 #contact-us {
-  margin-top:5em;
+  margin-top: 5em;
 }
+
 footer {
-  padding:2em;
+  padding: 2em;
   margin-top: 3em;
 }
-
-
-
-
-
-
-
 
 
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 
+
 /*
  * Hide visually and from screen readers:
  */
 
- .hidden {
+.hidden {
   display: none !important;
 }
+
 
 /*
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 
- .visuallyhidden {
+.visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -472,14 +494,14 @@ footer {
   width: 1px;
 }
 
+
 /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
 
- .visuallyhidden.focusable:active,
- .visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -488,13 +510,15 @@ footer {
   width: auto;
 }
 
+
 /*
  * Hide visually and from screen readers, but maintain layout
  */
 
- .invisible {
+.invisible {
   visibility: hidden;
 }
+
 
 /*
  * Clearfix: contain floats
@@ -508,15 +532,17 @@ footer {
  *    `:before` to contain the top-margins of child elements.
  */
 
- .clearfix:before,
- .clearfix:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
 
 .clearfix:after {
   clear: both;
 }
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -524,15 +550,14 @@ footer {
    Modify as content requires.
    ========================================================================== */
 
-   @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-  }
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
 
-  @media print,
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-  }
+@media print, (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
 
 /* ==========================================================================
    Print styles.
@@ -540,75 +565,86 @@ footer {
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-   @media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-      background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+@media print {
+  *, *:before, *:after, *:first-letter, *:first-line {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
         http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-      }
-
-      a,
-      a:visited {
-        text-decoration: underline;
-      }
-
-      a[href]:after {
-        content: " (" attr(href) ")";
-      }
-
-      abbr[title]:after {
-        content: " (" attr(title) ")";
-      }
-
-    /*
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a, a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
-     a[href^="#"]:after,
-     a[href^="javascript:"]:after {
-      content: "";
-    }
-
-    pre,
-    blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
-    }
-
-    /*
+  a[href^="#"]:after, a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
-
-     thead {
-      display: table-header-group;
-    }
-
-    tr,
-    img {
-      page-break-inside: avoid;
-    }
-
-    img {
-      max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-      orphans: 3;
-      widows: 3;
-    }
-
-    h2,
-    h3 {
-      page-break-after: avoid;
-    }
+  thead {
+    display: table-header-group;
   }
+  tr, img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+
+/*************************GIVING PAGE***********************************/
+
+.jumbotron {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),url("../img/givingbackground.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+  margin-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.donate-button-container {
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.donation-partner {
+  text-align: center;
+}
