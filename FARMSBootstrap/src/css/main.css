@@ -181,6 +181,10 @@ body {
     font-size: 1.4rem;
     font-weight: bold;
   }
+
+  .responsive-break {
+      display: none;
+  }
 }
 
 .navbar-toggle {
@@ -216,6 +220,13 @@ body {
 
 #social-media {
   vertical-align: top;
+}
+
+.section-header {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    margin: 1em 0;
+    text-align: center;
 }
 
 .vcenter {
@@ -256,7 +267,7 @@ body {
 }
 
 .cambodia {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cambodia.png");
   background-position: center;
 }
 
@@ -293,7 +304,7 @@ body {
 }
 
 .nepal {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/nepal.png");
   background-position: center;
 }
 
@@ -302,7 +313,7 @@ body {
 }
 
 .philippines {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Philippenes.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/philippenes.png");
   background-position: center;
 }
 
@@ -311,7 +322,7 @@ body {
 }
 
 .rwanda {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/rwanda.png");
 }
 
 .country_section.rwanda h2 {
@@ -329,7 +340,7 @@ body {
 }
 
 .senegal {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/senegal.png");
   background-position: center;
 }
 
@@ -338,7 +349,7 @@ body {
 }
 
 .vietnam {
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cuba_car_cropped.png");
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/vietnam.png");
   background-position: center;
 }
 
@@ -456,6 +467,16 @@ a.donate-btn {
 
 #contact-us {
   margin-top: 5em;
+}
+
+.contact-form-sending {
+    display: none;
+}
+.contact-form-success{
+    display: none;
+}
+.contact-form-failure {
+    display: none;
 }
 
 footer {
