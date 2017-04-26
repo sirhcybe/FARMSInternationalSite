@@ -73,8 +73,7 @@
         //Set an alternative reply-to address
         $mail->addReplyTo($email, $name);
         //Set who the message is to be sent to
-        //$mail->addAddress('info@farmsinternational.com');
-        $mail->addAddress('sirhcybe@gmail.com');
+        $mail->addAddress('info@farmsinternational.com');
 
         //Set the subject line
         $mail->Subject = $subject;

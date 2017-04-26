@@ -1074,6 +1074,8 @@
 
         $('input:checkbox').change(validateCheckBoxes);
         $('#note').on('change keyup paste', validateCheckBoxes);
+        $('#name').on('change keyup paste', validateRequired);
+        $('#email').on('change keyup paste', validateRequired);
 
         $('#submit').click(function(event){
             if(validateCheckBoxes() && validateRequired()){
@@ -1091,8 +1093,15 @@
                         },5000);
                         $('.contact-form-button-group').show();
                         $('.contact-form-sending').hide();
+                        $('#contact-form')[0].reset();
                     },
                     error:function(response){
+                        if(response.responseJSON.nameValidationFailed){
+                            $('#name').siblings('.required-error').show();
+                        }
+                        if(response.responseJSON.emailValidationFailed){
+                            $('#email').siblings('.required-error').show();
+                        }
                         $('.contact-form-failure').show();
                         setTimeout(function(){
                             $('.contact-form-failure').fadeOut();
