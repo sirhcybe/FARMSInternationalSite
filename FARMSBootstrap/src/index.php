@@ -921,80 +921,80 @@
                         <div id="no-data-validation" style="display: none;" class="alert alert-danger">Please either select one of the options below or enter a note</div>
 						<div class="checkbox">
 							<label for="subscribe-email">
-									<input id="subscribe-email" name="subscribe-email" type="checkbox" <?php echo (isset($_POST["submit"]) ? (isset($_POST['subscribe-email']) ? 'checked' : '') : 'checked'); ?>>
+									<input id="subscribe-email" name="subscribe-email" type="checkbox" checked>
 									I want to subscribe to email newsletter and updates
 								</label>
 						</div>
 						<div class="checkbox">
 							<label for="subscribe-mail">
-									<input id="subscribe-mail" name="subscribe-mail" type="checkbox" value="true" <?php echo (isset($_POST['subscribe-email']) ? 'checked' : ''); ?>>
+									<input id="subscribe-mail" name="subscribe-mail" type="checkbox" value="true">
 									I want to subscribe to mailings of our the "Doing Good That Is Good" newsletter
 								</label>
 						</div>
 						<div class="checkbox">
 							<label for="request-dvd">
-									<input id="request-dvd" name="request-dvd" type="checkbox" <?php echo (isset($_POST['subscribe-email']) ? 'checked' : ''); ?>>
+									<input id="request-dvd" name="request-dvd" type="checkbox">
 									I want a ministry information packet (includes DVD)
 								</label>
 						</div>
 						<div class="checkbox">
 							<label for="estate-stewardship">
-									<input id="estate-stewardship" name="estate-stewardship" type="checkbox" <?php echo (isset($_POST['subscribe-email']) ? 'checked' : ''); ?>>
+									<input id="estate-stewardship" name="estate-stewardship" type="checkbox">
 									I want information about estate stewardship opportunities
 								</label>
 						</div>
 						<div class="checkbox">
 							<label for="farms-coffee">
-									<input id="farms-coffee" name="farms-coffee" type="checkbox" <?php echo (isset($_POST['subscribe-email']) ? 'checked' : ''); ?>>
+									<input id="farms-coffee" name="farms-coffee" type="checkbox">
 									I want information on holding a "FARMS Coffee"
 								</label>
 						</div>
 						<div class="checkbox">
 							<label for="request-presentation">
-									<input id="request-presentation" name="request-presentation" type="checkbox" <?php echo (isset($_POST['subscribe-email']) ? 'checked' : ''); ?>>
+									<input id="request-presentation" name="request-presentation" type="checkbox">
 									Our church is interested in a personal FARMS presentation
 								</label>
 						</div>
 						<div class="checkbox">
 							<label for="request-prayer">
-									<input id="request-prayer" name="request-prayer" type="checkbox" <?php echo (isset($_POST['subscribe-email']) ? 'checked' : ''); ?>>
+									<input id="request-prayer" name="request-prayer" type="checkbox">
 									I want to join the FARMS prayer team
 								</label>
 						</div>
 					</div>
 					<div class="form-group col-md-12">
 						<label for="firstname">Name *</label>
-						<input name="name" id="name" class="form-control" placeholder="Your Name" required value="<?php echo htmlspecialchars($_POST['name']); ?>" />
+						<input name="name" id="name" class="form-control" placeholder="Your Name" required />
                         <p class='text-danger required-error' style='display:none;'>Your name is required so that we know who we're talking to.</p>
 					</div>
 					<div class="form-group col-md-12">
 						<label for="email">Email address *</label>
-						<input id="email" name="email" class="form-control" placeholder="Your Email" required value="<?php echo htmlspecialchars($_POST['email']); ?>" />
+						<input id="email" name="email" class="form-control" placeholder="Your Email" required />
                         <p class='text-danger required-error' style='display:none;'>We need your email so we can get back to you.</p>
 					</div>
 					<div class="form-group col-md-12">
 						<label for="mailingaddress">Mailing address</label>
-						<input id="mailingaddress" name="mailingaddress" class="form-control" placeholder="Your Mailing Address"  value="<?php echo htmlspecialchars($_POST['mailingaddress']); ?>" />
+						<input id="mailingaddress" name="mailingaddress" class="form-control" placeholder="Your Mailing Address" />
 					</div>
 					<div class="form-group col-md-12">
 						<label for="city">City</label>
-						<input id="city" name="city" class="form-control" placeholder="Your City" value="<?php echo htmlspecialchars($_POST['city']); ?>" />
+						<input id="city" name="city" class="form-control" placeholder="Your City" />
 					</div>
 					<div class="form-group col-md-12">
 						<label for="state">State</label>
-						<input id="state" name="state" class="form-control" placeholder="Your State" value="<?php echo htmlspecialchars($_POST['state']); ?>" />
+						<input id="state" name="state" class="form-control" placeholder="Your State" />
 					</div>
 					<div class="form-group col-md-12">
 						<label for="zip">Zip code</label>
-						<input id="zip" name="zip" class="form-control" placeholder="Your ZIP code" value="<?php echo htmlspecialchars($_POST['zip']); ?>" />
+						<input id="zip" name="zip" class="form-control" placeholder="Your ZIP code" />
 					</div>
 					<div class="form-group col-md-12">
 						<label for="country">Country</label>
-						<input id="country" name="country" class="form-control" placeholder="Your Country" value="<?php echo htmlspecialchars($_POST['country']); ?>" />
+						<input id="country" name="country" class="form-control" placeholder="Your Country" />
 					</div>
 					<div class="form-group col-md-12">
 						<label for="note">Personal note or prayer request</label>
-						<textarea id="note" name="note" class="form-control"><?php echo htmlspecialchars($_POST['note']); ?></textarea>
+						<textarea id="note" name="note" class="form-control"></textarea>
 					</div>
 					<div class="form-group col-md-12">* Required information</div>
                     <div class="contact-form-button-group form-group col-md-12">
@@ -1074,7 +1074,7 @@
 
         $('input:checkbox').change(validateCheckBoxes);
         $('#note').on('change keyup paste', validateCheckBoxes);
-/*
+
         $('#submit').click(function(event){
             if(validateCheckBoxes() && validateRequired()){
                 $('.contact-form-button-group').hide();
@@ -1104,7 +1104,7 @@
             }
             event.preventDefault();
         });
-*/
+
         $('.country-title').textfill(100);
         window.onresize = function () { $('.country-title').textfill(100); };
         $('#farmsAge').text((new Date().getFullYear()) - 1961);
