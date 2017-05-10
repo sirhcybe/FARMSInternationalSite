@@ -1,5 +1,7 @@
 <?php
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        include('config.php');
+
 		$name = $_POST['name'];
 		$mailingAddress = $_POST['mailingaddress'];
 		$city = $_POST['city'];
@@ -65,9 +67,9 @@
         $mail->SMTPAuth = true;
         $mail->SMTPAutoTLS = false;
         //Username to use for SMTP authentication
-        $mail->Username = "chris@farmsinternational.com";
+        $mail->Username = $config['smtpemail'];
         //Password to use for SMTP authentication
-        $mail->Password = "FarmsEmail#1";
+        $mail->Password = $config['smtppassword'];
         //Set who the message is to be sent from
         $mail->setFrom("info@farmsinternational.com", "FARMS Contact Form");
         //Set an alternative reply-to address
