@@ -42,11 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //Set the subject line
         $mail->Subject = "FARMS International Informational Booklet";
 
-        echo 'test';
         //if you want to include text in the body.
         $mail->Body    = file_get_contents('premiumemail.html');
 
-        echo 'test';
+        echo $mail->Body;
         //send the message, check for errors
         if ($mail->send()) {
             $responseJson = "{ \"success\": true }";
