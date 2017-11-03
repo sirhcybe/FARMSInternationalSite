@@ -60,7 +60,8 @@
         $mail->Debugoutput = 'html';
 
         //Set the hostname of the mail server
-        $mail->Host = "SMTP.FARMSINTERNATIONAL.COM";
+        //$mail->Host = "SMTP.FARMSINTERNATIONAL.COM";
+        $mail->Host = "sub5.mail.dreamhost.com";
         //Set the SMTP port number - likely to be 25, 465 or 587
         $mail->Port = 587;
         //Whether to use SMTP authentication
