@@ -1,19 +1,40 @@
 <?php
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        include('config.php');
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    include('config.php');
 
-		$name = $_POST['name'];
-		$mailingAddress = $_POST['mailingaddress'];
-		$city = $_POST['city'];
-		$state = $_POST['state'];
-		$zip = $_POST['zip'];
-		$email = $_POST['email'];
-		$country = $_POST['country'];
-		$note = $_POST['note'];
+	$url = 'https://www.google.com/recaptcha/api/siteverify';
+	$data = array(
+		'secret' => $config['recaptchaprivatekey'],
+        'response' => $_POST["g-recaptcha-response"],
+        'remoteip' => $_SERVER["REMOTE_ADDR"]
+	);
+	$options = array(
+		'http' => array (
+			'method' => 'POST',
+			'content' => http_build_query($data)
+		)
+	);
+	$context  = stream_context_create($options);
+	$verify = file_get_contents($url, false, $context);
+	$resp=json_decode($verify);
 
-		$subject = 'New Contact Form Submission';
+    if (!$resp->success) {
+        $responseJson = "{ \"error\": \"Captcha Failed\" }";
+        $responseHtmlMsg = "Submission failed, please try emailing us at info@farmsinternational.com.";
+    } else {
+      // Your code here to handle a successful verification
+        $name = $_POST['name'];
+        $mailingAddress = $_POST['mailingaddress'];
+        $city = $_POST['city'];
+        $state = $_POST['state'];
+        $zip = $_POST['zip'];
+        $email = $_POST['email'];
+        $country = $_POST['country'];
+        $note = $_POST['note'];
 
-		$body ="From: $name\nE-Mail: $email\n";
+        $subject = 'New Contact Form Submission';
+
+        $body ="From: $name\nE-Mail: $email\n";
         $body .= ($mailingAddress ? "Mailing Address: $mailingAddress\n" : "");
         $body .= ($city ? "City: $city\n" : "");
         $body .= ($state ? "State: $state\n" : "");
@@ -29,17 +50,17 @@
         $body .= ($note ? "Note:\n$note" : "");
 
 
-		// Check if name has been entered
-		$errName = 'false';
-		if (!$_POST['name']) {
-			$errName = 'true';
-		}
+        // Check if name has been entered
+        $errName = 'false';
+        if (!$_POST['name']) {
+            $errName = 'true';
+        }
 
-		// Check if email has been entered and is valid
+        // Check if email has been entered and is valid
         $errEmail = 'false';
-		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$errEmail = 'true';
-		}
+        if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $errEmail = 'true';
+        }
 
         //SMTP needs accurate times, and the PHP timezone MUST be set
         //This should be done in your php.ini, but this is how to do it if you don't have access to that
@@ -96,21 +117,22 @@
         } else {
             http_response_code(422);
             $responseJson = "{ \"nameValidationFailed\": $errName, \"emailValidationFailed\": $errEmail }";
-            if($errName === 'true'){
+            if ($errName === 'true') {
                 $responseHtmlMsg = "Submission failed, your name was missing.";
             } else {
                 $responseHtmlMsg = "Submission failed, your email address was incorrect or missing.";
             }
         }
+    }
 
-        if(strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false){
-            header('Content-Type: application/json');
-            echo $responseJson;
-        } else {
-            header('Content-Type: text/html; charset=UTF-8');
-            echo "<html><head><meta http-equiv=\"refresh\" content=\"10;url=http://www.farmsinternational.com\" /></head>".
-                "<body style=\"text-align:center;\"><strong>$responseHtmlMsg</strong><br /> Redirecting to FARMS homepage in 10 seconds.<br />".
-                "If not redirected, click here to contine: <a href=\"http://www.farmsinternational.com\">http://www.farmsinternational.com</a></body><html>";
-        }
-	}
+    if (strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) {
+        header('Content-Type: application/json');
+        echo $responseJson;
+    } else {
+        header('Content-Type: text/html; charset=UTF-8');
+        echo "<html><head><meta http-equiv=\"refresh\" content=\"10;url=http://www.farmsinternational.com\" /></head>".
+        "<body style=\"text-align:center;\"><strong>$responseHtmlMsg</strong><br /> Redirecting to FARMS homepage in 10 seconds.<br />".
+        "If not redirected, click here to contine: <a href=\"http://www.farmsinternational.com\">http://www.farmsinternational.com</a></body><html>";
+    }
+}
 ?>
