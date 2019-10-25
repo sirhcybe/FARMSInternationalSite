@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $body .= ($note ? "Note:\n$note" : "");
 
 
-        // Check if name has been entered
+        /*// Check if name has been entered
         $errName = 'false';
         if (!$_POST['name']) {
             $errName = 'true';
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errEmail = 'false';
         if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $errEmail = 'true';
-        }
+        }*/
 
         //SMTP needs accurate times, and the PHP timezone MUST be set
         //This should be done in your php.ini, but this is how to do it if you don't have access to that
@@ -104,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //if you want to include text in the body.
         $mail->Body    = $body;
 
-        if ($errName != 'true' && $errEmail != 'true') {
+        //if ($errName != 'true' && $errEmail != 'true') {
             //send the message, check for errors
             if ($mail->send()) {
                 $responseJson = "{ \"success\": true }";
@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $responseJson = "{ \"error\": \"$mail->ErrorInfo\" }";
                 $responseHtmlMsg = "Submission failed, please try emailing us at info@farmsinternational.com.";
             }
-        } else {
+        /*} else {
             http_response_code(422);
             $responseJson = "{ \"nameValidationFailed\": $errName, \"emailValidationFailed\": $errEmail }";
             if ($errName === 'true') {
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 $responseHtmlMsg = "Submission failed, your email address was incorrect or missing.";
             }
-        }
+        }*/
     }
 
     if (strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) {
