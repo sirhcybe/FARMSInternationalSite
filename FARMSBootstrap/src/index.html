@@ -1166,37 +1166,54 @@
 				</div>
 				<div>
 					<h2>Phone</h2>
-					<div>+1 218 416 1961</div>
+					<div>(218) 416-1961</div>
 				</div>
 				<div>
 					<form id="email-form" role="form" class="form-horizontal" method="POST" action="contactsubmit.php">
 						<h2>Email</h2>
-						<div class="checkbox">
-							<label for="leave-comment">
-								<input id="leave-comment" name="leave-comment" type="checkbox">
-								Send a Message to FARMS International:
-								<div class="commentbox">
-									<div class="form-group col-md-12">
-										<input id="email" name="email" class="form-control email" placeholder="Email *"
-											required />
-									</div>
-									<div class="form-group col-md-12">
-										<textarea id="note" name="note" class="form-control email"
-											placeholder="Comment Here *" required></textarea>
-									</div>
-									<div class="form-group col-md-12">* Required information</div>
-									<div class="contact-form-button-group form-group col-md-12">
-										<button id="message-submit" name="submit" type="submit" class="btn btn-primary"
-											onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form');">
-											Submit
-										</button>
-									</div>
-									<div id="recaptcha" class="form-group col-md-12 g-recaptcha" data-widget-id="Email"
-										data-sitekey="6Lc8_TYUAAAAANc47TO81_x4gGwS8IPHQZRRAMg2"
-										data-callback="onSubmitEmail" data-badge="inline" data-size="invisible">
+						<div class="panel-group" id="email-group" role="tablist" aria-multiselectable="true">
+							<div class="panel">
+								<div class="panel-heading contrast-color" role="tab" id="heading-email">
+									<h3 class="panel-contact">
+										<a role="button" class="collapsed" data-toggle="collapse"
+											data-parent="#email-group" href="#collapse-email" aria-expanded="false"
+											aria-controls="collapse-email">
+											Click Here to Send a Message
+										</a>
+									</h3>
+								</div>
+								<div id="collapse-email" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="heading-email">
+									<div class="panel-body">
+										<!--<div class="checkbox">
+										<label for="leave-comment">
+											<input id="leave-comment" name="leave-comment" type="checkbox">
+											Send a Message to FARMS International:
+											<div class="commentbox">-->
+										<div class="form-group col-md-12">
+											<input id="email" name="email" class="form-control email"
+												placeholder="Email *" required />
+										</div>
+										<div class="form-group col-md-12">
+											<textarea id="note" name="note" class="form-control email"
+												placeholder="Comment Here *" required></textarea>
+										</div>
+										<div class="form-group col-md-12">* Required information</div>
+										<div class="contact-form-button-group form-group col-md-12">
+											<button id="message-submit" name="submit" type="submit"
+												class="btn btn-primary"
+												onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form');">
+												Submit
+											</button>
+										</div>
+										<div id="recaptcha" class="form-group col-md-12 g-recaptcha"
+											data-widget-id="Email"
+											data-sitekey="6Lc8_TYUAAAAANc47TO81_x4gGwS8IPHQZRRAMg2"
+											data-callback="onSubmitEmail" data-badge="inline" data-size="invisible">
+										</div>
 									</div>
 								</div>
-							</label>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -1236,11 +1253,11 @@
 					<div class="panel-group" id="mailing-group" role="tablist" aria-multiselectable="true">
 						<div class="panel">
 							<div class="panel-heading contrast-color" role="tab" id="heading-mailing">
-								<h3 class="panel-title">
+								<h3 class="panel-contact">
 									<a role="button" class="collapsed" data-toggle="collapse"
-										data-parent="#mailing-group" href="#collapse-mailing"
-										aria-expanded="false" aria-controls="collapse-mailing">
-										Subscribe to FARMS Mail Newsletter
+										data-parent="#mailing-group" href="#collapse-mailing" aria-expanded="false"
+										aria-controls="collapse-mailing">
+										Click Here to Subscribe to Mail Newsletter
 									</a>
 								</h3>
 							</div>
@@ -1363,7 +1380,9 @@
 			<div class="col-md-6">
 				<p>© 2016 FARMS International. All Rights Reserved</p>
 				<p>(218) 416-1961</p>
-				<p>FARMS International, Inc. is a registered 501 (c)(3) non profit organization headquatered in
+				<p>PO Box 270
+					<br>Knife River, MN 55609</p>
+				<p>FARMS International, Inc. is a registered 501(c)(3) non profit organization headquartered in
 					Minnesota.</p>
 				<p>All donations in the United States are tax-deductible in full or part.</p>
 			</div>

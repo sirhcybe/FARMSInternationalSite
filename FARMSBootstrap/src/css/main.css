@@ -469,6 +469,43 @@ a.donate-btn {
   margin-top: 5em;
 }
 
+.panel-contact {
+  color: white;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.panel-contact p {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+.panel-contact ul {
+  list-style-type: none;
+}
+
+.panel-contact a:link {
+  color: white;
+}
+
+.panel-contact a:visited {
+  color: white;
+}
+
+.panel-contact a:hover {
+  color: white;
+}
+
+.panel-contact a:active {
+  color: white;
+}
+
+.panel-contact .panel {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .contact-form-sending {
     display: none;
 }
