@@ -24,10 +24,6 @@
 	<link rel="stylesheet" href="css/main.css">
 	<!-- endbuild -->
 
-
-
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -88,19 +84,9 @@
 					webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 			</div>
 			<div id="social-media" class="col-md-4" onclick="ga('send', 'event', 'Media Feed', 'Click', 'Twitter');">
-				<a class="twitter-timeline" href="https://twitter.com/FARMSDoingGood"
-					data-widget-id="343489355320545280">Tweets by @FARMSDoingGood</a>
-				<script>
-					! function (d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
-						if (!d.getElementById(id)) {
-							js = d.createElement(s);
-							js.id = id;
-							js.src = p + "://platform.twitter.com/widgets.js";
-							fjs.parentNode.insertBefore(js, fjs);
-						}
-					}(document, "script", "twitter-wjs");
-				</script>
+				<a class="twitter-timeline" data-height="364"
+					href="https://twitter.com/FARMSDoingGood?ref_src=twsrc%5Etfw">Tweets by FARMSDoingGood</a>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 			<div id="donate" class="col-md-2">
 				<p class="donate-text">FARMS only works because people like you support us</p>
@@ -199,7 +185,8 @@
 							onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Great Outlook for FARMS International');">Great
 							Outlook for FARMS International</a><br />
 						<a href="newsletters/Richter Retirement Letter_e-version.pdf"
-							onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Great Outlook for FARMS International');">Joe Richter
+							onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Great Outlook for FARMS International');">Joe
+							Richter
 							Retirement</a>
 					</div>
 				</div>
@@ -1181,34 +1168,33 @@
 					<div>(218) 416-1961</div>
 				</div>
 				<div>
-					<form id="email-form" role="form" class="form-horizontal" method="POST" action="contactsubmit.php">
-						<h2>Email</h2>
-						<div class="panel-group" id="email-group" role="tablist" aria-multiselectable="true">
-							<div class="panel">
-								<div class="panel-heading contrast-color" role="tab" id="heading-email">
-									<h3 class="panel-contact">
-										<a role="button" class="collapsed" data-toggle="collapse"
-											data-parent="#email-group" href="#collapse-email" aria-expanded="false"
-											aria-controls="collapse-email">
-											Click Here to Send a Message
-										</a>
-									</h3>
-								</div>
-								<div id="collapse-email" class="panel-collapse collapse" role="tabpanel"
-									aria-labelledby="heading-email">
-									<div class="panel-body">
-										<!--<div class="checkbox">
-										<label for="leave-comment">
-											<input id="leave-comment" name="leave-comment" type="checkbox">
-											Send a Message to FARMS International:
-											<div class="commentbox">-->
+					<h2>Email</h2>
+					<div class="panel-group" id="email-group" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+							<div class="panel-heading contrast-color" role="tab" id="heading-email">
+								<h3 class="panel-contact">
+									<a role="button" class="collapsed" data-toggle="collapse" data-parent="#email-group"
+										href="#collapse-email" aria-expanded="false" aria-controls="collapse-email">
+										Click Here to Send a Message
+									</a>
+								</h3>
+							</div>
+							<div id="collapse-email" class="panel-collapse collapse" role="tabpanel"
+								aria-labelledby="heading-email">
+								<div class="panel-body">
+									<form id="email-form" role="form" class="form-horizontal" method="POST"
+										action="contactsubmit.php">
 										<div class="form-group col-md-12">
 											<input id="email" name="email" class="form-control email"
-												placeholder="Email *" required />
+												placeholder="Email *" required autocomplete="email" />
+											<p class='text-danger required-error' style='display:none;'>We need your
+												email so we can get back to you.</p>
 										</div>
 										<div class="form-group col-md-12">
 											<textarea id="note" name="note" class="form-control email"
 												placeholder="Comment Here *" required></textarea>
+											<p class='text-danger required-error' style='display:none;'>You forgot your
+												comment.</p>
 										</div>
 										<div class="form-group col-md-12">* Required information</div>
 										<div class="contact-form-button-group form-group col-md-12">
@@ -1218,16 +1204,26 @@
 												Submit
 											</button>
 										</div>
-										<div id="recaptcha" class="form-group col-md-12 g-recaptcha"
-											data-widget-id="Email"
-											data-sitekey="6Lc8_TYUAAAAANc47TO81_x4gGwS8IPHQZRRAMg2"
-											data-callback="onSubmitEmail" data-badge="inline" data-size="invisible">
+										<div id="emailRecaptcha" class="form-group col-md-12 g-recaptcha" data-badge="inline" data-size="invisible">
 										</div>
-									</div>
+										<div class="contact-form-sending form-group col-md-12">
+											Submitting...
+										</div>
+										<div class="form-group col-md-12">
+											<div class="contact-form-success alert alert-success">
+												Thank you for your interest in FARMS International!
+											</div>
+											<div class="contact-form-failure alert alert-danger">
+												Sorry there was an error. Please try again later or email us directly at
+												<a
+													href="mailto:info@farmsinternational.com">info@farmsinternational.com</a>
+											</div>
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
 
@@ -1243,8 +1239,8 @@
 						target="_blank" novalidate>
 						<div id="mc_embed_signup_scroll">
 							Subscribe to FARMS E-Newsletter!
-							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
-								placeholder="Email Address" required>
+							<input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Email Address"
+								required>
 							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
 									name="b_327bff531daf5aae34d2fe667_8269e92cdf" tabindex="-1" value=""></div>
@@ -1256,12 +1252,6 @@
 				<!--End mc_embed_signup-->
 				<form id="mailing-form" role="form" class="form-horizontal" method="POST" action="contactsubmit.php">
 					<h3>FARMS Mailing Newsletter</h3>
-					<!--<div class="checkbox" id=subscribe-mail>
-						<label for="subscribe-mail">
-							<input id="subscribe-mail" name="subscribe-mail" type="checkbox" value="true">
-							Subscribe to FARMS Mail Newsletter!
-						</label>
-					</div>-->
 					<div class="panel-group" id="mailing-group" role="tablist" aria-multiselectable="true">
 						<div class="panel">
 							<div class="panel-heading contrast-color" role="tab" id="heading-mailing">
@@ -1276,113 +1266,78 @@
 							<div id="collapse-mailing" class="panel-collapse collapse" role="tabpanel"
 								aria-labelledby="heading-mailing">
 								<div class="panel-body">
+									<div class="form-group col-md-12">
+										<label for="name">Name *</label>
+										<input name="name" id="name" class="form-control mailing" placeholder="Name"
+											required autocomplete="name" />
+										<p class='text-danger required-error' style='display:none;'>Your name is
+											required.</p>
+									</div>
+									<div class="form-group col-md-12">
+										<label for="mailingaddress">Street address *</label>
+										<input id="mailingaddress" name="mailingaddress" class="form-control mailing"
+											placeholder="Mailing Address" required autocomplete="street-address">
+										<p class='text-danger required-error' style='display:none;'>Your address is
+											required.</p>
+									</div>
+									<div class="form-group col-md-12">
+										<label for="city">City *</label>
+										<input id="city" name="city" class="form-control mailing" placeholder="City"
+											required autocomplete="address-level2" />
+										<p class='text-danger required-error' style='display:none;'>Your city is
+											required.</p>
+									</div>
+									<div class="form-group col-md-12">
+										<label for="state">State *</label>
+										<input id="state" name="state" class="form-control mailing" placeholder="State"
+											required autocomplete="address-level1" />
+										<p class='text-danger required-error' style='display:none;'>Your state is
+											required.</p>
+									</div>
+									<div class="form-group col-md-12">
+										<label for="zip">Zip code *</label>
+										<input id="zip" name="zip" class="form-control mailing" placeholder="ZIP code"
+											required autocomplete="postal-code" />
+										<p class='text-danger required-error' style='display:none;'>Your zip code is
+											required.</p>
+									</div>
+									<div class="form-group col-md-12">
+										<label for="country">Country *</label>
+										<input id="country" name="country" class="form-control mailing"
+											placeholder="Country" required autocomplete="country" />
+										<p class='text-danger required-error' style='display:none;'>Your country is
+											required.</p>
+									</div>
+									<div class="form-group col-md-12">* Required information</div>
+									<div class="contact-form-button-group form-group col-md-12">
+										<button id="mail-submit" name="submit" type="submit" class="btn btn-primary"
+											onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form');">
+											Subscribe
+										</button>
+										<!--<button type="reset" class="btn btn-default">Reset</button>-->
+									</div>
+									<div id="recaptchaMailing" class="form-group col-md-12 g-recaptcha" data-size="invisible">
+									</div>
 
-
-									<div class="mailcontactinfo">
-										<div class="form-group col-md-12">
-											<label for="firstname">Name *</label>
-											<input name="name" id="name" class="form-control" placeholder="Name"
-												required />
-										</div>
-										<div class="form-group col-md-12">
-											<label for="mailingaddress">Mailing address *</label>
-											<input id="mailingaddress" name="mailingaddress" class="form-control"
-												placeholder="Mailing Address" required>
-										</div>
-										<div class="form-group col-md-12">
-											<label for="city">City *</label>
-											<input id="city" name="city" class="form-control" placeholder="City"
-												required />
-										</div>
-										<div class="form-group col-md-12">
-											<label for="state">State *</label>
-											<input id="state" name="state" class="form-control" placeholder="State"
-												required />
-										</div>
-										<div class="form-group col-md-12">
-											<label for="zip">Zip code *</label>
-											<input id="zip" name="zip" class="form-control" placeholder="ZIP code"
-												required />
-										</div>
-										<div class="form-group col-md-12">
-											<label for="country">Country *</label>
-											<input id="country" name="country" class="form-control"
-												placeholder="Country" required />
-											<div class="form-group col-md-12">* Required information</div>
-										</div>
-										<div class="contact-form-button-group form-group col-md-12">
-											<button id="mail-submit" name="submit" type="submit" class="btn btn-primary"
-												onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form');">
-												Subscribe
-											</button>
-											<!--<button type="reset" class="btn btn-default">Reset</button>-->
-										</div>
-										<div id="recaptcha" class="form-group col-md-12 g-recaptcha"
-											data-widget-id="Mailing"
-											data-sitekey="6Lc8_TYUAAAAANc47TO81_x4gGwS8IPHQZRRAMg2"
-											data-callback="onSubmitMailing" data-badge="inline" data-size="invisible">
+									<div class="contact-form-sending form-group col-md-12">
+										Submitting...
+									</div>
+									<div class="form-group col-md-12">
+										<div class="contact-form-success alert alert-success">Thank you for your
+											interest in FARMS
+											International!</div>
+										<div class="contact-form-failure alert alert-danger">
+											Sorry there was an error. Please try again later or email us directly at <a
+												href="mailto:info@farmsinternational.com">info@farmsinternational.com</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
-
 				</form>
 			</div>
-
-	</div>
-	<!--<h2>Send a Message to FARMS International</h2>
-				<div class="checkbox">
-					<label for="other">
-					<input id="other" name="other" type="checkbox">
-					Send a Message to FARMS International:
-					<div class="commentbox">	
-						<div class="form-group col-md-12">
-							<label for="note"></label>
-							<textarea id="note" name="note" class="form-control" placeholder="Comment Here *" required></textarea>
-						</div>
-						<div class="form-group col-md-12">* Required information</div>
-					</div>
-					</label>
-				</div>-->
-
-
-	<style>
-		.mailcontactinfo {
-			display: none
-		}
-
-		.commentbox {
-			display: none
-		}
-
-		#subscribe-mail:checked,
-		.mailcontactinfo {
-			display: block
-		}
-
-		#leave-comment:checked~.commentbox {
-			display: block
-		}
-	</style>
-
-
-	<div class="contact-form-sending form-group col-md-12">
-		Submitting...
-	</div>
-	<div class="form-group col-md-12">
-		<div class="contact-form-success alert alert-success">Thank you for your interest in FARMS
-			International!</div>
-		<div class="contact-form-failure alert alert-danger">
-			Sorry there was an error. Please try again later or email us directly at <a
-				href="mailto:info@farmsinternational.com">info@farmsinternational.com</a>
-		</div>
-	</div>
-
-	</form>
-	</section>
+		</section>
 	</div>
 	<!-- /.container -->
 	<footer>
@@ -1421,22 +1376,11 @@
 
 	<script>
 
-		/*function validateComment(){
-            var Commentform = document.form.id(('input[type="leave-comment"]');
-            if(!Array.prototype.slice.call(checkboxes).some(x => x.checked) && $('#note').val() === ''){
-                document.getElementById('no-data-validation').style = 'display: block;';
-                return false;
-            } else {
-                document.getElementById('no-data-validation').style = 'display: none;';
-                return true;
-			}
-		}*/
-
 		function validateRequired(selector) {
-			var requiredInputs = document.querySelector(selector + ' input[required]');
+			var requiredInputs = document.querySelectorAll('input[required]' + selector + ',textarea[required]' + selector);
 			var isFormValid = true;
 			$.each(requiredInputs, function (index, element) {
-				if (element.value === '') {
+				if (!element.value) {
 					$(element).siblings('.required-error').show();
 					isFormValid = false;
 				} else {
@@ -1446,23 +1390,28 @@
 			return isFormValid;
 		}
 
-		$('input:checkbox').change(validateCheckBoxes);
-		$('#note').on('change keyup paste', validateCheckBoxes);
-		$('#name').on('change keyup paste', validateRequired);
-		$('#email').on('change keyup paste', validateRequired);
+		$('#note').on('change keyup paste', function (event) { validateRequired('.email[name="note"]'); });
+		$('#email').on('change keyup paste', function (event) { validateRequired('.email[name="email"]'); });
+		$('#name').on('change keyup paste', function (event) { validateRequired('.mailing[name="name"]'); });
+		$('#mailingaddress').on('change keyup paste', function (event) { validateRequired('.mailing[name="mailingaddress"]'); });
+		$('#city').on('change keyup paste', function (event) { validateRequired('.mailing[name="city"]'); });
+		$('#state').on('change keyup paste', function (event) { validateRequired('.mailing[name="state"]'); });
+		$('#zip').on('change keyup paste', function (event) { validateRequired('.mailing[name="zip"]'); });
+		$('#country').on('change keyup paste', function (event) { validateRequired('.mailing[name="country"]'); });
+
+		var FARMS = {};
 
 		function validateEmail(event) {
 			event.preventDefault();
-			//if(validateCheckBoxes() && 
 			if (validateRequired('.email')) {
-				grecaptcha.execute('Email');
+				grecaptcha.execute(FARMS.emailRecaptcha);
 			}
 		}
 
 		function validateMailingSubscription(event) {
 			event.preventDefault();
-			if (validateCheckBoxes() && validateRequired()) {
-				grecaptcha.execute('Mailing');
+			if (validateRequired('.mailing')) {
+				grecaptcha.execute(FARMS.recaptchaMailing);
 			}
 		}
 		function onSubmitEmail() {
@@ -1505,6 +1454,21 @@
 			});
 		}
 
+		function captchaCallback() {
+			FARMS.emailRecaptcha = grecaptcha.render('emailRecaptcha', {
+				'sitekey' : '6Lc8_TYUAAAAANc47TO81_x4gGwS8IPHQZRRAMg2', 
+				'callback' : 'onSubmitEmail', 
+				'badge' : 'inline',
+				'size' : 'invisible'
+				});
+			FARMS.recaptchaMailing = grecaptcha.render('recaptchaMailing', {
+				'sitekey' : '6Lc8_TYUAAAAANc47TO81_x4gGwS8IPHQZRRAMg2', 
+				'callback' : 'onSubmitMailing', 
+				'badge' : 'inline',
+				'size' : 'invisible'
+				});
+		}
+
 		$('#message-submit').click(function (event) { validateEmail(event) });
 		$('#mail-submit').click(function (event) { validateMailingSubscription(event) });
 
@@ -1512,6 +1476,8 @@
 		window.onresize = function () { $('.country-title').textfill(100); };
 		$('#farmsAge').text((new Date().getFullYear()) - 1961);
 	</script>
+	
+	<script src="https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit" async defer></script>
 
 	<script>
 		(function (b, o, i, l, e, r) {

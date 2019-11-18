@@ -159,9 +159,6 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
-  #social-media iframe {
-    height: 26em !important;
-  }
 }
 
 @media (min-width: 992px) {
