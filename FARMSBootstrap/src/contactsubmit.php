@@ -34,7 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $subject = 'New Contact Form Submission';
 
-        $body ="From: $name\nE-Mail: $email\n";
+        $body ="From: $name\n";
+        $body .= ($email ? "Email: $email\n" : "");
         $body .= ($mailingAddress ? "Mailing Address: $mailingAddress\n" : "");
         $body .= ($city ? "City: $city\n" : "");
         $body .= ($state ? "State: $state\n" : "");
