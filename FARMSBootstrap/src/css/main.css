@@ -467,7 +467,6 @@ a.donate-btn {
 }
 
 .panel-contact {
-  color: white;
   margin-top: .5em;
   margin-bottom: .5em;
   background-position: center;
@@ -497,10 +496,6 @@ a.donate-btn {
 
 .panel-contact a:active {
   color: white;
-}
-
-.panel-contact .panel {
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .contact-form-sending {
