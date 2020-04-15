@@ -1,0 +1,217 @@
+/*! 
+* Overrides agency theme styles
+* Primary Color: #369543, rgb(54, 149, 67), hsl(128, 47%, 40%)
+* Secondary Color: #297032, rgb(41, 112, 50), hsl(128, 46%, 30%)
+* do a blog link & a resource page
+* do json & add handlebars to template
+*/
+
+a {
+  color: #369543;
+  text-decoration: none;
+}
+a:hover {
+  color: #212529;
+  text-decoration: none;
+}
+.subscribe-link a {
+  color: white;
+  text-decoration: none;
+}
+.subscribe-link a:hover {
+  color: gainsboro;
+  text-decoration: none;
+}
+.text-primary {
+  color: #369543 !important;
+}
+::-moz-selection {
+  background:none;
+}
+::selection {
+  background:none;
+}
+.btn-primary {
+  background-color: #369543;
+  border-color: #369543;
+}
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: #297032 !important;
+  border-color: #297032 !important;
+}
+.btn-primary:active, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgb(41, 112, 50) !important;
+}
+#mainNav .navbar-toggler {
+  background-color: #369543;
+}
+#mainNav .navbar-brand {
+  color: #369543;
+  font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+}
+#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: #297032;
+}
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #369543;
+}
+.nav-pills a{
+  background-color: white;
+  color: #369543;
+  font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+}
+.nav-pills a.active, .nav-pills a:active, .nav-pills a:focus, .nav-pills a:hover,
+.nav-pills .nav-link.active {
+  color: white;
+  border-color: #297032;
+  background-color: #297032;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  background: rgb(54, 149, 67);
+}
+.timeline > li .timeline-image {
+  background-color: #369543;
+}
+section#contact .form-control:focus {
+  border-color: #369543;
+}
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+  background-color: #369543;
+}
+
+
+ 
+/*! 
+* Custom Styles for Farms website
+*/
+#logo {
+  width: 50px;
+  border-radius: 30px;
+  margin-right: 5px;
+}
+#video {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 70px;
+}
+#video iframe {
+  height: 100%;
+  width: 100%;
+}
+.page-section h3.section-subheading {
+  font-size: 24px;
+}
+.fa-external-link-alt {
+  margin-left: 5px;
+}
+.cta {
+  background-color: #369543;
+  color: white;
+}
+#message-submit, #mc-embedded-subscribe, #mail-submit, #sendMessageButton {
+  color: #369543;
+  background-color: white;
+  border-color: white;
+}
+#message-submit:active, #message-submit:focus, #message-submit:hover,
+#mc-embedded-subscribe:active, #mc-embedded-subscribe:focus, #mc-embedded-subscribe:hover,
+#mail-submit:active, #mail-submit:focus, #mail-submit:hover,
+#sendMessageButton:active, #sendMessageButton:focus, #sendMessageButton:hover {
+  background-color: white !important;
+  color: #297032;
+}
+.form-group {
+  width: 90%;
+}
+.required-error, .contact-form-sending, .contact-form-success, .contact-form-failure {
+  display: none;
+}
+#email-form, .snail-mail {
+  color: white;
+}
+.donate-message {
+  width: 75%;
+  margin: auto auto;
+}
+.subscribe-pills {
+  margin: auto auto;
+  padding-right: 5%;
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+.footer .ecfa,
+.footer .farms-address {
+  font-size: 90%;
+  text-transform: none;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+.footer .ecfa {
+  text-align: right;
+}
+.footer .farms-address {
+  text-align: left;
+}
+.ecfaseal {
+  height: 60px;
+  margin:10px 0 0 16px;
+}
+
+
+/* Resource & Giving Page */
+.jumbotron {
+  padding-top: 213px;
+  background-color: #212529;
+  color: white;
+}
+.jumbotron span {
+  color: #369543;
+}
+
+/* Resource Page */
+.resource-tron {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),url("../img/resource_bk.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.team-member h4 {
+  margin-bottom: 20px;
+}
+.team-member h6 {
+  margin-bottom: 10px;
+}
+
+/* Giving Page */
+.giving-tron {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+    ),url("../img/givingbackground.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.donate-button-container {
+  text-align: center;
+  padding: 2em 1em;
+}
+.quote {
+  text-align: center;
+  font-style: italic;
+}
+.donation-partner {
+  text-align: center;
+  margin-top: 50px;
+}
