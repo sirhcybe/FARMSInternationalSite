@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	);
 	$context  = stream_context_create($options);
 	$verify = file_get_contents($url, false, $context);
-	$resp=json_decode($verify);
+    $resp=json_decode($verify);
 
     if (!$resp->success) {
         $responseJson = "{ \"error\": \"Captcha Failed\" }";
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $country = $_POST['country'];
         $note = $_POST['note'];
 
-        $subject = 'New Contact Form Submission';
+        $subject = trim($note) != "" ? 'New Contact Form Submission': 'New Mail Newsletter Subscription';
 
         $body ="From: $name\n";
         $body .= ($email ? "Email: $email\n" : "");
@@ -41,15 +41,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $body .= ($state ? "State: $state\n" : "");
         $body .= ($zip ? "Zip: $zip\n" : "");
         $body .= ($country ? "Country: $country\n" : "");
-        $body .= (isset($_POST['subscribe-email']) ? "Requests email newsletter subscription\n" : "");
-        $body .= (isset($_POST['subscribe-mail']) ? "Requests mail newsletter subscription\n" : "");
-        $body .= (isset($_POST['request-dvd']) ? "Requests DVD\n" : "");
-        $body .= (isset($_POST['estate-stewardship']) ? "Requests estate stewardship info\n" : "");
-        $body .= (isset($_POST['farms-coffee']) ? "Requests FARMS Coffee materials\n" : "");
-        $body .= (isset($_POST['request-presentation']) ? "Requests a church presentation\n" : "");
-        $body .= (isset($_POST['request-prayer']) ? "Requests to be on the prayer team\n" : "");
         $body .= ($note ? "Note:\n$note" : "");
 
+        // No longer used
+        // $body .= (isset($_POST['subscribe-email']) ? "Requests email newsletter subscription\n" : "");
+        // $body .= (isset($_POST['subscribe-mail']) ? "Requests mail newsletter subscription\n" : "");
+        // $body .= (isset($_POST['request-dvd']) ? "Requests DVD\n" : "");
+        // $body .= (isset($_POST['estate-stewardship']) ? "Requests estate stewardship info\n" : "");
+        // $body .= (isset($_POST['farms-coffee']) ? "Requests FARMS Coffee materials\n" : "");
+        // $body .= (isset($_POST['request-presentation']) ? "Requests a church presentation\n" : "");
+        // $body .= (isset($_POST['request-prayer']) ? "Requests to be on the prayer team\n" : "");
 
         /*// Check if name has been entered
         $errName = 'false';
