@@ -2,24 +2,13 @@
 * Overrides agency theme styles
 * Primary Color: #369543, rgb(54, 149, 67), hsl(128, 47%, 40%)
 * Secondary Color: #297032, rgb(41, 112, 50), hsl(128, 46%, 30%)
-* do a blog link & a resource page
-* do json & add handlebars to template
 */
-
-a {
+a, .fas .fa-external-link-alt {
   color: #369543;
   text-decoration: none;
 }
-a:hover {
+a:hover, .fas .fa-external-link-alt:hover {
   color: #212529;
-  text-decoration: none;
-}
-.subscribe-link a {
-  color: white;
-  text-decoration: none;
-}
-.subscribe-link a:hover {
-  color: gainsboro;
   text-decoration: none;
 }
 .text-primary {
@@ -42,6 +31,8 @@ a:hover {
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgb(41, 112, 50) !important;
 }
+
+/* Override Navbar Style */
 #mainNav .navbar-toggler {
   background-color: #369543;
 }
@@ -49,13 +40,25 @@ a:hover {
   color: #369543;
   font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
 }
-#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, 
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
   color: #297032;
 }
-#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-size: 80%;
+}
+#mainNav .navbar-nav .nav-item .nav-link.active, 
+#mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #369543;
 }
-.nav-pills a{
+#mainNav .navbar-nav .nav-item .nav-btn.active, #mainNav .navbar-nav .nav-item .nav-btn:active,
+#mainNav .navbar-nav .nav-item .nav-btn:focus, #mainNav .navbar-nav .nav-item .nav-btn:hover {
+  background-color: white !important;
+  color: #297032;
+}
+
+/* Override Pill Style */
+.nav-pills a {
   background-color: white;
   color: #369543;
   font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
@@ -81,10 +84,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 
- 
-/*! 
-* Custom Styles for Farms website
-*/
+
+/**************** Home Page & Shared Styles ****************/
 #logo {
   width: 50px;
   border-radius: 30px;
@@ -101,6 +102,12 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 .page-section h3.section-subheading {
   font-size: 24px;
+  padding: 10px 40px;
+  margin: 0;
+}
+.page-section p.section-subheading-reference {
+  padding: 0 40px 40px 40px;
+  font-size: 20px;
 }
 .fa-external-link-alt {
   margin-left: 5px;
@@ -109,7 +116,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-color: #369543;
   color: white;
 }
-#message-submit, #mc-embedded-subscribe, #mail-submit, #sendMessageButton {
+.contact-form-button-group {
+  padding: 0;
+}
+#message-submit, #mc-embedded-subscribe, #mail-submit, .sendMessageButton {
   color: #369543;
   background-color: white;
   border-color: white;
@@ -117,9 +127,16 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 #message-submit:active, #message-submit:focus, #message-submit:hover,
 #mc-embedded-subscribe:active, #mc-embedded-subscribe:focus, #mc-embedded-subscribe:hover,
 #mail-submit:active, #mail-submit:focus, #mail-submit:hover,
-#sendMessageButton:active, #sendMessageButton:focus, #sendMessageButton:hover {
+.sendMessageButton:active, .sendMessageButton:focus, .sendMessageButton:hover {
   background-color: white !important;
   color: #297032;
+}
+.phone-link {
+  color: #369543;
+  font-weight: 600;
+}
+.phone-link:active, .phone-link:focus, .phone-link:hover {
+  color: white;
 }
 .form-group {
   width: 90%;
@@ -140,25 +157,25 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   padding-bottom: 30px;
   padding-top: 15px;
 }
-.footer .ecfa,
-.footer .farms-address {
+.footer-left, .footer-right {
   font-size: 90%;
   text-transform: none;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
-.footer .ecfa {
-  text-align: right;
-}
-.footer .farms-address {
+.footer-left {
   text-align: left;
+}
+.footer-right {
+  text-align: right;
 }
 .ecfaseal {
   height: 60px;
-  margin:10px 0 0 16px;
 }
+/**************** End Home Page & Shared Styles ****************/
 
 
-/* Resource & Giving Page */
+
+/**************** Resource & Giving Page ****************/
 .jumbotron {
   padding-top: 213px;
   background-color: #212529;
@@ -167,8 +184,11 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .jumbotron span {
   color: #369543;
 }
+/**************** End Resource & Giving Page ****************/
 
-/* Resource Page */
+
+
+/**************** Resource Page ****************/
 .resource-tron {
   background: linear-gradient(
     rgba(0, 0, 0, 0.5),
@@ -188,12 +208,21 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .team-member h6 {
   margin-bottom: 10px;
 }
+.team-member a {
+  font-size: 14px;
+}
+.team-member-newsletters, .team-member-newsspots, .team-member-videos {
+  margin-bottom: 20px;
+}
+/**************** End Resource Page ****************/
 
-/* Giving Page */
+
+
+/**************** Giving Page ****************/
 .giving-tron {
   background: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)
     ),url("../img/givingbackground.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -203,15 +232,225 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   padding-left: 1em;
   padding-right: 1em;
 }
+.giving-intro-heading {
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 75px;
+  margin-bottom: 50px;
+  font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+}
 .donate-button-container {
   text-align: center;
   padding: 2em 1em;
 }
-.quote {
-  text-align: center;
-  font-style: italic;
+.btn-giving {
+  background-color: #369543;
+  border-color: #369543;
+}
+.btn-giving:active, .btn-giving:focus, .btn-giving:hover {
+  background-color:white !important;
+  border-color: white !important;
+  color: #369543;
+}
+.btn-giving:active, .btn-giving:focus {
+  box-shadow: 0 0 0 0.2rem white !important;
+}
+.giving-section {
+  font-size: 18px;
 }
 .donation-partner {
   text-align: center;
   margin-top: 50px;
 }
+.seal-img img {
+  border-radius: 0px; 
+  border-width: 0;
+  margin-bottom: 10px;
+} 
+/**************** End Giving Page ****************/
+
+
+
+/**************** Media Queries ****************/
+/* Extra Small devices(phones, 325px and down) */
+@media only screen and (max-width: 325px) {
+  #mainNav .navbar-brand {
+    font-size: 15px !important;
+  }
+  .subscribe-heading {
+    font-size: 30px !important;
+  }
+}
+/* End Extra Small devices (phones, 325px and down) */
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #mainNav .navbar-brand {
+    font-size: 15px;
+  }
+  header.masthead .intro-text { 
+    padding: 150px 20px 100px 20px;
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 30px;
+  }
+  .page-section h3.section-subheading, 
+  #video {
+    margin-bottom: 0;
+  }
+  .copy-container {
+    padding: 0 20px;
+  }
+  .special-news-section {
+    margin-bottom: 30px;
+  }
+  .portfolio-item {
+    margin-bottom: 10px;
+  }
+  #mc_embed_signup_scroll {
+    text-align: center;
+  }
+  .mc-formgroup, .snail-formgroup, .contact-formgroup, .snail-mail {
+    width: 90%;
+    margin: auto auto;
+  }
+  .mc-formgroup input {
+    margin-bottom: 20px;
+  }
+  .snail-formgroup .form-group {
+    width:100%;
+  }
+  .footer-right {
+    text-align: left;
+  } 
+  .footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+  .portfolio-modal .modal-content h2 {
+    font-size: 25px;
+  }
+
+  /*** Resource ***/
+
+  /*** Giving ***/
+  .giving-display {
+    font-size: 50px;
+  }
+  .giving-intro-heading {
+    font-size: 60px;
+  }
+  .giving-section {
+    width: 90%;
+    margin: auto auto;
+  }
+  .seal-img {
+    display: none;
+  }
+}
+/* End Small devices (phones, 600px and down) */
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) { 
+  .navbar-brand {
+    font-size: 20px !important;
+  }
+  header.masthead .intro-text {
+    padding-top: 200px;
+  }
+  .donate-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .mc-formgroup, .snail-formgroup, .contact-formgroup {
+    width: 90%;
+    margin: auto auto;
+  }
+  .mc-formgroup input {
+    margin-bottom: 20px;
+  }
+  .snail-formgroup .form-group {
+    width:100%;
+  }
+  .footer span.copyright {
+    line-height: 20px;
+    padding-bottom: 40px;
+  }
+  .footer .ecfa {
+    text-align: right;
+  }
+
+  /*** Resource ***/
+  .resource-display {
+    font-size: 50px;
+  }
+
+  /*** Giving ***/
+  .giving-tron {
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+      ),url("../img/givingbg_mobile.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .btn-giving {
+    padding: 20px;
+  }
+  .seal-img img {
+    height: auto;
+    width: 500px;
+  } 
+}
+/* End Medium devices(landscape tablets, 768px and down) */
+
+/* Medium devices (landscape tablets, 768px - 992px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+  #mainNav .navbar-brand {
+    font-size: 18px; 
+  }
+  #mainNav .nav-item {
+    text-align: center;
+  }
+  #mainNav .nav-item a.-center {
+    line-height: 38px;
+  }
+  #mainNav .nav-item a.nav-btn {
+    margin-top: 8px;
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 50px;
+  }
+  .mc-formgroup, .snail-formgroup, .contact-formgroup, .snail-formgroup .form-group {
+    width: 90%;
+    margin: auto auto;
+  }
+  .snail-formgroup .form-group {
+    margin-bottom: 16px;
+  }
+
+  /*** Resource ***/
+  .resource-display {
+    font-size: 50px;
+  }
+
+  /*** Giving ***/
+  .btn-giving {
+    padding: 20px;
+  }
+  .seal-img img {
+    height: auto;
+    width: 500px;
+  } 
+}
+/* End Medium devices (landscape tablets, 768px - 992px) */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) { } */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) { } */
