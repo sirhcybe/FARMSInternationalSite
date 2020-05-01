@@ -2,6 +2,10 @@
 * Overrides agency theme styles
 * Primary Color: #369543, rgb(54, 149, 67), hsl(128, 47%, 40%)
 * Secondary Color: #297032, rgb(41, 112, 50), hsl(128, 46%, 30%)
+* Images:
+*    On Where We Work section - projectname_thumb.png (400x300)
+*    On Modal - projectname.png (full size)
+*    On Resource page - projectname_sm.png (200x200)
 */
 a, .fas .fa-external-link-alt {
   color: #369543;
