@@ -1,198 +1,818 @@
 /*! 
+ * Start Bootstrap - Agency v5.2.2 (https://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2019 Start Bootstrap
+*
 * Overrides agency theme styles
-* Primary Color: #369543, rgb(54, 149, 67), hsl(128, 47%, 40%)
-* Secondary Color: #297032, rgb(41, 112, 50), hsl(128, 46%, 30%)
 * Images:
 *    On Where We Work section - projectname_thumb.png (400x300)
 *    On Modal - projectname.png (full size)
 *    On Resource page - projectname_sm.png (200x200)
 */
-a, .fas .fa-external-link-alt {
-  color: #369543;
-  text-decoration: none;
-}
-a:hover, .fas .fa-external-link-alt:hover {
-  color: #212529;
-  text-decoration: none;
-}
-.text-primary {
-  color: #369543 !important;
-}
-::-moz-selection {
-  background:none;
-}
-::selection {
-  background:none;
-}
-.btn-primary {
-  background-color: #369543;
-  border-color: #369543;
-}
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #297032 !important;
-  border-color: #297032 !important;
-}
-.btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgb(41, 112, 50) !important;
+
+:root {
+  /* COLORS */
+  --green: #708e83;
+  --light-green: #b4d7ca;
+  --olive: #727a26;
+  --light-olive: #aeb653;
+  --tan: #f1f1f1;
+  --white: white;
+  --black: #262626;
+  --gray: #58595b;
+
+  /* FONTS */
+  --farms-font-roboto: 'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+  --farms-font-montserrat: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --farms-font-droid: 'Droid Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --farms-font-kaushan: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-/* Override Navbar Style */
+
+
+/************* GENERAL *************/
+ body {
+  overflow-x: hidden;
+  font-family: var(--farms-font-roboto);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+::-moz-selection,
+::selection {
+  background: none;
+  text-shadow: none;
+}
+
+img::-moz-selection, 
+img::selection {
+  background: transparent;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.text-primary {
+  color: var(--olive) !important;
+}
+
+.text-muted {
+  color: var(--gray) !important;
+}
+
+a,
+.fas .fa-external-link-alt {
+  color: var(--olive);
+  text-decoration: none;
+}
+
+a:hover,
+.fas .fa-external-link-alt:hover {
+  color: var(--light-olive);
+}
+
+.fa-external-link-alt {
+  margin-left: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: var(--farms-font-montserrat);
+}
+
+.input-xl {
+  height: 69px;
+  padding: 20px;
+}
+
+.btn {
+  font-family: var(--farms-font-montserrat);
+  font-weight: 700;
+  border-radius: 2px;
+  border: 0;
+}
+
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px;
+}
+
+.btn-primary {
+  background-color: var(--olive);
+  color: var(--white);
+}
+ 
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+  background-color: var(--light-green) !important;
+  color: var(--olive) !important;
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--green);
+}
+ 
+.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+  background-color: var(--green) !important;
+  color: var(--white) !important;
+}
+
+.social-buttons {
+  margin-bottom: 0;
+}
+
+.social-buttons li a {
+  font-size: 20px;
+  line-height: 50px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+  color: var(--white);
+  border-radius: 100%;
+  outline: none;
+  background-color: var(--olive);
+}
+
+.social-buttons li a:active, 
+.social-buttons li a:focus, 
+.social-buttons li a:hover {
+  background-color: var(--light-green);
+}
+
+
+/************* SECTION *************/
+section {
+  padding: 75px 0;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 45px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+section h3 {
+  font-size: 24px;
+  padding: 10px 40px;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-transform: none;
+  font-family: var(--farms-font-droid);
+}
+
+@media only screen and (max-width: 600px) {
+  section h3 {
+    margin-bottom: 0;
+  }
+}
+
+/*************  THREE COLUMN ROW *************/
+.three-col-row {
+  padding: 0 20px;
+}
+
+.three-col-row h4 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.three-col-row p {
+  padding: 0px 25px;
+}
+
+/************* FOUR COLUMN ROW *************/
+.four-col-row {
+  padding-top: 20px;
+}
+
+.four-col-row div {
+  padding: 0px 35px;
+}
+
+@media only screen and (max-width: 600px) {
+  .four-col-row div {
+    margin-bottom: 30px;
+  }
+}
+
+/************* CTA *************/
+.cta {
+  background-color: var(--light-green);
+  color: var(--white);
+}
+
+.cta .row {
+  padding: 0 20px;
+}
+
+.cta h3 {
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+
+/************* NAVBAR *************/
+#mainNav {
+  background-color: var(--black);
+}
+
 #mainNav .navbar-toggler {
-  background-color: #369543;
+  font-size: 12px;
+  right: 0;
+  padding: 13px;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 0;
+  background-color: var(--olive);
+  font-family: var(--farms-font-montserrat);
 }
+
 #mainNav .navbar-brand {
-  color: #369543;
-  font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+  color: var(--olive);
+  font-family: var(--farms-font-kaushan);
+  padding: 0px;
+  margin: 0px;
 }
-#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, 
-#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #297032;
+
+#mainNav .navbar-brand.active, 
+#mainNav .navbar-brand:active, 
+#mainNav .navbar-brand:focus, 
+#mainNav .navbar-brand:hover {
+  color: var(--light-green);
 }
+
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-size: 80%;
+  font-size: 85%;
+  font-weight: 500;
+  padding: 0.75em 0;
+  letter-spacing: 1px;
+  color: var(--white);
+  font-family: var(--farms-font-montserrat);
 }
+
 #mainNav .navbar-nav .nav-item .nav-link.active, 
 #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #369543;
-}
-#mainNav .navbar-nav .nav-item .nav-btn.active, #mainNav .navbar-nav .nav-item .nav-btn:active,
-#mainNav .navbar-nav .nav-item .nav-btn:focus, #mainNav .navbar-nav .nav-item .nav-btn:hover {
-  background-color: white !important;
-  color: #297032;
+  color: var(--olive);
 }
 
-/* Override Pill Style */
-.nav-pills a {
-  background-color: white;
-  color: #369543;
-  font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
-}
-.nav-pills a.active, .nav-pills a:active, .nav-pills a:focus, .nav-pills a:hover,
-.nav-pills .nav-link.active {
-  color: white;
-  border-color: #297032;
-  background-color: #297032;
+#mainNav .navbar-nav .nav-item .nav-btn {
+  font-weight: 600 !important;
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  background: rgb(54, 149, 67);
+#mainNav .navbar-nav .nav-item .nav-btn.active, 
+#mainNav .navbar-nav .nav-item .nav-btn:active,
+#mainNav .navbar-nav .nav-item .nav-btn:focus, 
+#mainNav .navbar-nav .nav-item .nav-btn:hover {
+  background-color: var(--light-green) !important;
+  color: var(--olive) !important;
 }
-.timeline > li .timeline-image {
-  background-color: #369543;
-}
-section#contact .form-control:focus {
-  border-color: #369543;
-}
-ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #369543;
-}
-
-
-
-/**************** Home Page & Shared Styles ****************/
 #logo {
-  width: 50px;
-  border-radius: 30px;
-  margin-right: 5px;
+  height: 140px;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+  }
+  #mainNav .navbar-brand {
+    font-size: 1.75em;
+    transition: all 0.3s;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    padding: 1.1em 1em !important;
+  }
+  #mainNav.navbar-shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: var(--black);
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+  #mainNav .nav-item {
+    text-align: center;
+  }
+  #mainNav .nav-item a.-center {
+    line-height: 38px;
+  }
+  #mainNav .nav-item a.nav-btn {
+    margin-top: 8px;
+  }
+}
+
+
+/************* HEADER *************/
+header.masthead {
+  text-align: center;
+  color: var(--white);
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+header.masthead .intro-text {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+header.masthead .intro-text .intro-lead-in {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 22px;
+  margin-bottom: 25px;
+  font-family: var(--farms-font-droid);
+}
+
+header.masthead .intro-text .intro-heading {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 25px;
+  font-family: var(--farms-font-montserrat);
+}
+
+@media only screen and (max-width: 600px) {
+  header.masthead .intro-text { 
+    padding: 150px 20px 100px 20px;
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 768px) { 
+  header.masthead .intro-text {
+    padding-top: 200px;
+  }
+}
+@media (min-width: 768px) {
+  header.masthead .intro-text {
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+  header.masthead .intro-text .intro-lead-in {
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+    margin-bottom: 25px;
+    font-family: var(--farms-font-droid);
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+    margin-bottom: 50px;
+    font-family: var(--farms-font-montserrat);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+  header.masthead .intro-text .intro-heading {
+    font-size: 50px;
+  }
+}
+
+
+/************* WHAT WE DO SECTION *************/
+.bible-reference {
+  padding: 0 40px 40px 40px;
+  font-size: 20px;
 }
 #video {
-  height: 300px;
+  height: 400px;
   width: 100%;
-  margin-bottom: 70px;
+  margin-bottom: 150px;
 }
 #video iframe {
   height: 100%;
   width: 100%;
 }
-.page-section h3.section-subheading {
-  font-size: 24px;
-  padding: 10px 40px;
-  margin: 0;
+@media only screen and (max-width: 600px) {
+  #video {
+    margin-bottom: 0;
+  }
 }
-.page-section p.section-subheading-reference {
-  padding: 0 40px 40px 40px;
+
+
+/************* WHERE WE WORK SECTION *************/
+.project-item {
+  right: 0;
+  margin: 0 0 15px;
+}
+@media only screen and (max-width: 600px) {
+  .project-item {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 767px) {
+  .project-item {
+    margin: 0 0 30px;
+  }
+}
+
+.project-link {
+  position: relative;
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.project-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.5s;
+  opacity: 0;
+  background: var(--olive);
+}
+
+.project-hover:hover {
+  opacity: 1;
+}
+
+.project-hover-content {
   font-size: 20px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 20px;
+  margin-top: -12px;
+  text-align: center;
+  color: var(--white);
 }
-.fa-external-link-alt {
-  margin-left: 5px;
+
+.project-hover-content i {
+  margin-top: -12px;
 }
-.cta {
-  background-color: #369543;
-  color: white;
+
+.project-caption {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center;
+  background-color: var(--white);
 }
+
+.project-caption h4 {
+  margin: 0;
+  text-transform: none;
+}
+
+#projects * {
+  z-index: 2;
+}
+
+.project-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
+
+.project-modal .modal-content {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.project-modal .modal-content h2 {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 600px) {
+  .project-modal .modal-content h2 {
+    font-size: 25px;
+  }
+}
+
+.project-modal .modal-content p {
+  margin-bottom: 30px;
+}
+
+.project-modal .modal-content p.item-intro {
+  font-size: 16px;
+  font-style: italic;
+  margin: 20px 0 30px;
+  font-family: var(--farms-font-droid);
+}
+
+.project-modal .modal-content ul.list-inline {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.project-modal .modal-content img {
+  margin-bottom: 30px;
+}
+
+.project-modal .modal-content button {
+  cursor: pointer;
+}
+
+.project-modal .close-modal {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.project-modal .close-modal:hover {
+  opacity: 0.3;
+}
+
+.project-modal .close-modal .lr {
+  /* Safari and Chrome */
+  z-index: 1051;
+  width: 1px;
+  height: 75px;
+  margin-left: 35px;
+  /* IE 9 */
+  transform: rotate(45deg);
+  background-color: var(--black);
+}
+
+.project-modal .close-modal .lr .rl {
+  /* Safari and Chrome */
+  z-index: 1052;
+  width: 1px;
+  height: 75px;
+  /* IE 9 */
+  transform: rotate(90deg);
+  background-color: var(--black);
+}
+
+/************* GET INVOLVED SECTION *************/
+@media only screen and (max-width: 768px) { 
+  .donate-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+
+/************* CONTACT SECTION *************/
+section#contact {
+  background-color: var(--black);
+  background-image: url("../img/map-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section#contact .section-heading {
+  color: var(--white);
+}
+
+section#contact .three-col-row {
+  text-align: left;
+}
+
+section#contact .form-group {
+  margin-bottom: 25px;
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+  padding: 20px;
+}
+
+section#contact .form-group input.form-control {
+  height: auto;
+}
+
+section#contact .form-group textarea.form-control {
+  height: 248px;
+}
+
+section#contact .form-control:focus {
+  border-color: var(--light-green);
+  border-width: 3px;
+  box-shadow: none;
+}
+
+section#contact ::-webkit-input-placeholder,
+section#contact :-moz-placeholder,
+section#contact ::-moz-placeholder,
+section#contact :-ms-input-placeholder {
+  font-weight: 700;
+  color: var(--gray);
+  font-family: var(--farms-font-montserrat);
+}
+
+.snail-mail {
+  color: var(--white);
+}
+
+.snail-mail h5 {
+  margin-bottom: 20px;
+}
+
+.snail-mail address {
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+.snail-mail a {
+  color: var(--light-green);
+}
+
+.snail-mail a:hover {
+  color: var(--green);
+}
+
+/************* SUBSCRIBE SECTION *************/
+.subscribe-pills {
+  margin: auto auto;
+  padding: 0px 0px 30px 0px
+}
+  
+.nav-pills a {
+  background-color: var(--white);
+  color: var(--green);
+}
+
+.nav-pills a.active, 
+.nav-pills a:active, 
+.nav-pills a:focus, 
+.nav-pills a:hover,
+.nav-pills .nav-link.active {
+  color: var(--white);
+  border-color: var(--green);
+  background-color: var(--green);
+}
+
+#mailing-form {
+  text-align: left;
+}
+
+@media only screen and (max-width: 325px) {
+  section#subscribe h2 {
+    font-size: 30px !important;
+  }
+}
+
+/************* FORMS *************/
 .contact-form-button-group {
   padding: 0;
 }
-#message-submit, #mc-embedded-subscribe, #mail-submit, .sendMessageButton {
-  color: #369543;
-  background-color: white;
-  border-color: white;
+
+#message-submit, 
+#mc-embedded-subscribe, 
+#mail-submit {
+  color: var(--green);
+  background-color: var(--white);
 }
+
 #message-submit:active, #message-submit:focus, #message-submit:hover,
 #mc-embedded-subscribe:active, #mc-embedded-subscribe:focus, #mc-embedded-subscribe:hover,
-#mail-submit:active, #mail-submit:focus, #mail-submit:hover,
-.sendMessageButton:active, .sendMessageButton:focus, .sendMessageButton:hover {
-  background-color: white !important;
-  color: #297032;
+#mail-submit:active, #mail-submit:focus, #mail-submit:hover {
+  background-color: var(--white);
+  color: var(--olive);
 }
+
 .phone-link {
-  color: #369543;
+  color: var(--olive);
   font-weight: 600;
 }
+
 .phone-link:active, .phone-link:focus, .phone-link:hover {
-  color: white;
+  color: var(--white);
 }
+
 .form-group {
   width: 90%;
 }
+
 .required-error, .contact-form-sending, .contact-form-success, .contact-form-failure {
   display: none;
 }
+
 #email-form, .snail-mail {
-  color: white;
+  color: var(--white);
 }
+
 .donate-message {
   width: 75%;
   margin: auto auto;
 }
-.subscribe-pills {
-  margin: auto auto;
-  padding-right: 5%;
-  padding-bottom: 30px;
-  padding-top: 15px;
+@media only screen and (max-width: 600px) {
+  #mc_embed_signup_scroll {
+    text-align: center;
+  }
+  .mc-formgroup, .snail-formgroup, .form-group, .snail-mail {
+    width: 90%;
+    margin: auto auto;
+  }
+  .mc-formgroup input {
+    margin-bottom: 20px;
+  }
+  .snail-formgroup .form-group {
+    width:100%;
+  }
 }
+@media only screen and (max-width: 768px) { 
+  .mc-formgroup, .snail-formgroup, .form-group {
+    width: 90%;
+    margin: auto auto;
+  }
+  .mc-formgroup input {
+    margin-bottom: 20px;
+  }
+  .snail-formgroup .form-group {
+    width:100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+  .mc-formgroup, .snail-formgroup, .form-group, .snail-formgroup .form-group {
+    width: 90%;
+    margin: auto auto;
+  }
+  .snail-formgroup .form-group {
+    margin-bottom: 16px;
+  }
+}
+
+
+
+/************* FOOTER *************/
+.footer {
+  padding: 25px 0;
+  text-align: center;
+}
+
 .footer-left, .footer-right {
   font-size: 90%;
   text-transform: none;
-  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: var(--farms-font2);
 }
+
 .footer-left {
   text-align: left;
 }
+
 .footer-right {
   text-align: right;
 }
+
+.footer span.copyright,
+.footer ul.quicklinks {
+  font-size: 90%;
+  line-height: 40px;
+  text-transform: none;
+  font-family: var(--farms-font-montserrat);
+} 
+
+.footer ul.quicklinks {
+  margin-bottom: 0;
+} 
+
+@media only screen and (max-width: 600px) {
+  .footer-right {
+    text-align: left;
+  } 
+  .footer .col-md-4 {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 768px) { 
+  .footer span.copyright {
+    line-height: 20px;
+    padding-bottom: 40px;
+  }
+  .footer .ecfa {
+    text-align: right;
+  }
+}
+
+
+/************* ECFA SEAL *************/
 .ecfaseal {
   height: 60px;
 }
-/**************** End Home Page & Shared Styles ****************/
-
-
-
-/**************** Resource & Giving Page ****************/
-.jumbotron {
-  padding-top: 213px;
-  background-color: #212529;
-  color: white;
-}
-.jumbotron span {
-  color: #369543;
-}
-/**************** End Resource & Giving Page ****************/
 
 
 
 /**************** Resource Page ****************/
+.jumbotron {
+  padding-top: 213px;
+  background-color: var(--light-green);
+  color: var(--white);
+}
+
+.jumbotron span {
+  color: var(--olive);
+}
+
 .resource-tron {
   background: linear-gradient(
     rgba(0, 0, 0, 0.5),
@@ -206,255 +826,53 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   padding-left: 1em;
   padding-right: 1em;
 }
-.team-member h4 {
+
+.section-column h4 {
   margin-bottom: 20px;
 }
-.team-member h6 {
+
+.section-column h6 {
   margin-bottom: 10px;
 }
-.team-member a {
+
+.section-column a {
   font-size: 14px;
 }
-.team-member-newsletters, .team-member-newsspots, .team-member-videos {
+
+.section-column-newsletters, 
+.section-column-newsspots, 
+.section-column-videos {
   margin-bottom: 20px;
 }
-/**************** End Resource Page ****************/
+@media only screen and (max-width: 768px) { 
+  .resource-display {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+  .resource-display {
+    font-size: 50px;
+  }
+}
 
-
-
-/**************** Giving Page ****************/
-.giving-tron {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)
-    ),url("../img/givingbackground.png") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin-bottom: 0;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-.giving-intro-heading {
-  font-size: 60px;
-  font-weight: 500;
-  line-height: 75px;
-  margin-bottom: 50px;
-  font-family: 'Roboto Slab',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
-}
-.donate-button-container {
-  text-align: center;
-  padding: 2em 1em;
-}
-.btn-giving {
-  background-color: #369543;
-  border-color: #369543;
-}
-.btn-giving:active, .btn-giving:focus, .btn-giving:hover {
-  background-color:white !important;
-  border-color: white !important;
-  color: #369543;
-}
-.btn-giving:active, .btn-giving:focus {
-  box-shadow: 0 0 0 0.2rem white !important;
-}
-.giving-section {
-  font-size: 18px;
-}
-.donation-partner {
-  text-align: center;
-  margin-top: 50px;
-}
-.seal-img img {
-  border-radius: 0px; 
-  border-width: 0;
-  margin-bottom: 10px;
-} 
-/**************** End Giving Page ****************/
 
 
 
 /**************** Media Queries ****************/
-/* Extra Small devices(phones, 325px and down) */
-@media only screen and (max-width: 325px) {
-  #mainNav .navbar-brand {
-    font-size: 15px !important;
-  }
-  .subscribe-heading {
-    font-size: 30px !important;
-  }
-}
-/* End Extra Small devices (phones, 325px and down) */
+/* Extra Small devices(phones, 325px and down)
+@media only screen and (max-width: 325px) {}
 
-/* Small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  #mainNav .navbar-brand {
-    font-size: 15px;
-  }
-  header.masthead .intro-text { 
-    padding: 150px 20px 100px 20px;
-  }
-  header.masthead .intro-text .intro-heading {
-    font-size: 30px;
-  }
-  .page-section h3.section-subheading, 
-  #video {
-    margin-bottom: 0;
-  }
-  .copy-container {
-    padding: 0 20px;
-  }
-  .special-news-section {
-    margin-bottom: 30px;
-  }
-  .portfolio-item {
-    margin-bottom: 10px;
-  }
-  #mc_embed_signup_scroll {
-    text-align: center;
-  }
-  .mc-formgroup, .snail-formgroup, .contact-formgroup, .snail-mail {
-    width: 90%;
-    margin: auto auto;
-  }
-  .mc-formgroup input {
-    margin-bottom: 20px;
-  }
-  .snail-formgroup .form-group {
-    width:100%;
-  }
-  .footer-right {
-    text-align: left;
-  } 
-  .footer .col-md-4 {
-    margin-bottom: 20px;
-  }
-  .portfolio-modal .modal-content h2 {
-    font-size: 25px;
-  }
+Small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) { }
 
-  /*** Resource ***/
+Medium devices (landscape tablets, 768px and down)
+@media only screen and (max-width: 768px) { }
 
-  /*** Giving ***/
-  .giving-display {
-    font-size: 50px;
-  }
-  .giving-intro-heading {
-    font-size: 60px;
-  }
-  .giving-section {
-    width: 90%;
-    margin: auto auto;
-  }
-  .seal-img {
-    display: none;
-  }
-}
-/* End Small devices (phones, 600px and down) */
+Medium devices (landscape tablets, 768px - 992px)
+@media only screen and (min-width: 768px) and (max-width: 1024px) { }
 
-/* Medium devices (landscape tablets, 768px and down) */
-@media only screen and (max-width: 768px) { 
-  .navbar-brand {
-    font-size: 20px !important;
-  }
-  header.masthead .intro-text {
-    padding-top: 200px;
-  }
-  .donate-btn {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-  .mc-formgroup, .snail-formgroup, .contact-formgroup {
-    width: 90%;
-    margin: auto auto;
-  }
-  .mc-formgroup input {
-    margin-bottom: 20px;
-  }
-  .snail-formgroup .form-group {
-    width:100%;
-  }
-  .footer span.copyright {
-    line-height: 20px;
-    padding-bottom: 40px;
-  }
-  .footer .ecfa {
-    text-align: right;
-  }
+Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) { }
 
-  /*** Resource ***/
-  .resource-display {
-    font-size: 50px;
-  }
-
-  /*** Giving ***/
-  .giving-tron {
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-      ),url("../img/givingbg_mobile.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    margin-bottom: 0;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .btn-giving {
-    padding: 20px;
-  }
-  .seal-img img {
-    height: auto;
-    width: 500px;
-  } 
-}
-/* End Medium devices(landscape tablets, 768px and down) */
-
-/* Medium devices (landscape tablets, 768px - 992px) */
-@media only screen and (min-width: 768px) and (max-width: 1024px) { 
-  #mainNav .navbar-brand {
-    font-size: 18px; 
-  }
-  #mainNav .nav-item {
-    text-align: center;
-  }
-  #mainNav .nav-item a.-center {
-    line-height: 38px;
-  }
-  #mainNav .nav-item a.nav-btn {
-    margin-top: 8px;
-  }
-  header.masthead .intro-text .intro-heading {
-    font-size: 50px;
-  }
-  .mc-formgroup, .snail-formgroup, .contact-formgroup, .snail-formgroup .form-group {
-    width: 90%;
-    margin: auto auto;
-  }
-  .snail-formgroup .form-group {
-    margin-bottom: 16px;
-  }
-
-  /*** Resource ***/
-  .resource-display {
-    font-size: 50px;
-  }
-
-  /*** Giving ***/
-  .btn-giving {
-    padding: 20px;
-  }
-  .seal-img img {
-    height: auto;
-    width: 500px;
-  } 
-}
-/* End Medium devices (landscape tablets, 768px - 992px) */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) { } */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) { } */
+Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) { } */

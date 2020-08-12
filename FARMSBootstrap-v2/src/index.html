@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
+
+  <!-- 
+    TODO:
+    DONE 1. Add new logo
+    DONE 2. Add new colors
+    3. Add new fonts
+    4. Add new giving button
+    <button class="aplos-donation-button" data-widget-id="24E7EE7BBE9CF54658F113B3D811E098">Donate</button>
+<script type="text/javascript" src="https://cdn.aplos.com/widgets/donations/1.0.2/donations.min.js"></script>
+    5. Add new giving section
+    6. Rename newsletters
+    7. Add handlebars
+  -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,6 +23,7 @@
     content="FARMS, FARMS International, Christian, loans, development, poverty, dependency, dignity, good, help, church">
   <title>FARMS International</title>
 
+  <link rel="icon" href="favicon.png" type="image/png">  
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <!-- Bootstrap core CSS -->
@@ -24,7 +38,7 @@
 
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="css/jquery_fancybox_min.css" type="text/css" media="screen" />
-  <link rel="stylesheet" href="css/agency.min.css">
+  <!-- <link rel="stylesheet" href="css/farms.min.css"> -->
   <link rel="stylesheet" href="css/farms.css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -43,8 +57,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container nav-container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <img id="logo" src="img/farmslogo.jpg" alt="FARMS International" />
-        FARMS International
+        <img id="logo" src="img/logo/FARMS-logo-onblack.png" alt="FARMS International" />
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" 
               data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" 
@@ -59,7 +72,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Where We Work');" href="#portfolio">
+            <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Where We Work');" href="#projects">
               Where We Work
             </a>
           </li>
@@ -79,10 +92,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger btn btn-primary btn-xl text-uppercase nav-btn" 
-               onclick="ga('send', 'event', 'Link', 'Click', 'Donate');" href="./giving.html" role="button">
-              Donate
-            </a>
+            <button class="aplos-donation-button nav-link js-scroll-trigger btn btn-primary nav-btn" data-widget-id="24E7EE7BBE9CF54658F113B3D811E098">DONATE</button>
+            <script type="text/javascript" src="https://cdn.aplos.com/widgets/donations/1.0.2/donations.min.js"></script>
           </li>
         </ul>
       </div>
@@ -101,30 +112,30 @@
   </header>
 
   <!-- What We Do -->
-  <section class="page-section" id="what-we-do">
+  <section id="what-we-do">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">What We Do</h2>
-          <h3 class="section-subheading text-muted what-we-do-subheading">
+        <div class="col-lg-12">
+          <h2 class="text-uppercase">What We Do</h2>
+          <h3 class="text-muted">
             "As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith."
           </h3>
-          <p class="section-subheading-reference text-muted">
-            Galatians 6:10
+          <p class="bible-reference text-muted">
+            - Galatians 6:10
           </p>
           <div id="video" onclick="ga('send', 'event', 'Video', 'Play', 'Main Video');">
-            <iframe src="https://player.vimeo.com/video/27291439?byline=0&amp;portrait=0&title=0" frameborder="0"
-              webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            <iframe src="https://player.vimeo.com/video/27291439?byline=0&amp;portrait=0&title=0" 
+                    frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
           </div>
         </div>
       </div>
-      <div class="row text-center copy-container">
+      <div class="row three-col-row">
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-hand-holding-heart fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Doing Good</h4>
+          <h4>Doing Good</h4>
           <p class="text-muted">
             Jesus had compassion for the poor and he left us this challenge, "...whenever you wish you may do them good...”. 
             FARMs International is an opportunity for you to "do good" for your brothers and sisters in an exciting and practical way.
@@ -135,7 +146,7 @@
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-bible fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Biblical Approach</h4>
+          <h4>Biblical Approach</h4>
           <p class="text-muted">
             FARMs International combines Christian stewardship with interest free loans to help families 
             give and work their way out of poverty while preserving their dignity and avoiding dependency.
@@ -146,7 +157,7 @@
             <i class="fas fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-seedling fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">It Works</h4>
+          <h4>It Works</h4>
           <p class="text-muted">
             Our unique and refreshing approach to microcredit has helped thousands of families
             and their churches in places of great need and persecution for over <span id="farmsAge">56</span> years! 
@@ -157,171 +168,173 @@
   </section>
 
   <!-- Special Newsletters -->
-  <section class="py-5 bg-light">
+  <section class="bg-light">
     <div class="container">
-      <div class="row text-center copy-container">
+      <div class="row">
         <div class="col-lg-12">
-          <h4 class="text-muted">
-            These special editions of our newsletter offer in-depth <br />
-            information on FARMS approach and methods.
-          </h4>
+          <h3>
+            <strong>These special editions of our newsletter offer in-depth information <br />
+            on FARMS approach and methods.</strong>
+          </h3>
         </div>
       </div>
-      <br /><br />
-      <div class="row text-center copy-container">
-        <div class="col-md-3 special-news-section">
+      <div class="row four-col-row">
+        <div class="col-md-3">
+          <p>Learn how a FARMS program works</p>
           <a href="newsletters/FARMS-Special_Edition-Nuts_and_Bolts.pdf" target="_blank"
              onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Nuts and Bolts');">
-             The Nuts and Bolts of FARMS: Learn how a FARMS program works 
+             The Nuts and Bolts of FARMS
              <i class="fas fa-external-link-alt"></i>
           </a> 
         </div>
-        <div class="col-md-3 special-news-section">
+        <div class="col-md-3">
+          <p>Learn why a FARMS program is very different from a micro-credit project</p>
           <a href="newsletters/FARMS-Sept11NL-What_is_wrong_with_microcredit.pdf" target="_blank"
              onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Whats Wrong with Micro-credit');">
-             What's Wrong with Micro-Credit: Learn why a FARMS program is very different from a micro-credit project 
+             What's Wrong with Micro-Credit 
              <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
-        <div class="col-md-3 special-news-section">
+        <div class="col-md-3">
+          <p>Learn about the results of an independent survey of one of our programs in Thailand </p>
           <a href="newsletters/FARMS-Special_Edition-_Thailand_Survey.pdf" target="_blank"
              onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Thailand Survey');">
-             Thailand Survey: Learn about the results of an independent survey of one of our programs in Thailand 
+             Thailand Survey
              <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
-        <div class="col-md-3 special-news-section">
+        <div class="col-md-3">
           <a href="newsletters/October 2019 E-Newsletter.pdf" target="_blank"
             onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Latest Newsletter');">
-             Our most recent newsletter <i class="fas fa-external-link-alt"></i>
+             Our most recent<br />
+             newsletter <i class="fas fa-external-link-alt"></i>
           </a>
         </div>
       </div>
       <br /><br />
-      <div class="row text-center copy-container">
+      <div class="row">
         <div class="col-lg-12">
-          <p class="text-muted">See our <a href="./resources.html">Resources</a> page for additional publications</p>
+          <p class="text-muted">
+            <em>See our <a href="./resources.html">Resources</a> page for additional publications</em>
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Donate CTA -->
-  <section class="page-section cta">
+  <section class="cta">
     <div class="container">
-      <div class="row copy-container">
+      <div class="row">
         <div class="col-lg-12 text-center">
-          <h3 class="section-heading text-uppercase">
+          <h3 class="text-uppercase">
             FARMS is 100% funded by donors like you<br />
             and we need your support
           </h3>
-          <br />
-          <a class="btn btn-primary btn-xl text-uppercase sendMessageButton" href="./giving.html" 
-            role="button" onclick="ga('send', 'event', 'Link', 'Click', 'Donate');">
-            Donate Now
-          </a>
+          <button class="aplos-donation-button btn btn-xl btn-secondary" data-widget-id="24E7EE7BBE9CF54658F113B3D811E098">DONATE</button>
+          <script type="text/javascript" src="https://cdn.aplos.com/widgets/donations/1.0.2/donations.min.js"></script>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Where we work - Project Grid -->
-  <section class="bg-light page-section" id="portfolio">
+  <section class="bg-light" id="projects">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Where We Work</h2>
+          <h2 class="text-uppercase">Where We Work</h2>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
+        <div class="col-md-4 col-sm-6 project-item">
+          <a class="project-link" data-toggle="modal" href="#projectmodal1">
+            <div class="project-hover">
+              <div class="project-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/projects/cuba_thumb.png" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="project-caption">
             <h4>Cuba</h4>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
+        <div class="col-md-4 col-sm-6 project-item">
+          <a class="project-link" data-toggle="modal" href="#projectmodal2">
+            <div class="project-hover">
+              <div class="project-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/projects/bangladesh_thumb.png" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="project-caption">
             <h4>Bangladesh</h4>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
+        <div class="col-md-4 col-sm-6 project-item">
+          <a class="project-link" data-toggle="modal" href="#projectmodal3">
+            <div class="project-hover">
+              <div class="project-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/projects/haiti_thumb.png" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="project-caption">
             <h4>Haiti</h4>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
+        <div class="col-md-4 col-sm-6 project-item">
+          <a class="project-link" data-toggle="modal" href="#projectmodal4">
+            <div class="project-hover">
+              <div class="project-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/projects/moldova_thumb.png" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="project-caption">
             <h4>Moldova</h4>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
+        <div class="col-md-4 col-sm-6 project-item">
+          <a class="project-link" data-toggle="modal" href="#projectmodal5">
+            <div class="project-hover">
+              <div class="project-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/projects/nagaland2_thumb.png" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="project-caption">
             <h4>Nagaland/India</h4>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
+        <div class="col-md-4 col-sm-6 project-item">
+          <a class="project-link" data-toggle="modal" href="#projectmodal6">
+            <div class="project-hover">
+              <div class="project-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/projects/philippenes_thumb.png" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="project-caption">
             <h4>The Philippines</h4>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal7">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
+        <div class="col-md-4 col-sm-6 project-item">
+          <a class="project-link" data-toggle="modal" href="#projectmodal7">
+            <div class="project-hover">
+              <div class="project-hover-content">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/projects/thailand_thumb.png" alt="">
           </a>
-          <div class="portfolio-caption">
+          <div class="project-caption">
             <h4>Thailand</h4>
           </div>
         </div>
@@ -330,110 +343,106 @@
   </section>
 
   <!-- Get Involved -->
-  <section class="page-section" id="getinvolved">
+  <section id="getinvolved">
     <div class="container">
-      <div class="row copy-container">
+      <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Get Involved</h2>
+          <h2 class="text-uppercase">Get Involved</h2>
         </div>
       </div>
-      <div class="row copy-container">
+      <div class="row three-col-row">
         <div class="col-md-4">
-          <div class="team-member">
-            <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <!-- <i class="fas fa-book-reader fa-stack-1x fa-inverse"></i> -->
-              <i class="fas fa-info fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4>Stay Informed</h4>
-            <p class="text-muted">
-              <a href="#subscribe">Sign up</a> for our newletter, read our <a href="https://blog.farmsinternational.com/" 
-                onclick="ga('send', 'event', 'Link', 'Click', 'Blog');" target="_blank">blog</a>, or follow us on social media
-            </p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="https://twitter.com/FARMSDoingGood" data-show-count="false" target="_blank">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.facebook.com/farmsinternational" target="_blank">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com/farmsinternational" target="_blank">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-info fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4>Stay Informed</h4>
+          <p class="text-muted">
+            <a href="#subscribe">Sign up</a> for our newletter, read 
+            our <a href="https://blog.farmsinternational.com/" 
+                   onclick="ga('send', 'event', 'Link', 'Click', 'Blog');" 
+                   target="_blank">blog</a>
+            , or follow us on social media
+          </p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="https://twitter.com/FARMSDoingGood" data-show-count="false" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.facebook.com/farmsinternational" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/farmsinternational" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="col-md-4">
-          <div class="team-member">
-            <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fab fa-amazon fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4>AmazonSmile</h4>
-            <p class="text-muted">
-              Choose to support us on AmazonSmile and Amazon will donate a portion of your purchase to us
-              at no cost to you!
-            </p>
-            <a class="donate-btn btn btn-success btn-xl center-block" href="https://smile.amazon.com/ch/22-1776920" role="button"
-              onclick="ga('send', 'event', 'Link', 'Click', 'GetInvolved - AmazonSmile');" target="_blank">
-              Shop AmazonSmile
-            </a>
-          </div>
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fab fa-amazon fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4>AmazonSmile</h4>
+          <p class="text-muted">
+            Choose to support us on AmazonSmile and Amazon will donate a portion of 
+            your purchase to us at no cost to you!
+          </p>
+          <a class="donate-btn btn btn-primary btn-xl center-block" href="https://smile.amazon.com/ch/22-1776920" role="button"
+            onclick="ga('send', 'event', 'Link', 'Click', 'GetInvolved - AmazonSmile');" target="_blank">
+            Shop AmazonSmile
+          </a>
         </div>
         <div class="col-md-4">
-          <div class="team-member">
-            <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-primary"></i>
-              <i class="fas fa-users fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4>Spread the Word</h4>
-            <p class="text-muted">
-              Tell your friends about us, share our social media and blog posts, or <a href="#contact">contact us</a> 
-              to request a free DVD to show to others, to request a presentation at your church, 
-              or to learn how to pray for FARMS
-            </p>
-          </div>
+          <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4>Spread the Word</h4>
+          <p class="text-muted">
+            Tell your friends about us, share our social media and blog posts, or 
+            <a href="#contact">contact us</a> to request a free DVD to show to others, 
+            to request a presentation at your church, or to learn how to pray for FARMS
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Us -->
-  <section class="page-section" id="contact">
+  <section id="contact">
     <div class="container">
-      <div class="row copy-container">
-        <div class="col-lg-12 text-center">
+      <div class="row">
+        <div class="col-lg-12">
           <h2 class="section-heading text-uppercase">Contact Us</h2>
         </div>
       </div>
-      <div class="row copy-container">
+      <div class="row three-col-row">
         <div class="col-md-6">
           <form id="email-form" role="form" class="form-horizontal" method="POST" action="contactsubmit.php">
-            <div class="form-group contact-formgroup">
+            <div class="form-group">
               <input id="email" name="email" class="form-control email" placeholder="Your Email *" required autocomplete="email" />
               <p class='text-danger required-error'>We need your email so we can get back to you.</p>
             </div>
-            <div class="form-group contact-formgroup">
+            <div class="form-group">
               <textarea id="note" name="note" class="form-control email" placeholder="Your Comment Here *" required></textarea>
               <p class='text-danger required-error'>You forgot your comment.</p>
               <span>* Required information</span>
             </div>
-            <div class="contact-form-button-group form-group contact-formgroup col-md-12">
+            <div class="contact-form-button-group form-group col-md-12">
               <p class="contact-form-sending">Submitting...</p>
               <p class="contact-form-success">Thank you for your interest in FARMS International!</p>
               <p class="contact-form-failure">
                 Sorry there was an error. Please try again later or email us directly at
                 <a href="mailto:info@farmsinternational.com">info@farmsinternational.com</a>
               </p>
-              <button id="message-submit" name="submit" type="submit" class="btn btn-primary" 
+              <button id="message-submit" name="submit" type="submit" class="btn btn-xl btn-secondary" 
                       onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form');">
-                Submit
+                SUBMIT
               </button>
             </div>
             <div id="emailRecaptcha" class="form-group col-md-12 g-recaptcha" data-badge="inline" data-size="invisible"></div>
@@ -455,16 +464,16 @@
   </section>
 
   <!-- Subscribe CTA -->
-  <section class="page-section cta" id="subscribe">
+  <section class="cta" id="subscribe">
     <div class="container">
-      <div class="row copy-container">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase subscribe-heading">Subscribe to receive our newsletter</h2>
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="text-uppercase">Subscribe to receive our newsletter</h2>
         </div>
       </div>
       <div class="row">
         <div class="subscribe-pills">
-          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="pills-email-tab" data-toggle="pill" href="#pills-email" 
               role="tab" aria-controls="pills-email" aria-selected="true">Email</a>
@@ -481,15 +490,14 @@
           <div class="tab-pane fade show active" id="pills-email" role="tabpanel" aria-labelledby="pills-email-tab">
             <!-- Begin Mailchimp Signup Form -->
             <div id="mc_embed_signup">
-              <form
-                action="https://farmsinternational.us3.list-manage.com/subscribe/post?u=327bff531daf5aae34d2fe667&amp;id=8269e92cdf"
-                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                class="validate" target="_blank" novalidate>
+              <form class="validate" target="_blank" novalidate method="post" 
+                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                    action="https://farmsinternational.us3.list-manage.com/subscribe/post?u=327bff531daf5aae34d2fe667&amp;id=8269e92cdf">
                 <div id="mc_embed_signup_scroll" class="form-horizontal row">
                   <div class="form-group col-md-3"></div>
                   <div class="form-group col-md-4 mc-formgroup">
-                    <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="form-control mc-email" placeholder="Email Address" 
-                          required="required" data-validation-required-message="Please enter your email address.">
+                    <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="form-control mc-email input-xl" placeholder="Email Address" 
+                           required="required" data-validation-required-message="Please enter your email address.">
                     <p class='text-danger required-error mc-email-error'>Your email is required.</p>
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -497,7 +505,7 @@
                     </div>
                   </div>
                   <div class="form-group col-md-2 mc-formgroup">
-                    <input type="submit" class="btn btn-primary" value="Subscribe" name="subscribe" id="mc-embedded-subscribe">
+                    <input type="submit" class="btn btn-secondary btn-xl" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe">
                   </div>
                   <div class="form-group col-md-3"></div>
                 </div>
@@ -515,8 +523,7 @@
                     <p class='text-danger required-error'>Your name is required.</p>
                   </div>
                   <div class="form-group">
-                    <input id="mailingaddress" name="mailingaddress" class="form-control mailing" placeholder="Your Mailing Address *" 
-                            required autocomplete="street-address">
+                    <input id="mailingaddress" name="mailingaddress" class="form-control mailing" placeholder="Your Mailing Address *" required autocomplete="street-address">
                     <p class='text-danger required-error'>Your address is required.</p>
                   </div>
                   <div class="form-group">
@@ -543,8 +550,8 @@
                       Sorry there was an error. Please try again later or email us directly at
                       <a href="mailto:info@farmsinternational.com">info@farmsinternational.com</a>
                     </p>
-                    <button id="mail-submit" name="submit" type="submit" class="btn btn-primary"
-                      onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form');">
+                    <button id="mail-submit" name="submit" type="submit" class="btn btn-secondary btn-xl text-uppercase" 
+                            onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form');">
                       Subscribe
                     </button>
                   </div>
@@ -607,7 +614,7 @@
  
 
   <!-- Cuba Modal -->
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="project-modal modal fade" id="projectmodal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -634,7 +641,7 @@
                   Find out more about our Cuba project in additional publications on our <a href="./resources.html#cuba">Resources</a> page or 
                   in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Cuba">FARMS blog post</a>. 
                 </p>
-                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                <button class="btn btn-primary btn-xl" data-dismiss="modal" type="button">
                   Close
                 </button>
               </div>
@@ -646,7 +653,7 @@
   </div>
 
   <!-- Bangladesh Modal -->
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="project-modal modal fade" id="projectmodal2" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -671,19 +678,19 @@
                 </p>
                 <p>
                   Our second program began in 1997 when only 1000 believers were part of a new people movement with
-                  converts from the majority religion. FARMS mainly supported pedal rickshaw projects, which through
+                  converts from the majority religion. FARMS mainly supported pedal rickshaw project, which through
                   additional indigenous funding, now numbers in the thousands. Our partnership in the beginning of
                   this movement has been credited with spurring the growth of thousands of house churches.
                 </p>
                 <p>
                   Our third program began in 1998, helping a community of Bengali converts from the Hindu minority.
-                  These Christians are disadvantaged and extremely poor. Most of the projects involve farming and
+                  These Christians are disadvantaged and extremely poor. Most of the project involve farming and
                   small animal raising.
                 </p>
                 <p>
                   A fourth program was begun in 2007 and is in the far southwestern part of the country just north of
                   the Ganga Delta. Although this part of the country in culturally Hindu, there has been a real
-                  openness to the gospel. This region is nearly inaccessible, except by water. The main projects in
+                  openness to the gospel. This region is nearly inaccessible, except by water. The main project in
                   this region consist of fish farming, poultry, and cattle raising.
                 </p>
                 <p>
@@ -701,7 +708,7 @@
   </div>
 
   <!-- Haiti Modal -->
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="project-modal modal fade" id="projectmodal3" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -756,7 +763,7 @@
   </div>
 
   <!-- Moldova Modal -->
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="project-modal modal fade" id="projectmodal4" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -780,8 +787,8 @@
                   resources, it is still struggling as a nation. The average Moldovan family lives on $1200 dollars a
                   year. Imagine providing food, housing, and education for children at this income level in Europe.
                   <br /></br>
-                  The people of Moldova have a great work ethic and are proud of their history and our projects
-                  reflect this; a true entrepreneurial spirit prevails. Projects include beekeeping projects, 
+                  The people of Moldova have a great work ethic and are proud of their history and our project
+                  reflect this; a true entrepreneurial spirit prevails. project include beekeeping project, 
                   mushroom growing, greenhouse vegetable farming and numerous animal and other agricultural endeavors.
                   <br /></br>
                   It is our goal to see more and more families given an opportunity to use their skills to work,
@@ -807,7 +814,7 @@
   </div>
 
   <!-- Nagaland Modal -->
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="project-modal modal fade" id="projectmodal5" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -837,7 +844,7 @@
                   <br /><br />
                   God is working through FARMS in Nagaland and we have been encouraged by the reports of how the
                   increased tithing that FARMS loans have created has enabled the Nagas to send missionaries 
-                  throughout the region. Our projects there consist of agriculture,
+                  throughout the region. Our project there consist of agriculture,
                   fish farming, rubber tree plantations, silk production, animal husbandry, and hand woven material.
                 </p> 
                 <p>
@@ -855,7 +862,7 @@
   </div>
 
   <!-- The Philippines Modal -->
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="project-modal modal fade" id="projectmodal6" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -881,7 +888,7 @@
                   in New Jersey. The pastor of that church asked if we could start a program in his birthplace to help
                   the many disadvantaged Christians. Their church graciously helped fund part of the initial 
                   startup and have continued to support FARMS over the years. Our program began in 2003
-                  and has projects in agriculture and home industry. The tithing from project holders has helped the
+                  and has project in agriculture and home industry. The tithing from project holders has helped the
                   churches a great deal.
                 </p> 
                 <p>
@@ -900,7 +907,7 @@
   </div>
 
   <!-- Thailand Modal -->
-  <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="project-modal modal fade" id="projectmodal7" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="close-modal" data-dismiss="modal">
@@ -931,7 +938,7 @@
                   Myanmar. The Lahu people are a displaced people group with roots in Myanmar. In 2003 we partnered 
                   with Thailand Lahu Christian Church (TLCC) in Chiang Mai. This indigenous church group partners 
                   with the Evangelical Free Church in missions. The churches are in remote villages and most of our 
-                  projects are in animal husbandry and cash crops like coffee. The Lahu people
+                  project are in animal husbandry and cash crops like coffee. The Lahu people
                   are hard working and have a zeal for evangelism and missions.
                 </p>  
                 <p>
@@ -958,14 +965,14 @@
   <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 
   <!-- Add fancyBox -->
-  <script type="text/javascript" src="js/vendor/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="vendor/jquery.fancybox.min.js"></script>
   <script src="js/plugins.js"></script>
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Contact form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="vendor/jqBootstrapValidation.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.min.js"></script>
