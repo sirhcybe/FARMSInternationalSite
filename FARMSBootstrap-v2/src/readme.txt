@@ -5,3 +5,7 @@ Theme Author:
 TODO:
   Rename newletters
   Add Handlebars
+
+
+NOTES:
+  Don't push brand-guide.html page live

@@ -11,7 +11,7 @@
 *    Use Montserrat for everything 
 *    Bold on headlines
 *    Larger and regular on body copy
-*/
+*/ 
 
 :root {
   /* COLORS */
@@ -57,6 +57,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   font-size: 45px;
+}
+@media only screen and (max-width: 768px) { 
+  h2 {
+    font-size: 35px;
+  } 
 }
 
 p {
@@ -158,12 +163,22 @@ section {
 }
 
 section h2 {
-  margin-top: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 section h3 {
   margin: 0;
   padding: 20px 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  section h2 {
+    margin-top: 0px;
+  }
+  section h3 {
+    padding: 20px 10px;
+  }
 }
 
 /*************  THREE COLUMN ROW *************/
@@ -178,6 +193,21 @@ section h3 {
 
 .three-col-row p {
   padding: 0px 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .three-col-row .col-md-4 {
+    margin: 25px 0px 0px 0px;
+  }
+  .three-col-row .col-md-4:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  .three-col-row p {
+    padding: 0px;
+  }
+  .-exception {
+    margin: 0 !important;
+  }
 }
 
 /************* FOUR COLUMN ROW *************/
@@ -203,6 +233,11 @@ section h3 {
 
 .cta .row {
   padding: 0 20px;
+}
+@media only screen and (max-width: 768px) {
+  .cta .row {
+    padding: 0px;
+  }
 }
 
 /************* NAVBAR *************/
@@ -249,6 +284,18 @@ section h3 {
   height: 140px;
 }
 
+@media only screen and (max-width: 768px) {
+  #logo {
+    height: 80px;
+  }
+  #mainNav .nav-btn {
+    width: 100%;
+  }
+  #mainNav .navbar-nav li:last-child {
+    border-top: 1px solid var(--light-olive);
+    padding-top: 10px;
+  }
+}
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
@@ -264,9 +311,6 @@ section h3 {
     padding-top: 0;
     padding-bottom: 0;
     background-color: var(--black);
-  }
-  #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.25em;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
@@ -362,21 +406,34 @@ header.masthead .intro-text .intro-heading {
   padding: 0 40px 40px 40px;
   font-size: 20px;
 }
+@media only screen and (max-width: 768px) {
+  #what-we-do .bible-verse {
+    font-size: 20px;
+  } 
+  #what-we-do .bible-reference {
+    font-size: 18px;
+  }
+}
 
 #video {
   height: 400px;
   width: 100%;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 @media only screen and (max-width: 600px) {
   #video {
     margin-bottom: 0;
+    height: auto;
   }
 }
 
 #video iframe {
   height: 100%;
   width: 100%;
+}
+
+#video span {
+  font-size: 14px;
 }
 
 .special-newsletters-h4 {
@@ -454,12 +511,18 @@ section.giving {
   background-position: center;
   background-size: cover;
   color: var(--white);
-  height: 600px; 
+  min-height: 600px; 
 }
+
 section.giving p {
   text-align: left;
   padding: 20px;
   line-height: 35px;
+}
+@media only screen and (max-width: 600px) {
+  section.giving .giving-ecfaseal {
+    margin-top: 20px
+  }
 }
 
 
@@ -532,8 +595,13 @@ section.giving p {
 }
 
 .project-modal .modal-dialog {
-  margin: 1rem;
+  margin: 1rem 5rem;
   max-width: 100vw;
+}
+@media only screen and (max-width: 600px) {
+  .project-modal .modal-dialog {
+    margin: .5rem;
+  }
 }
 
 .project-modal .modal-content {
@@ -542,7 +610,6 @@ section.giving p {
 }
 
 .project-modal .modal-content h2 {
-  /* font-size: 3em; */
   margin-bottom: 15px;
 }
 @media only screen and (max-width: 600px) {
@@ -553,6 +620,7 @@ section.giving p {
 
 .project-modal .modal-content p {
   margin-bottom: 30px;
+  text-align: left;
 }
 
 .project-modal .modal-content p.item-intro {
@@ -633,6 +701,11 @@ section#contact .section-heading {
 section#contact .three-col-row {
   text-align: left;
 }
+@media only screen and (max-width: 768px) {
+  section#contact .three-col-row {
+    padding: 0px !important;
+  } 
+}
 
 section#contact .form-group {
   margin-bottom: 25px;
@@ -710,12 +783,14 @@ section#contact :-ms-input-placeholder {
 #mailing-form {
   text-align: left;
 }
-
+#mc-embedded-subscribe-form input {
+  width: 100%
+}
 @media only screen and (max-width: 325px) {
   section#subscribe h2 {
     font-size: 30px !important;
   }
-}
+} 
 
 /************* FORMS *************/
 .contact-form-button-group {
@@ -761,7 +836,7 @@ section#contact :-ms-input-placeholder {
   width: 75%;
   margin: auto auto;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   #mc_embed_signup_scroll {
     text-align: center;
   }
@@ -877,7 +952,7 @@ section#contact :-ms-input-placeholder {
 
 @media only screen and (max-width: 768px) { 
   .resource-display {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
@@ -920,7 +995,7 @@ section#contact :-ms-input-placeholder {
 @media only screen and (max-width: 325px) {}
 
 Small devices (phones, 600px and down)
-@media only screen and (max-width: 600px) { }
+@media only screen and (max-width: 768px) {}
 
 Medium devices (landscape tablets, 768px and down)
 @media only screen and (max-width: 768px) { }

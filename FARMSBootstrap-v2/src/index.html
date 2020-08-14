@@ -92,16 +92,16 @@
         <div class="row">
           <div class="col-lg-12">
             <h2>What We Do</h2>
+            <div id="video" onclick="ga('send', 'event', 'Video', 'Play', 'Main Video');">
+              <iframe src="https://player.vimeo.com/video/27291439?byline=0&amp;portrait=0&title=0" 
+                      frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
             <h3 class="bible-verse text-muted">
               <em>"As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith."</em>
             </h3>
             <p class="bible-reference text-muted">
               - Galatians 6:10
             </p>
-            <div id="video" onclick="ga('send', 'event', 'Video', 'Play', 'Main Video');">
-              <iframe src="https://player.vimeo.com/video/27291439?byline=0&amp;portrait=0&title=0" 
-                      frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-            </div>
           </div>
         </div>
         <div class="row three-col-row">
@@ -201,7 +201,7 @@
       </div>
     </section>
 
-    <!-- Donate CTA: HIDDEN -->
+    <!-- HIDDEN! Donate CTA: HIDDEN! -->
     <section class="cta" style="display: none;">
       <div class="container">
         <div class="row">
@@ -235,12 +235,12 @@
           </div>
         </div>
         <div class="row three-col-row">
-          <div class="col-md-4"></div>
-          <div class="col-md-4">
+          <div class="col-md-4 -exception"></div>
+          <div class="col-md-4 -exception">
             <button class="aplos-donation-button btn btn-primary" data-widget-id="24E7EE7BBE9CF54658F113B3D811E098">DONATE</button>
             <script type="text/javascript" src="https://cdn.aplos.com/widgets/donations/1.0.2/donations.min.js"></script>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 giving-ecfaseal">
             <a href="https://www.ecfa.org/MemberProfile.aspx?ID=7200" title="Click to view FARMS ECFA accreditation" target="_blank">
               <img class="ecfaseal" src="img/ecfaseal.png" alt="ECFA Seal" />
             </a>
@@ -502,21 +502,25 @@
                 <form class="validate" target="_blank" novalidate method="post" 
                       id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                       action="https://farmsinternational.us3.list-manage.com/subscribe/post?u=327bff531daf5aae34d2fe667&amp;id=8269e92cdf">
-                  <div id="mc_embed_signup_scroll" class="form-horizontal row">
-                    <div class="form-group col-md-3"></div>
-                    <div class="form-group col-md-4 mc-formgroup">
-                      <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="form-control mc-email input-xl" placeholder="Email Address" 
-                            required="required" data-validation-required-message="Please enter your email address.">
-                      <p class='text-danger required-error mc-email-error'>Your email is required.</p>
-                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_327bff531daf5aae34d2fe667_8269e92cdf" tabindex="-1" value="">
+                  <div id="mc_embed_signup_scroll" class="form-horizontal">
+                    <div class="row">
+                      <div class="col-lg-2"></div>
+                      <div class="col-lg-8">
+                        <div class="form-group">
+                          <input type="email" value="" name="EMAIL" id="mce-EMAIL" class="form-control mc-email input-xl" placeholder="Email Address" 
+                              required="required" data-validation-required-message="Please enter your email address.">
+                          <p class='text-danger required-error mc-email-error'>Your email is required.</p>
+                          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                            <input type="text" name="b_327bff531daf5aae34d2fe667_8269e92cdf" tabindex="-1" value="">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <input type="submit" class="btn btn-secondary" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe">
+                        </div>
                       </div>
+                      <div class="col-lg-2"></div>
                     </div>
-                    <div class="form-group col-md-2 mc-formgroup">
-                      <input type="submit" class="btn btn-secondary" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe">
-                    </div>
-                    <div class="form-group col-md-3"></div>
                   </div>
                 </form>
               </div>
@@ -620,7 +624,7 @@
         </div>
       </div>
     </footer>
-  
+
 
     <!-- Cuba Modal -->
     <div class="project-modal modal fade" id="projectmodal1" tabindex="-1" role="dialog" aria-hidden="true">
@@ -633,26 +637,32 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Cuba</h2>
-                  <img class="img-fluid d-block mx-auto" src="img/projects/cuba.png" alt="">
+                  <h2>Cuba</h2>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <img class="img-fluid d-block mx-auto" src="img/projects/cuba_thumb.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <p>
+                        FARMS is actively working in Cuba and has been there since 2012. Although the economic system there
+                        makes it difficult for Cubans to provide for their families, the church is growing rapidly in Cuba. 
+                        <br /><br />
+                        Many Cubans would like to start a small business since they were legalized by governmental reforms 
+                        in 2010 but they do not have access to the funds required to do so. FARMS works with Cuban house 
+                        churches across Cuba to provide loans for these businesses. Our programs have funded hog farms, 
+                        carpenter shops, chicken farms, and more.
+                      </p>
+                    </div>
+                  </div>
                   <p>
-                    FARMS is actively working in Cuba and has been there since 2012. Although the economic system there
-                    makes it difficult for Cubans to provide for their families, the church is growing rapidly in Cuba. 
-                    Many Cubans would like to start a small business since they were legalized by governmental reforms 
-                    in 2010 but they do not have access to the funds required to do so. FARMS works with Cuban house 
-                    churches across Cuba to provide loans for these businesses. Our programs have funded hog farms, 
-                    carpenter shops, chicken farms, and more.
+                    <em>
+                      Find out more about this project in additional publications on our <a href="./resources.html#cuba">Resources</a> page or 
+                      in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Cuba">blog post</a>. 
+                    </em>
                   </p>
-                  <p>
-                    Find out more about our Cuba project in additional publications on our <a href="./resources.html#cuba">Resources</a> page or 
-                    in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Cuba">FARMS blog post</a>. 
-                  </p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    Close
-                  </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
                 </div>
               </div>
             </div>
@@ -672,42 +682,45 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Bangladesh</h2>
-                  <img class="img-fluid d-block mx-auto" src="img/projects/bangladesh.png" alt="">
-                  <p>
-                    Bangladesh is a diverse country with approximately 164 million people that occupy a land area comparable to the
-                    state of Wisconsin. We have four programs in this needy country. Our first began in 1996 with
-                    Christians living in the Chittagong Hill Tracts. This area is known as the most diverse tribal area
-                    in the world. Bordering Myanmar on the east, it is a narrow strip of hilly land filled with remote
-                    villages connected by foot trails. We partner with an indigenous tribal church association to
-                    provide income generation loans for this rapidly growing Christian population.
-                  </p>
+                  <h2>Bangladesh</h2>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <img class="img-fluid d-block mx-auto" src="img/projects/bangladesh_thumb.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <p>
+                        Bangladesh is a diverse country with approximately 164 million people that occupy a land area comparable to the
+                        state of Wisconsin. We have four programs in this needy country. Our first began in 1996 with
+                        Christians living in the Chittagong Hill Tracts. This area is known as the most diverse tribal area
+                        in the world. Bordering Myanmar on the east, it is a narrow strip of hilly land filled with remote
+                        villages connected by foot trails. We partner with an indigenous tribal church association to
+                        provide income generation loans for this rapidly growing Christian population.
+                      </p>
+                    </div>
+                  </div>
                   <p>
                     Our second program began in 1997 when only 1000 believers were part of a new people movement with
                     converts from the majority religion. FARMS mainly supported pedal rickshaw project, which through
                     additional indigenous funding, now numbers in the thousands. Our partnership in the beginning of
                     this movement has been credited with spurring the growth of thousands of house churches.
-                  </p>
-                  <p>
+                    <br /><br />
                     Our third program began in 1998, helping a community of Bengali converts from the Hindu minority.
                     These Christians are disadvantaged and extremely poor. Most of the project involve farming and
                     small animal raising.
-                  </p>
-                  <p>
+                    <br /><br />
                     A fourth program was begun in 2007 and is in the far southwestern part of the country just north of
                     the Ganga Delta. Although this part of the country in culturally Hindu, there has been a real
                     openness to the gospel. This region is nearly inaccessible, except by water. The main project in
                     this region consist of fish farming, poultry, and cattle raising.
                   </p>
                   <p>
-                    Find out more about our Bangladesh project in additional publications on our <a href="./resources.html#bangladesh">Resources</a> page.
+                    <em>
+                      Find out more about our Bangladesh project in additional publications on our <a href="./resources.html#bangladesh">Resources</a> page.
+                    </em>
                   </p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    Close
-                  </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
                 </div>
               </div>
             </div>
@@ -727,29 +740,32 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Haiti</h2>
-                  <img class="img-fluid d-block mx-auto" src="img/projects/haiti.png" alt="">
-                  <p>
-                    Haiti has the distinction of being the poorest country in the Western Hemisphere, its name has
-                    become synonymous with poverty and sometimes hopelessness. FARMS mission in Haiti is to confront the notion of hopelessness through our loan programs.
-                    We have been very pleased to see God move in hearts to produce genuine hope in believers, without
-                    the perennial scourge of dependency.
-                  </p>
+                  <h2>Haiti</h2>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <img class="img-fluid d-block mx-auto" src="img/projects/haiti.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <p>
+                        Haiti has the distinction of being the poorest country in the Western Hemisphere, its name has
+                        become synonymous with poverty and sometimes hopelessness. FARMS mission in Haiti is to confront the notion of hopelessness through our loan programs.
+                        We have been very pleased to see God move in hearts to produce genuine hope in believers, without
+                        the perennial scourge of dependency.
+                      </p>
+                    </div>
+                  </div>
                   <p>
                     FARMS International has two programs in Haiti originating in 1997, one centered in the
                     northern city of Cap Haitien and the other on the Central Plateau near Bohoc.
-                  </p>
-                  <p>
+                    <br /><br />
                     We partner with Family Life Outreach in Cap Haitien. Family Life Outreach is the development arm of
                     the indigenous Evangelical Church of Haiti, which consists of over 50 churches both 
                     rural and urban. This group of churches is fully independent and self-supporting, 
                     which is almost unique in Haiti. Here, FARMS helps families with agricultural
                     and small business loans.
-                  </p>
-                  <p>
+                    <br /><br />
                     Our other program, on the Central Plateau, reaches out to many local independent and
                     denominational churches. The plateau is extremely poor and our program is a real 
                     blessing to Christian families. Access to credit is limited and other “microcredit” 
@@ -757,12 +773,12 @@
                     of fresh air.
                   </p>
                   <p>
-                    Find out more about our Haiti project in additional publications on our <a href="./resources.html#haiti">Resources</a> page or 
-                    in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Haiti">FARMS blog post</a>.
+                    <em>
+                      Find out more about our Haiti project in additional publications on our <a href="./resources.html#haiti">Resources</a> page or 
+                      in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Haiti">FARMS blog post</a>.
+                    </em>
                   </p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    Close
-                  </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
                 </div>
               </div>
             </div>
@@ -782,20 +798,26 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Moldova</h2>
-                  <img class="img-fluid d-block mx-auto" src="img/projects/moldova.png" alt="">
+                  <h2>Moldova</h2>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <img class="img-fluid d-block mx-auto" src="img/projects/moldova.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <p>
+                        Moldova, a former satellite of the Soviet Union is a small nation landlocked between the Ukraine and
+                        Romania. When our program started in 2005 it was a first for FARMS in Eastern Europe. Moldova is known 
+                        as “the poorest country” in Europe. Although, formally known as the “breadbasket” of Eastern Europe, 
+                        Moldova was devastated economically when the Soviet Union broke apart. Its agricultural products were 
+                        no longer welcomed in Russia. Although Moldova is a country rich in agricultural
+                        resources, it is still struggling as a nation. The average Moldovan family lives on $1200 dollars a
+                        year. Imagine providing food, housing, and education for children at this income level in Europe. 
+                      </p>
+                    </div>
+                  </div>
                   <p>
-                    Moldova, a former satellite of the Soviet Union is a small nation landlocked between the Ukraine and
-                    Romania. When our program started in 2005 it was a first for FARMS in Eastern Europe. Moldova is known 
-                    as “the poorest country” in Europe. Although, formally known as the “breadbasket” of Eastern Europe, 
-                    Moldova was devastated economically when the Soviet Union broke apart. Its agricultural products were 
-                    no longer welcomed in Russia. Although Moldova is a country rich in agricultural
-                    resources, it is still struggling as a nation. The average Moldovan family lives on $1200 dollars a
-                    year. Imagine providing food, housing, and education for children at this income level in Europe.
-                    <br /></br>
                     The people of Moldova have a great work ethic and are proud of their history and our project
                     reflect this; a true entrepreneurial spirit prevails. project include beekeeping project, 
                     mushroom growing, greenhouse vegetable farming and numerous animal and other agricultural endeavors.
@@ -805,15 +827,15 @@
                     pastors who have seen increased tithing in their churches, which allows them to focus on 
                     ministering and sharing the Gospel. Please pray for the Christians in Moldova. Also, pray
                     that we can enlarge the program to help more Christian families, especially those that are adopting
-                    orphans into their families.  
+                    orphans into their families. 
                   </p>
                   <p>
-                    Find out more about our Moldova project in additional publications on our <a href="./resources.html#moldova">Resources</a> page or 
-                    in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Moldova">FARMS blog post</a>.
+                    <em>
+                      Find out more about our Moldova project in additional publications on our <a href="./resources.html#moldova">Resources</a> page or 
+                      in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Moldova">FARMS blog post</a>.
+                    </em>
                   </p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    Close
-                  </button>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
                 </div>
               </div>
             </div>
@@ -833,35 +855,41 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Nagaland/India</h2>
-                  <img class="img-fluid d-block mx-auto" src="img/projects/nagaland2.png" alt="">
+                  <h2>Nagaland/India</h2>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <img class="img-fluid d-block mx-auto" src="img/projects/nagaland2.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <p>
+                        Nagaland lies in the far northeast of India and the Naga people who live there consist of sixteen
+                        colorful and courageous tribes. The Nagas have embraced Christianity in overwhelming numbers 
+                        with some estimates putting the percentage of believers at 80% of the population. Several revivals 
+                        have swept through Nagaland and nearly every village has a church.
+                        <br /><br />
+                        FARMS began working with churches of the Ziliangron tribe in 2004. This tribe, because of its
+                        remoteness, has had few opportunities for economic advancement. In fact, many of them have 
+                        relocated to better their livelihood. For years, security concerns have restricted travel of 
+                        foreigners to any outlying villages. On our last visit, we felt honored to be able to visit
+                        three Ziliangron villages. In fact, we were the first foreigners ever to step foot in these
+                        particular villages!
+                      </p>
+                    </div>
+                  </div>
                   <p>
-                    Nagaland lies in the far northeast of India and the Naga people who live there consist of sixteen
-                    colorful and courageous tribes. The Nagas have embraced Christianity in overwhelming numbers 
-                    with some estimates putting the percentage of believers at 80% of the population. Several revivals 
-                    have swept through Nagaland and nearly every village has a church.
-                    <br /><br />
-                    FARMS began working with churches of the Ziliangron tribe in 2004. This tribe, because of its
-                    remoteness, has had few opportunities for economic advancement. In fact, many of them have 
-                    relocated to better their livelihood. For years, security concerns have restricted travel of 
-                    foreigners to any outlying villages. On our last visit, we felt honored to be able to visit
-                    three Ziliangron villages. In fact, we were the first foreigners ever to step foot in these
-                    particular villages!
-                    <br /><br />
                     God is working through FARMS in Nagaland and we have been encouraged by the reports of how the
                     increased tithing that FARMS loans have created has enabled the Nagas to send missionaries 
                     throughout the region. Our project there consist of agriculture,
                     fish farming, rubber tree plantations, silk production, animal husbandry, and hand woven material.
-                  </p> 
-                  <p>
-                    Find out more about our Nagaland project in additional publications on our <a href="./resources.html#nagaland">Resources</a> page.
                   </p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    Close
-                  </button>
+                  <p>
+                    <em>
+                      Find out more about our Nagaland project in additional publications on our <a href="./resources.html#nagaland">Resources</a> page.
+                    </em>
+                  </p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
                 </div>
               </div>
             </div>
@@ -881,32 +909,39 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">The Philippines</h2>
-                  <img class="img-fluid d-block mx-auto" src="img/projects/philippenes.png" alt="">
+                  <h2>The Philippines</h2>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <img class="img-fluid d-block mx-auto" src="img/projects/philippenes.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <p>
+                        The location of our program in the Philippines is in the Central Luzon region of the large province
+                        of Pangasinan. This province is noted for its agriculture, especially rice and corn. Bounded on the 
+                        north by Lingayen Gulf it also has a large aquaculture and marine fisheries industry.
+                        <br><br>
+                        Although the Philippines has prospered in many ways, the rural areas still face many economic
+                        hardships. This is true of many of the remote villages in this part of the Philippines. 
+                      </p>
+                    </div>
+                  </div>
                   <p>
-                    The location of our program in the Philippines is in the Central Luzon region of the large province
-                    of Pangasinan. This province is noted for its agriculture, especially rice and corn. Bounded on the 
-                    north by Lingayen Gulf it also has a large aquaculture and marine fisheries industry.
-                    <br><br>
-                    Although the Philippines has prospered in many ways, the rural areas still face many economic
-                    hardships. This is true of many of the remote villages in this part of the Philippines. 
                     We began our program in Pangasinan after being contacted by a predominantly Filipino church
                     in New Jersey. The pastor of that church asked if we could start a program in his birthplace to help
                     the many disadvantaged Christians. Their church graciously helped fund part of the initial 
                     startup and have continued to support FARMS over the years. Our program began in 2003
                     and has project in agriculture and home industry. The tithing from project holders has helped the
                     churches a great deal.
-                  </p> 
-                  <p>
-                    Find out more about our Philippines project in additional publications on our <a href="./resources.html#philippines">Resources</a> page or 
-                    in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Philippines">FARMS blog post</a>.
                   </p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    Close
-                  </button>
+                  <p>
+                    <em>
+                      Find out more about our Philippines project in additional publications on our <a href="./resources.html#philippines">Resources</a> page or 
+                      in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Philippines">FARMS blog post</a>.
+                    </em>
+                  </p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
                 </div>
               </div>
             </div>
@@ -926,17 +961,25 @@
           </div>
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 mx-auto">
+              <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Thailand</h2>
-                  <img class="img-fluid d-block mx-auto" src="img/projects/thailand.png" alt="">
+                  <h2>Thailand</h2>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <img class="img-fluid d-block mx-auto" src="img/projects/thailand.png" alt="">
+                    </div>
+                    <div class="col-lg-6">
+                      <p>
+                        In 1998, we began our first program in Thailand with churches along the northern border with Laos.
+                        The churches are primarily made up of Christians from the Hmong, Aka and Mien tribal groups. 
+                        These tribal people are very disadvantaged and mostly live in remote villages. Historically, 
+                        tribal farmers used destructive slash and burn farming practices which have been
+                        outlawed; forcing them to find new ways to support themselves. 
+                      </p>
+                    </div>
+                  </div> 
                   <p>
-                    In 1998, we began our first program in Thailand with churches along the northern border with Laos.
-                    The churches are primarily made up of Christians from the Hmong, Aka and Mien tribal groups. 
-                    These tribal people are very disadvantaged and mostly live in remote villages. Historically, 
-                    tribal farmers used destructive slash and burn farming practices which have been
-                    outlawed; forcing them to find new ways to support themselves. FARMS loans have gone a long way in
+                    FARMS loans have gone a long way in
                     helping that by funding many agricultural ventures as well as some small businesses. 
                     Coffee growing has turned out to be a profitable enterprise and our loans have helped farmers grow 
                     and develop this industry in their villages. The tribal people of Thailand have
@@ -949,14 +992,14 @@
                     with the Evangelical Free Church in missions. The churches are in remote villages and most of our 
                     project are in animal husbandry and cash crops like coffee. The Lahu people
                     are hard working and have a zeal for evangelism and missions.
-                  </p>  
-                  <p>
-                    Find out more about our Thailand project in additional publications on our <a href="./resources.html#thailand">Resources</a> page or 
-                    in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Thailand">FARMS blog post</a>.
                   </p>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    Close
-                  </button>
+                  <p>
+                    <em>
+                      Find out more about our Thailand project in additional publications on our <a href="./resources.html#thailand">Resources</a> page or 
+                      in this <a role="button" target="_blank" href="https://blog.farmsinternational.com/search/label/Thailand">FARMS blog post</a>.
+                    </em>
+                  </p>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
                 </div>
               </div>
             </div>
