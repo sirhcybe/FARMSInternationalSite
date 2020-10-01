@@ -367,12 +367,12 @@ header.masthead .intro-text .intro-heading {
 }
 @media only screen and (max-width: 768px) { 
   header.masthead .intro-text {
-    padding-top: 200px;
+    padding-top: 170px;
   }
 }
 @media (min-width: 768px) {
   header.masthead .intro-text {
-    padding-top: 300px;
+    padding-top: 250px;
     padding-bottom: 200px;
   }
   header.masthead .intro-text .intro-lead-in {
@@ -748,11 +748,15 @@ section#contact :-ms-input-placeholder {
 
 .snail-mail address {
   line-height: 1.7;
-  letter-spacing: 1px;
+  color: var(--light-olive);
+  font-size: 20px;
+  font-weight: 600;
+  /* letter-spacing: 1px; */
 }
 
 .snail-mail a {
-  color: var(--light-green);
+  font-size: 20px;
+  color: var(--light-olive);
 }
 
 .snail-mail a:hover {
@@ -987,6 +991,59 @@ section#contact :-ms-input-placeholder {
   margin-bottom: 20px;
 }
 
+/* 404 Page */
+.page-not-found-section {
+  padding-top: 200px; 
+  background-color: var(--black);
+  color: var(--tan);
+}
+.left-section {
+  text-align: center;
+}
+.right-section {
+  text-align: left;
+}
+.page-not-found-section h1, 
+.page-not-found-section h2, 
+.page-not-found-section h3,
+.page-not-found-section h6 {
+  font-weight: normal;
+}
+.page-not-found-section h1 {
+  font-size: 150px;
+}
+.page-not-found-section h2 {
+  font-size: 40px;
+  margin-top: 50px;
+}
+.page-not-found-section h6 {
+  margin: 40px 0px; 
+  padding: 0; 
+  text-transform: none;
+} 
+.page-not-found-section .btn {
+  margin-top: 20px;
+}
+@media only screen and (max-width: 400px) {
+  .page-not-found-section {
+    padding-top: 150px; 
+  }
+  .page-not-found-section h1 {
+    font-size: 120px;
+  }
+  .page-not-found-section .left-section,
+  .page-not-found-section .right-section {
+    text-align: left;
+    padding: 0px 30px;
+  }
+  .page-not-found-section h2 {
+    font-size: 25px;
+    margin-top: 0px;
+  }
+  .page-not-found-section h6 {
+    margin-top: 0px;
+  }
+}
 
 
 
