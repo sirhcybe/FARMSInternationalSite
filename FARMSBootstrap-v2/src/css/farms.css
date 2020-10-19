@@ -949,8 +949,16 @@ section#contact :-ms-input-placeholder {
 /************* SEALS *************/
 .ecfaseal {
   height: 60px;
+  margin-right: 20px;
 }
 .guidestarseal {
+  height: 54px;
+}
+.ecfaseal-footer {
+  height: 60px;
+  margin-right: 50px;
+}
+.guidestarseal-footer {
   height: 54px;
 }
 
