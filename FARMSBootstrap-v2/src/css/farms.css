@@ -186,7 +186,7 @@ section h3 {
 
 /*************  THREE COLUMN ROW *************/
 .three-col-row {
-  padding: 0 20px;
+  padding: 20px 20px 0px 20px;
 }
 
 .three-col-row h4 {
@@ -281,6 +281,11 @@ section h3 {
 #mainNav .navbar-nav .nav-item .nav-btn:hover {
   background-color: var(--light-green) !important;
   color: var(--olive) !important;
+}
+
+#mainNav .navbar-nav .nav-item .dropdown-menu {
+  background-color: var(--light-green);
+  border-radius: 3px;
 }
 
 #logo {
@@ -518,6 +523,39 @@ header.masthead .intro-text .intro-heading {
   font-weight: normal;
 }
 
+/************* COFFEE SECTION *************/
+section.coffee {
+  background-color: var(--black);
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)), url("../img/coffee.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--white);
+  min-height: 600px; 
+} 
+section.coffee p {
+  text-align: left;
+  padding: 35px;
+  /* font-size: 20px; */
+  line-height: 35px;
+  top: 10%;
+}
+.doc-div {
+  text-align: center;
+  vertical-align: middle;
+}
+.mobile-video {
+  display: none;
+} 
+@media only screen and (max-width: 768px) {
+  .desktop-video {
+    display: none;
+  }
+  .mobile-video {
+    display: inline;
+  }
+}
+ 
 
 /************* GIVING SECTION *************/
 section.giving {

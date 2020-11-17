@@ -9,15 +9,10 @@
     <title>FARMS International</title>
     <link rel="icon" href="favicon.png" type="image/png">  
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Bootstrap core css -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Fonts -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="vendor/jquery-fancybox/jquery_fancybox_min.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/farms.min.css">
+    <link rel="stylesheet" href="dist/farms.1.1.min.css">
   </head>
   <body id="page-top">
     <!--[if lt IE 11]>
@@ -53,14 +48,26 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Contact Us');" href="#contact">
-                Contact Us
+              <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Coffee');" href="#coffee">
+                Coffee
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger -center" href="./resources.html">
-                Resources
+            <li class="nav-item dropdown">
+              <a href="#" class="dropdown-toggle nav-link -center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                 More <span class="caret"></span>
               </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Contact Us');" href="#contact">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a class="nav-link js-scroll-trigger -center" href="./resources.html">
+                    Resources
+                  </a>
+                </li>
+              </ul>
             </li>
             <li class="nav-item">
               <button class="aplos-donation-button nav-link js-scroll-trigger btn btn-primary nav-btn" data-widget-id="24E7EE7BBE9CF54658F113B3D811E098">DONATE</button>
@@ -142,7 +149,7 @@
     </section>
 
     <!-- Special Newsletters -->
-    <section class="bg-light">
+    <section class="bg-light" id="special-newsletters">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -201,7 +208,7 @@
     </section>
 
     <!-- Giving Section -->
-    <section class="giving">
+    <section class="giving" id="giving">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -407,6 +414,37 @@
               <a href="#contact">contact us</a> to request a free DVD to show to others, 
               to request a presentation at your church, or to learn how to pray for FARMS
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coffee Section -->
+    <section class="coffee" id="coffee">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Did someone say coffee?</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <p> 
+              FARMS International has teamed up with Twin Valley Coffee to strengthen the global church.
+              So stock up on coffee, give coffee as gifts this holiday season, and know that 100% of the 
+              profit from your coffee purchases goes to FARMS International and helps provide 
+              Christian farmers and entrepreneurs with opportunities to overcome poverty.
+            </p>
+          </div>
+          <div class="col-lg-6 doc-div">
+            <iframe class="desktop-video" title="vimeo-player" src="https://player.vimeo.com/video/177505072" width="430" height="326" frameborder="0" allowfullscreen></iframe>
+            <iframe class="mobile-video" title="vimeo-player" src="https://player.vimeo.com/video/177505072" width="300" height="196" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <a class="btn btn-primary js-scroll-trigger" href="https://coffeehelpingfarms.gomft.com/">Get Brewing</a>
+            <!-- <a class="btn btn-primary js-scroll-trigger" href="https://coffeehelpingfarms.com/">Get Brewing</a> -->
           </div>
         </div>
       </div>
@@ -1017,19 +1055,7 @@
       </div>
     </div>
 
-
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Add fancyBox -->
-    <script type="text/javascript" src="vendor/jquery-fancybox/jquery.fancybox.min.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Contact form JavaScript -->
-    <script src="vendor/jqBootstrapValidation.js"></script>
-    <!-- Custom scripts for this template -->
-    <script src="js/farms.min.js"></script>
+    <script src="dist/farms.1.1.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit" async defer></script>
     <script>
       (function (b, o, i, l, e, r) {

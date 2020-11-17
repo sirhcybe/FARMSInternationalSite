@@ -1,91 +1,43 @@
-const {
-    src,
-    dest,
-    parallel,
-    series,
-    watch
-} = require('gulp');
+const {series, parallel} = require('gulp');
 
-// Load plugins
-const uglify       = require('gulp-uglify');
-const rename       = require('gulp-rename');
-const autoprefixer = require('gulp-autoprefixer');
-const cssnano      = require('gulp-cssnano');
-const concat       = require('gulp-concat');
-// const clean        = require('gulp-clean');
-// const imagemin     = require('gulp-imagemin');
-const changed      = require('gulp-changed');
-const browsersync  = require('browser-sync').create();
-
-// // Clean assets
-// function clear() {
-    // return src('./assets/*', {
-    //         read: false
-    //     })
-    //     .pipe(clean());
-// }
-
-// JS function 
-
-function js() {
-    const source = './src/js/*.js';
-
-    return src(source)
-        .pipe(changed(source))
-        .pipe(concat('farms.js'))
-        .pipe(uglify())
-        .pipe(rename({
-            extname: '.min.js'
+// Increment before pushing and update in index.html
+var counter  = 1;
+var gulp     = require('gulp');
+var concat   = require('gulp-concat');
+var minify   = require('gulp-minify');
+var cleanCss = require('gulp-clean-css');
+var del      = require('del');
+ 
+async function packjs () {
+    return gulp.src(['src/vendor/jquery/jquery.min.js',
+                     'src/vendor/bootstrap/js/bootstrap.bundle.min.js', 
+                     'src/vendor/jquery-fancybox/jquery.fancybox.min.js', 
+                     'src/vendor/jquery-easing/jquery.easing.min.js',
+                     'src/vendor/jqBootstrapValidation.js',
+                     'src/js/*.js'
+                    ])
+        .pipe(concat('farms.1.' + counter + '.min.js'))
+        .pipe(minify({
+            ext:{
+                min:'.js'
+            },
+            noSource: true
         }))
-        .pipe(dest('./src/js/'))
-        .pipe(browsersync.stream());
+        .pipe(gulp.dest('src/dist'));
+}
+ 
+async function packcss () {    
+    return gulp.src(['src/vendor/bootstrap/css/bootstrap.min.css',
+                     'src/vendor/jquery-fancybox/jquery_fancybox_min.css',
+                     'src/css/*.css'
+                     ])
+        .pipe(concat('farms.1.' + counter + '.min.css'))
+        .pipe(cleanCss())
+        .pipe(gulp.dest('src/dist'));
 }
 
-// CSS function 
-function css() {
-    const source = './src/css/*.css';
-
-    return src(source)
-        .pipe(changed(source))
-        .pipe(concat('farms.css'))
-        .pipe(autoprefixer({
-            overrideBrowserslist: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(rename({
-            extname: '.min.css'
-        }))
-        .pipe(cssnano())
-        .pipe(dest('./src/css/'))
-        .pipe(browsersync.stream());
+async function clean() {
+    return del(['src/dist']);
 }
 
-// // Optimize images
-// function img() {
-//     return src('./src/img/*')
-//         .pipe(imagemin())
-//         .pipe(dest('./assets/img'));
-// }
-
-// Watch files
-
-function watchFiles() {
-    watch('./src/css/*', css);
-    watch('./src/js/*', js);
-    // watch('./src/img/*', img);
-}
-
-// BrowserSync
-function browserSync() {
-    browsersync.init({
-        server: {
-            baseDir: './'
-        },
-        port: 3000
-    });
-}
-
-// Tasks to define the execution of the functions simultaneously or in series
-exports.watch = parallel(watchFiles, browserSync);
-//exports.default = series(clear, parallel(js, css, img));
-exports.default = series(parallel(js, css));
+exports.default = series(clean, parallel(packjs, packcss));

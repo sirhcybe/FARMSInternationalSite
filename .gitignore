@@ -2,3 +2,10 @@ FARMSBootstrap/node_modules/
 Moldova.zip
 FARMSBootstrap/dist/
 FARMSBootstrap/src/config.php
+FARMSBootstrap-v2/node_modules/
+FARMSBootstrap-v2/dist/
+FARMSBootstrap-v2/src/config.php
+FARMSBootstrap-v2/.DS_Store
+FARMSBootstrap-v2/src/.DS_Store
+FARMSBootstrap-v2/package-lock.json
+.DS_Store
