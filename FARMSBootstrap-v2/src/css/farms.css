@@ -544,6 +544,15 @@ section.coffee p {
   text-align: center;
   vertical-align: middle;
 }
+.doc-div .doc-heading {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: var(--light-green);
+}
+.desktop-video {
+  margin-top: -42px;
+}
 .mobile-video {
   display: none;
 } 
