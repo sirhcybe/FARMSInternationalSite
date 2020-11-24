@@ -1,7 +1,7 @@
 const {series, parallel} = require('gulp');
 
 // Increment before pushing and update in index.html
-var counter  = 1;
+var counter  = 2;
 var gulp     = require('gulp');
 var concat   = require('gulp-concat');
 var minify   = require('gulp-minify');

@@ -543,28 +543,37 @@ section.coffee p {
 .doc-div {
   text-align: center;
   vertical-align: middle;
+  padding: 20px;
 }
-.doc-div .doc-heading {
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  color: var(--light-green);
+.doc-iframe-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
 }
-.desktop-video {
-  margin-top: -42px;
+.doc-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
-.mobile-video {
-  display: none;
-} 
+.btn-coffee {
+  margin-top: 20px;
+}
 @media only screen and (max-width: 768px) {
-  .desktop-video {
-    display: none;
+  section.coffee h2,
+  section.documentry h2 {
+    font-size: 30px;
+    margin-bottom: 0px;
   }
-  .mobile-video {
-    display: inline;
+  section.coffee p {
+    padding: 20px 35px;
   }
 }
- 
 
 /************* GIVING SECTION *************/
 section.giving {
@@ -577,7 +586,6 @@ section.giving {
   color: var(--white);
   min-height: 600px; 
 }
-
 section.giving p {
   text-align: left;
   padding: 20px;
