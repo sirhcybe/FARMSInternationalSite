@@ -116,21 +116,41 @@ a:hover {
   background-color: var(--olive);
   color: var(--white);
 }
- 
+
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
   background-color: var(--light-green) !important;
   color: var(--olive) !important;
 }
 
+.btn-primary-rev {
+  background-color: var(--light-green);
+  color: var(--olive);
+}
+
+.btn-primary-rev:active, .btn-primary-rev:focus, .btn-primary-rev:hover {
+  background-color: var(--olive) !important;
+  color: var(--white) !important;
+} 
+
 .btn-secondary {
   background-color: var(--white);
   color: var(--green);
 }
- 
+
 .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
   background-color: var(--green) !important;
   color: var(--white) !important;
 } 
+
+.btn-secondary-rev {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.btn-secondary-rev:active, .btn-secondary-rev:focus, .btn-secondary-rev:hover {
+  background-color: var(--white) !important;
+  color: var(--green) !important;
+}
 
 .social-buttons {
   margin-bottom: 0;
@@ -159,6 +179,10 @@ a:hover {
   filter: brightness(0) invert(1);
 }
 
+.-use-cursor {
+  cursor:pointer;
+}
+
 /************* SECTION *************/
 section {
   padding: 75px 0;
@@ -181,6 +205,13 @@ section h3 {
   }
   section h3 {
     padding: 20px 10px;
+  }
+}
+
+/*************  TWO COLUMN ROW *************/
+@media only screen and (max-width: 768px) {
+  .-crypto-btn{
+    margin-top: 30px;
   }
 }
 
@@ -208,6 +239,7 @@ section h3 {
   .three-col-row p {
     padding: 0px;
   }
+  .-no-margin,
   .-exception {
     margin: 0 !important;
   }
@@ -249,10 +281,9 @@ section h3 {
 }
 
 #mainNav .navbar-toggler {
-  font-size: 12px;
+  font-size: 30px;
   right: 0;
-  padding: 13px;
-  text-transform: uppercase;
+  padding: 6px 10px;
   color: var(--white);
   border: 0;
   background-color: var(--olive);
@@ -271,7 +302,8 @@ section h3 {
   color: var(--olive);
 }
 
-#mainNav .navbar-nav .nav-item .nav-btn {
+#mainNav .navbar-nav .nav-item .nav-btn,
+.-nav-bold {
   font-weight: 600 !important;
 }
 
@@ -526,7 +558,7 @@ header.masthead .intro-text .intro-heading {
 /************* COFFEE SECTION *************/
 section.coffee {
   background-color: var(--black);
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)), url("../img/coffee.png");
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)), url("../img/coffee.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -578,8 +610,8 @@ section.coffee p {
 /************* GIVING SECTION *************/
 section.giving {
   background-color: var(--black);
-  /* background-image:  linear-gradient(rgba(114, 122, 38, 0.6),rgba(114, 122, 38, 0.6)), url("../img/givingbg_wide.png"); */
-  background-image:  linear-gradient(rgba(112, 142, 131, 0.8),rgba(112, 142, 131, 0.8)), url("../img/givingbg_wide.png");
+  /* background-image:  linear-gradient(rgba(114, 122, 38, 0.6),rgba(114, 122, 38, 0.6)), url("../img/givingbg_wide.webp"); */
+  background-image:  linear-gradient(rgba(112, 142, 131, 0.8),rgba(112, 142, 131, 0.8)), url("../img/givingbg_wide.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -591,9 +623,12 @@ section.giving p {
   padding: 20px;
   line-height: 35px;
 }
+section.giving .giving-ecfaseal {
+  margin-top: 50px;
+}
 @media only screen and (max-width: 600px) {
   section.giving .giving-ecfaseal {
-    margin-top: 20px
+    margin-top: 20px;
   }
 }
 
@@ -1024,7 +1059,7 @@ section#contact :-ms-input-placeholder {
   background: linear-gradient(
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
-    ),url("../img/resource_bk.jpg") no-repeat center center fixed;
+    ),url("../img/resource_bk.webp") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

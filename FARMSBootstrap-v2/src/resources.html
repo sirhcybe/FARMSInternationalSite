@@ -13,6 +13,7 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Fonts -->
+  <script src="https://kit.fontawesome.com/1a64dbfe9d.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
@@ -81,11 +82,28 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <button class="aplos-donation-button nav-link js-scroll-trigger btn btn-primary nav-btn"
-              data-widget-id="24E7EE7BBE9CF54658F113B3D811E098">DONATE</button>
-            <script type="text/javascript"
-              src="https://cdn.aplos.com/widgets/donations/1.0.2/donations.min.js"></script>
+          <li class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle nav-link -center btn btn-primary -nav-bold" data-toggle="dropdown"
+              role="button" aria-haspopup="true" aria-expanded="false">
+              DONATE <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="aplos-donation-button nav-link js-scroll-trigger -use-cursor"
+                  onclick="ga('send', 'event', 'Link', 'Click', 'Online Donation');"
+                  data-widget-id="24E7EE7BBE9CF54658F113B3D811E098">
+                  ONLINE DONATION
+                </a>
+                <script type="text/javascript"
+                  src="https://cdn.aplos.com/widgets/donations/1.0.2/donations.min.js"></script>
+              </li>
+              <li>
+                <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Crypto Donation');"
+                  href="https://platform.engiven.com/give/776/widget/554" target="_blank">
+                  CRYPTO DONATION
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
