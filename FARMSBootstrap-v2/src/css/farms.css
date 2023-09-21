@@ -103,7 +103,7 @@ a:hover {
 }
 
 .btn {
-  font-weight: bold;
+  font-weight: bold !important;
   border-radius: 2px;
   border: 0;
   font-size: 18px;
@@ -114,7 +114,7 @@ a:hover {
  
 .btn-primary {
   background-color: var(--olive);
-  color: var(--white);
+  color: var(--white) !important;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
@@ -217,7 +217,7 @@ section h3 {
 
 /*************  THREE COLUMN ROW *************/
 .three-col-row {
-  padding: 20px 20px 0px 20px;
+  padding: 60px 40px;
 }
 
 .three-col-row h4 {
@@ -287,19 +287,35 @@ section h3 {
   color: var(--white);
   border: 0;
   background-color: var(--olive);
-} 
+}
 
 #mainNav .navbar-nav .nav-item .nav-link {
   font-size: 85%;
-  font-weight: 500;
+  /* font-weight: 500; */
+  font-weight: 600;
   padding: 0.75em 0;
   letter-spacing: .5px;
-  color: var(--white);
+  /* color: var(--white); */
+  color: var(--gray);
+}
+
+@media only screen and (max-width: 768px) {
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-weight: 500;
+    color: var(--white);
+  }
+}
+
+#mainNav.navbar-shrink .nav-link {
+  font-weight: 500 !important;
+  color: var(--white) !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, 
-#mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: var(--olive);
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav.navbar-shrink .nav-link.active,
+#mainNav.navbar-shrink .nav-link:hover {
+  color: var(--olive) !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-btn,
@@ -324,9 +340,16 @@ section h3 {
   height: 140px;
 }
 
+/* Switch to on white logo on page scroll */
+#mainNav.navbar-shrink #logo {
+  content:url("../img/logo/FARMS-logo-onblack.png");
+}
+
 @media only screen and (max-width: 768px) {
+  /* logo needs to be white always for mobile */
   #logo {
     height: 80px;
+    content:url("../img/logo/FARMS-logo-onblack.png");
   }
   #mainNav .nav-btn {
     width: 100%;
@@ -336,6 +359,7 @@ section h3 {
     padding-top: 10px;
   }
 }
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
@@ -353,6 +377,7 @@ section h3 {
     background-color: var(--black);
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
   #mainNav .nav-item {
     text-align: center;
@@ -368,6 +393,7 @@ section h3 {
 
 /************* HEADER *************/
 header.masthead {
+  padding-top: 200px;
   text-align: center;
   color: var(--white);
   background-image: url("../img/header-bg.webp");
@@ -395,7 +421,7 @@ header.masthead .intro-text .intro-heading {
   font-size: 50px;
   font-weight: 700;
   line-height: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 0px !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -404,13 +430,16 @@ header.masthead .intro-text .intro-heading {
   }
   header.masthead .intro-text .intro-heading {
     font-size: 30px;
+    line-height: 35px;
   }
 }
+
 @media only screen and (max-width: 768px) { 
   header.masthead .intro-text {
     padding-top: 170px;
   }
 }
+
 @media (min-width: 768px) {
   header.masthead .intro-text {
     padding-top: 250px;
@@ -429,6 +458,7 @@ header.masthead .intro-text .intro-heading {
     margin-bottom: 50px;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
   header.masthead .intro-text .intro-heading {
     font-size: 50px;
@@ -437,12 +467,15 @@ header.masthead .intro-text .intro-heading {
 
 
 /************* WHAT WE DO SECTION *************/
+#what-we-do {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
 #what-we-do .bible-verse {
   text-transform: none;
   font-weight: normal;
   font-size: 24px; 
 }
-
 #what-we-do .bible-reference {
   padding: 0 40px 40px 40px;
   font-size: 20px;
@@ -455,47 +488,55 @@ header.masthead .intro-text .intro-heading {
     font-size: 18px;
   }
 }
-
 #video {
   height: 400px;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 @media only screen and (max-width: 600px) {
   #video {
-    margin-bottom: 0;
+    margin-bottom: 40px;
     height: auto;
   }
 }
-
 #video iframe {
   height: 100%;
   width: 100%;
 }
-
 #video span {
   font-size: 14px;
 }
-
+.what-we-do-icon-row {
+  background-color: var(--light-green);
+  padding: 50px;
+  margin:0;
+}
+@media only screen and (max-width: 768px) {
+  .what-we-do-icon-row {
+    margin-top: 50px;
+  }
+}
 .logo-circle {
   display: inline-block;
   padding: 35px;
   border-radius: 50%;
   background-color: var(--olive);
 }
-
 .logo-circle img {
   display: block;
   width: 75px;
   filter: brightness(0) invert(1);
 }
 
+/************* NEWSLETTER SECTION *************/
+#special-newsletters {
+  margin:0;
+}
 .special-newsletters-h4 {
   text-transform: none;
   font-size: 24px;
   margin-bottom: 20px;
 }
-
 .newsletter-item {
   right: 0;
   margin: 0 0 15px;
@@ -510,15 +551,33 @@ header.masthead .intro-text .intro-heading {
     margin: 0 0 30px;
   }
 }
-
 .newsletter-link {
   position: relative;
   display: block;
   max-width: 400px;
   margin: 0 auto;
   cursor: pointer;
+  color: #58595b;
 }
-
+.card {
+  box-shadow: 0px 0px 0px var(--olive);
+  -webkit-transition:  box-shadow .6s ease-out;
+  box-shadow: .8px .9px 3px var(--olive);
+}
+.card:hover { 
+  box-shadow: 1px 8px 20px var(--olive);
+  -webkit-transition:  box-shadow .6s ease-in;
+}
+@media only screen and (max-width: 600px) {
+  .newsletter-link .card {
+    display: none;
+  }
+  .newsletter-link .card-text {
+    padding: 20px;
+    background-color: var(--light-green);
+    font-weight: bold;
+  }
+}
 .newsletter-link-content {
   max-width: 400px;
   background-color: var(--green);
@@ -527,7 +586,6 @@ header.masthead .intro-text .intro-heading {
   font-weight: normal;
   border-radius: 2px;
 }
-
 .newsletter-hover {
   position: absolute;
   width: 100%;
@@ -537,11 +595,10 @@ header.masthead .intro-text .intro-heading {
   background: var(--olive);
   border-radius: 2px;
 }
-
-.newsletter-hover:hover {
+.newsletter-hover:hover,
+.card:hover {
   opacity: 1;
 }
-
 .newsletter-hover-content {
   position: absolute;
   top: 50%;
@@ -558,17 +615,19 @@ header.masthead .intro-text .intro-heading {
 /************* COFFEE SECTION *************/
 section.coffee {
   background-color: var(--black);
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)), url("../img/coffee.webp");
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.4)), url("../img/coffee.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: var(--white);
   min-height: 600px; 
 } 
-section.coffee p {
+.coffee-text {
   text-align: left;
-  padding: 35px;
-  /* font-size: 20px; */
+}
+section.coffee p {
+  padding: 35px 0px 0px 0px;
+  margin: 0px;
   line-height: 35px;
   top: 10%;
 }
@@ -595,6 +654,26 @@ section.coffee p {
 }
 .btn-coffee {
   margin-top: 20px;
+  padding: 15px 40px;
+  font-size: 16px;
+}
+.btn-coffee-bar {
+  padding: 15px 40px;
+  font-size: 16px;
+}
+.coffee-bar {
+  background-color: var(--light-green);
+  padding: 25px 0px;
+}
+.coffee-bar p {
+  font-size: 22px;
+  text-align: right;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 5px
+}
+.request-info {
+  text-align: left;
 }
 @media only screen and (max-width: 768px) {
   section.coffee h2,
@@ -605,7 +684,13 @@ section.coffee p {
   section.coffee p {
     padding: 20px 35px;
   }
+  .coffee-text,
+  .coffee-bar p, 
+  .request-info {
+    text-align: center;
+  }
 }
+
 
 /************* GIVING SECTION *************/
 section.giving {
@@ -1071,7 +1156,6 @@ section#contact :-ms-input-placeholder {
   background-color: var(--light-green);
   color: var(--white);
 }
-
 @media only screen and (max-width: 768px) { 
   .resource-display {
     font-size: 30px;
@@ -1082,32 +1166,28 @@ section#contact :-ms-input-placeholder {
     font-size: 50px;
   }
 }
-
 .resource-tron span {
   color: var(--light-olive);
 }
-
 .resource-row {
   margin: 25px 0px;
 }
-
 .resource-column h4 {
   margin: 20px 0px;
 }
-
 .resource-column h6 {
   margin: 20px 0px 0px 0px;
 }
-
 .resource-column a {
   font-size: 14px;
 }
-
 .section-column-newsletters, 
 .section-column-newsspots, 
 .section-column-videos {
   margin-bottom: 20px;
 }
+
+
 
 /* 404 Page */
 .page-not-found-section {

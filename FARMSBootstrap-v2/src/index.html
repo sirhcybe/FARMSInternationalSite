@@ -16,7 +16,7 @@
   <link href="vendor/fonts/montserrat.css" rel="stylesheet" type="text/css">
   <link href="vendor/fonts/droid.css" rel="stylesheet" type="text/css">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="dist/farms.1.2.min.css">
+  <link rel="stylesheet" href="dist/farms.1.3.min.css">
 </head>
 
 <body id="page-top">
@@ -28,7 +28,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container nav-container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <img id="logo" src="img/logo/FARMS-logo-onblack.png" alt="FARMS International" />
+        <img id="logo" src="img/logo/FARMS-logo-onwhite.png" alt="FARMS International" />
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -50,35 +50,22 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Get Involved');"
-              href="#getinvolved">
-              Get Involved
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Coffee');"
               href="#coffee">
               Coffee
             </a>
           </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="dropdown-toggle nav-link -center" data-toggle="dropdown" role="button"
-              aria-haspopup="true" aria-expanded="false">
-              More <span class="caret"></span>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Contact Us');"
+              href="#contact">
+              Contact Us
             </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Contact Us');"
-                  href="#contact">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a class="nav-link js-scroll-trigger -center" href="./resources.html">
-                  Resources
-                </a>
-              </li>
-            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger -center" onclick="ga('send', 'event', 'Link', 'Click', 'Resources');"
+            href="./resources.html">
+              Resources
+            </a>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="dropdown-toggle nav-link -center btn btn-primary -nav-bold" data-toggle="dropdown"
@@ -112,12 +99,16 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Doing Good That Is Good In Places Of Great Need</div>
+        <!-- <div class="intro-lead-in">Doing Good That Is Good In Places Of Great Need</div>
+        <div class="intro-heading text-uppercase">FARMS International</div> -->
         <div class="intro-heading text-uppercase">FARMS International</div>
+        <div class="intro-lead-in">Doing Good That Is Good In Places Of Great Need</div>
         <a class="btn btn-primary js-scroll-trigger" href="#what-we-do">Tell Me More</a>
+        <!-- <a class="btn btn-secondary js-scroll-trigger" href="#what-we-do">Tell Me More</a> -->
       </div>
     </div>
   </header>
+
 
   <!-- What We Do -->
   <section id="what-we-do">
@@ -138,6 +129,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="container-fluid what-we-do-icon-row">
       <div class="row three-col-row">
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -178,55 +171,64 @@
           </p>
         </div>
       </div>
+      </div>
     </div>
   </section>
 
-  <!-- Special Newsletters -->
+
+  <!-- Newsletters -->
   <section class="bg-light" id="special-newsletters">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-12">
           <h3 class="special-newsletters-h4">
-            These special editions of our newsletter offer in-depth information on FARMS approach and methods.
+            These editions of our newsletter offer in-depth information on FARMS approach and methods.
           </h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 newsletter-item">
-          <a class="newsletter-link" href="newsletters/FARMS-Special_Edition-Nuts_and_Bolts.pdf" target="_blank"
+        <div class="col-md-3 newsletter-item">
+          <a class="newsletter-link" href="newsletters/The Farms Process.pdf" target="_blank"
             onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Nuts and Bolts');">
-            <div class="newsletter-hover">
-              <div class="newsletter-hover-content"><em>The Nuts and Bolts of FARMS</em></div>
+            <div class="card">
+              <img class="card-img-top" src="img/TheFarmsProcess.webp" alt="FARMS Approach">
             </div>
-            <p class="newsletter-link-content">How does a FARMS program work?</p>
+            <p class="card-text" style="margin-top:10px; font-size: 16px;">
+              FARMS Approach
+            </p>
           </a>
         </div>
-        <div class="col-md-6 newsletter-item">
-          <a class="newsletter-link" href="https://us3.campaign-archive.com/?u=327bff531daf5aae34d2fe667&id=04f6562b1a"
-            target="_blank" onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Latest Newsletter');">
-            <div class="newsletter-hover">
-              <div class="newsletter-hover-content"><em>Our most recent newsletter</em></div>
+        <div class="col-md-3 newsletter-item">
+          <a class="newsletter-link" href="https://us3.campaign-archive.com/home/?u=327bff531daf5aae34d2fe667&id=8269e92cdf" target="_blank"
+            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Most Recent Newsletters');">
+            <div class="card">
+              <img class="card-img-top" src="img/MostRecent.webp" alt="Recent Newsletters">
             </div>
-            <p class="newsletter-link-content">What's new with FARMS International?</p>
+            <p class="card-text" style="margin-top:10px; font-size: 16px;">
+              Recent Newsletters
+            </p>
           </a>
         </div>
-        <div class="col-md-6 newsletter-item">
-          <a class="newsletter-link" href="newsletters/FARMS-Special_Edition-_Thailand_Survey.pdf" target="_blank"
-            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Thailand Survey');">
-            <div class="newsletter-hover">
-              <div class="newsletter-hover-content"><em>Thailand Survey Results</em></div>
+        <div class="col-md-3 newsletter-item">
+          <a class="newsletter-link" href="newsletters/FARMS FAQs.pdf" target="_blank"
+            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'FAQs');">
+            <div class="card">
+              <img class="card-img-top" src="img/FAQs.webp" alt="FAQs">
             </div>
-            <p class="newsletter-link-content">Check out the results of an independent survey of one of our programs</p>
+            <p class="card-text" style="margin-top:10px; font-size: 16px;">
+              FAQs
+            </p>
           </a>
         </div>
-        <div class="col-md-6 newsletter-item">
-          <a class="newsletter-link" href="newsletters/FARMS-Sept11NL-What_is_wrong_with_microcredit.pdf"
-            target="_blank" onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Whats Wrong with Micro-credit');">
-            <div class="newsletter-hover">
-              <div class="newsletter-hover-content"><em>What's Wrong with Micro-Credit?</em></div>
+        <div class="col-md-3 newsletter-item">
+          <a class="newsletter-link" href="newsletters/FARMS Giving Examples.pdf" target="_blank"
+            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Giving Examples');">
+            <div class="card">
+              <img class="card-img-top" src="img/Giving.webp" alt="Giving Examples">
             </div>
-            <p class="newsletter-link-content">What makes a FARMS International program different from a micro-credit
-              project?</p>
+            <p class="card-text" style="margin-top:10px; font-size: 16px;">
+              Giving Examples
+            </p>
           </a>
         </div>
       </div>
@@ -234,12 +236,13 @@
       <div class="row">
         <div class="col-lg-12">
           <p class="text-muted">
-            <em>See our <a href="./resources.html">Resources</a> page for additional publications</em>
+            *<em>See our <a href="./resources.html">Resources</a> page for additional publications</em>
           </p>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- Giving Section -->
   <section class="giving" id="giving">
@@ -285,6 +288,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- Where we work - Project Grid -->
   <section class="bg-light" id="projects">
@@ -390,8 +394,9 @@
     </div>
   </section>
 
+
   <!-- Get Involved -->
-  <section id="getinvolved">
+  <!-- <section id="getinvolved">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -407,10 +412,7 @@
           </span>
           <h4>Stay Informed</h4>
           <p class="text-muted">
-            <a href="#subscribe">Sign up</a> for our newletter, read
-            our <a href="https://blog.farmsinternational.com/" onclick="ga('send', 'event', 'Link', 'Click', 'Blog');"
-              target="_blank">blog</a>
-            , or follow us on social media
+            <a href="#subscribe">Sign up</a> for our newsletter or follow us on social media
           </p>
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
@@ -431,20 +433,7 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="logo-circle">
-              <img src="img/icons/amazonsmile.png" width="30" />
-            </i>
-          </span>
-          <h4>AmazonSmile</h4>
-          <p class="text-muted">
-            Choose to support us on AmazonSmile and Amazon will donate a portion of
-            your purchase to us at no cost to you!
-          </p>
-          <a class="donate-btn btn btn-primary center-block" href="https://smile.amazon.com/ch/22-1776920" role="button"
-            onclick="ga('send', 'event', 'Link', 'Click', 'GetInvolved - AmazonSmile');" target="_blank">
-            Shop AmazonSmile
-          </a>
+          
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -461,7 +450,8 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+
 
   <!-- Coffee Section -->
   <section class="coffee" id="coffee">
@@ -472,32 +462,45 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-4 coffee-text">
           <p>
             FARMS International has teamed up with Twin Valley Coffee to strengthen the global church.
-            So stock up on coffee, give coffee as gifts this holiday season, and know that 100% of the
-            profit from your coffee purchases goes to FARMS International and helps provide
-            Christian farmers and entrepreneurs with opportunities to overcome poverty.
+            Purchase or gift FARMS coffee and know that 100% of the
+            profit from your purchase helps provide
+            Christian farmers & entrepreneurs with opportunities to overcome poverty.
           </p>
+          <a class="btn btn-primary js-scroll-trigger btn-coffee" 
+            href="https://coffeehelpingfarms.com/"
+            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Get Brewing');">
+            Get Brewing
+          </a>
         </div>
-        <div class="col-lg-6 doc-div">
+        <div class="col-lg-8 doc-div">
           <div class="doc-iframe-container">
-            <!-- width="560" height="315"  -->
             <iframe frameborder="0" src="https://www.youtube.com/embed/b1RceO4udjs"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
-
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <a class="btn btn-primary js-scroll-trigger btn-coffee" href="https://coffeehelpingfarms.com/">Get Brewing</a>
         </div>
       </div>
     </div>
   </section>
-
+  <section class="coffee-bar">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-7">
+          <p>Serve FARMS coffee at your churches coffee bar!</p>
+        </div>
+        <div class="col-lg-5 request-info">
+          <a class="btn btn-secondary js-scroll-trigger btn-coffee-bar" 
+            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Coffee Bar Info Email');"
+            href="mailto:info@farmsinternational.com?subject=FARMS Coffee Bar Info Request&body=I am interested in learning more about serving FARMS coffee at my church.">
+            Request Info
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="documentry">
     <div class="container">
       <div class="row">
@@ -512,6 +515,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- Contact Us -->
   <section id="contact">
@@ -565,6 +569,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- Subscribe CTA -->
   <section class="cta" id="subscribe">
@@ -666,7 +671,7 @@
                       <a href="mailto:info@farmsinternational.com">info@farmsinternational.com</a>
                     </p>
                     <button id="mail-submit" name="submit" type="submit" class="btn btn-secondary btn-block"
-                      onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form');">
+                      onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form Submit');">
                       Subscribe
                     </button>
                   </div>
@@ -681,13 +686,14 @@
     </div>
   </section>
 
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-4 footer-left">
           <p>
-            &copy; FARMS International. All Rights Reserved.
+            &copy; 2023 FARMS International. All Rights Reserved.
           </p>
           <p>
             PO Box 270<br />
@@ -698,17 +704,20 @@
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
-              <a href="https://twitter.com/FARMSDoingGood" data-show-count="false" target="_blank">
+              <a href="https://twitter.com/FARMSDoingGood" data-show-count="false" target="_blank"
+                  onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Twitter');">
                 <img src="img/icons/twitter.png" width="30" />
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://www.facebook.com/farmsinternational" target="_blank">
+              <a href="https://www.facebook.com/farmsinternational" target="_blank"
+                  onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Facebook');">
                 <img src="img/icons/facebook.png" width="30" />
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://www.instagram.com/farmsinternational" target="_blank">
+              <a href="https://www.instagram.com/farmsinternational" target="_blank"
+                  onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Instagram');">
                 <img src="img/icons/instagram.png" width="30" />
               </a>
             </li>
@@ -1144,7 +1153,16 @@
     </div>
   </div>
 
-  <script src="dist/farms.1.2.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/jquery-fancybox/jquery.fancybox.min.js"></script>
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/jqBootstrapValidation.js"></script>
+  <script src="js/agency.js"></script>
+  <script src="js/farms.js"></script>
+  <script src="js/plugins.js"></script>
+
+  <!-- <script src="dist/farms.1.3.min.js"></script> -->
   <script src="https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit" async defer></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70612860-1"></script>

@@ -1,43 +1,36 @@
-const {series, parallel} = require('gulp');
+const { src, dest, watch } = require('gulp');
+const minifyJs = require('gulp-uglify');
+const concat = require('gulp-concat');
+const cleanCss = require('gulp-clean-css');
 
 // Increment before pushing and update in index.html
-var counter  = 2;
-var gulp     = require('gulp');
-var concat   = require('gulp-concat');
-var minify   = require('gulp-minify');
-var cleanCss = require('gulp-clean-css');
-var del      = require('del');
- 
-async function packjs () {
-    return gulp.src(['src/vendor/jquery/jquery.min.js',
-                     'src/vendor/bootstrap/js/bootstrap.bundle.min.js', 
-                     'src/vendor/jquery-fancybox/jquery.fancybox.min.js', 
-                     'src/vendor/jquery-easing/jquery.easing.min.js',
-                     'src/vendor/jqBootstrapValidation.js',
-                     'src/js/*.js'
-                    ])
-        .pipe(concat('farms.1.' + counter + '.min.js'))
-        .pipe(minify({
-            ext:{
-                min:'.js'
-            },
-            noSource: true
-        }))
-        .pipe(gulp.dest('src/dist'));
-}
- 
-async function packcss () {    
-    return gulp.src(['src/vendor/bootstrap/css/bootstrap.min.css',
-                     'src/vendor/jquery-fancybox/jquery_fancybox_min.css',
-                     'src/css/*.css'
-                     ])
-        .pipe(concat('farms.1.' + counter + '.min.css'))
-        .pipe(cleanCss())
-        .pipe(gulp.dest('src/dist'));
-}
+var minifiedJs = 'farms.1.3.min.js';
+var minifiedCss = 'farms.1.3.min.css';
 
-async function clean() {
-    return del(['src/dist']);
+const bundleJs = () => {
+    return src(['src/vendor/jquery/jquery.min.js',
+                'src/vendor/bootstrap/js/bootstrap.bundle.min.js', 
+                'src/vendor/jquery-fancybox/jquery.fancybox.min.js', 
+                'src/vendor/jquery-easing/jquery.easing.min.js',
+                'src/vendor/jqBootstrapValidation.js',
+                'src/js/*.js'
+                ])
+            .pipe(minifyJs())
+            .pipe(concat(minifiedJs))
+            .pipe(dest('src/dist/'));
 }
-
-exports.default = series(clean, parallel(packjs, packcss));
+const bundleCss = () => {
+    return src(['src/vendor/bootstrap/css/bootstrap.min.css',
+                'src/vendor/jquery-fancybox/jquery_fancybox_min.css',
+                'src/css/*.css'
+                ])
+    .pipe(concat(minifiedCss))
+    .pipe(cleanCss())
+    .pipe(dest('src/dist/'));
+}
+const devWatch = () => {
+    watch('./js/*.js', bundleJs);
+}
+exports.bundleJs  = bundleJs;
+exports.bundleCss = bundleCss;
+exports.devWatch  = devWatch;

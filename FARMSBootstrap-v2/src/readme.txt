@@ -9,3 +9,7 @@ TODO:
 
 NOTES:
   Don't push brand-guide.html page live
+
+
+ga('send', 'event', '[category]',       '[action]', '[label]', [value]);
+ga('send', 'event', 'Newsletter Link',  'Click',    'Coffee Bar Info Email' )
