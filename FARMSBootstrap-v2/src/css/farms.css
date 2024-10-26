@@ -275,12 +275,14 @@ section h3 {
   }
 }
 
-/************* NAVBAR *************/
-#mainNav {
+/************* NAVBARS *************/
+#mainNav,
+#secondaryNav {
   background-color: var(--black);
 }
 
-#mainNav .navbar-toggler {
+#mainNav .navbar-toggler,
+#secondaryNav .navbar-toggler {
   font-size: 30px;
   right: 0;
   padding: 6px 10px;
@@ -289,23 +291,29 @@ section h3 {
   background-color: var(--olive);
 }
 
-#mainNav .navbar-nav .nav-item .nav-link {
+#mainNav .navbar-nav .nav-item .nav-link,
+#secondaryNav .navbar-nav .nav-item .nav-link {
   font-size: 85%;
-  /* font-weight: 500; */
-  font-weight: 600;
   padding: 0.75em 0;
-  letter-spacing: .5px;
-  /* color: var(--white); */
-  color: var(--gray);
+  letter-spacing: .5px; 
 }
-
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-weight: 600; 
+  color: var(--black);
+}
+#secondaryNav .navbar-nav .nav-item .nav-link {
+  font-weight: 500; 
+  color: var(--white);
+}
 @media only screen and (max-width: 768px) {
-  #mainNav .navbar-nav .nav-item .nav-link {
+  #mainNav .navbar-nav .nav-item .nav-link,
+  #secondaryNav .navbar-nav .nav-item .nav-link {
     font-weight: 500;
     color: var(--white);
   }
 }
 
+/* On Navbar scroll transition */
 #mainNav.navbar-shrink .nav-link {
   font-weight: 500 !important;
   color: var(--white) !important;
@@ -314,29 +322,39 @@ section h3 {
 #mainNav .navbar-nav .nav-item .nav-link.active, 
 #mainNav .navbar-nav .nav-item .nav-link:hover,
 #mainNav.navbar-shrink .nav-link.active,
-#mainNav.navbar-shrink .nav-link:hover {
+#mainNav.navbar-shrink .nav-link:hover,
+#secondaryNav .navbar-nav .nav-item .nav-link.active, 
+#secondaryNav .navbar-nav .nav-item .nav-link:hover,
+#secondaryNav.navbar-shrink .nav-link.active,
+#secondaryNav.navbar-shrink .nav-link:hover {
   color: var(--olive) !important;
 }
 
 #mainNav .navbar-nav .nav-item .nav-btn,
+#secondaryNav .navbar-nav .nav-item .nav-btn,
 .-nav-bold {
   font-weight: 600 !important;
-}
+} 
 
 #mainNav .navbar-nav .nav-item .nav-btn.active, 
 #mainNav .navbar-nav .nav-item .nav-btn:active,
 #mainNav .navbar-nav .nav-item .nav-btn:focus, 
-#mainNav .navbar-nav .nav-item .nav-btn:hover {
+#mainNav .navbar-nav .nav-item .nav-btn:hover,
+#secondaryNav .navbar-nav .nav-item .nav-btn.active, 
+#secondaryNav .navbar-nav .nav-item .nav-btn:active,
+#secondaryNav .navbar-nav .nav-item .nav-btn:focus, 
+#secondaryNav .navbar-nav .nav-item .nav-btn:hover {
   background-color: var(--light-green) !important;
   color: var(--olive) !important;
 }
 
-#mainNav .navbar-nav .nav-item .dropdown-menu {
+#mainNav .navbar-nav .nav-item .dropdown-menu,
+#secondaryNav .navbar-nav .nav-item .dropdown-menu {
   background-color: var(--light-green);
   border-radius: 3px;
 }
 
-#logo {
+#logo, .logo-gala {
   height: 140px;
 }
 
@@ -344,22 +362,22 @@ section h3 {
 #mainNav.navbar-shrink #logo {
   content:url("../img/logo/FARMS-logo-onblack.png");
 }
-
 @media only screen and (max-width: 768px) {
   /* logo needs to be white always for mobile */
   #logo {
     height: 80px;
     content:url("../img/logo/FARMS-logo-onblack.png");
   }
-  #mainNav .nav-btn {
+  #mainNav .nav-btn,
+  #secondaryNav .nav-btn {
     width: 100%;
   }
-  #mainNav .navbar-nav li:last-child {
+  #mainNav .navbar-nav li:last-child,
+  #secondaryNav .navbar-nav li:last-child {
     border-top: 1px solid var(--light-olive);
     padding-top: 10px;
   }
 }
-
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 25px;
@@ -368,7 +386,14 @@ section h3 {
     border: none;
     background-color: transparent;
   }
-  #mainNav .navbar-nav .nav-item .nav-link {
+  #secondaryNav {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: var(--black);
+    border: none;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link,
+  #secondaryNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;
   }
   #mainNav.navbar-shrink {
@@ -377,19 +402,20 @@ section h3 {
     background-color: var(--black);
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1024px) { 
-  #mainNav .nav-item {
+  #mainNav .nav-item,
+  #secondaryNav .nav-item {
     text-align: center;
   }
-  #mainNav .nav-item a.-center {
+  #mainNav .nav-item a.-center,
+  #secondaryNav .nav-item a.-center {
     line-height: 38px;
   }
-  #mainNav .nav-item a.nav-btn {
+  #mainNav .nav-item a.nav-btn,
+  #secondaryNav .nav-item a.nav-btn {
     margin-top: 8px;
   }
 }
-
 
 /************* HEADER *************/
 header.masthead {
@@ -471,21 +497,33 @@ header.masthead .intro-text .intro-heading {
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
+#what-we-do h2, #what-we-do h3 {
+  text-align: left;
+}
 #what-we-do .bible-verse {
   text-transform: none;
   font-weight: normal;
   font-size: 24px; 
+  text-align: left;
+  margin: 0;
+  padding: 0 20px 0 0;
 }
 #what-we-do .bible-reference {
-  padding: 0 40px 40px 40px;
+  /* padding: 0 40px 40px 40px; */
   font-size: 20px;
+  text-align: left;
 }
 @media only screen and (max-width: 768px) {
+  #what-we-do h2, #what-we-do h3 {
+    text-align: center;
+  }
   #what-we-do .bible-verse {
     font-size: 20px;
+    text-align: center;
   } 
   #what-we-do .bible-reference {
     font-size: 18px;
+    text-align: center;
   }
 }
 #video {
@@ -1188,10 +1226,75 @@ section#contact :-ms-input-placeholder {
 }
 
 
+/**************** Gala Page ****************/
+.gala-header {
+  background-color: #2c3836; 
+  margin:0;
+  padding:0;
+}
+.gala-section {
+  background-color: #697428;
+  color: var(--white);
+  text-align: center; 
+  font-family: var(--farms-font-droid);
+}
+.gala-h1 {
+  font-size: 8rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.gala-h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.gala-text {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.gala-text-sm {
+  font-size: 1rem;
+  color: #2c3836;
+  font-weight: 500;
+  margin-top: 50px;
+}
+/* horizontal */
+.gala-banner {
+  background-image: url("../img/gala-banner.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  height: 150px;
+}
+.gala-banner-vert {
+  background-image: url("../img/gala-banner.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+.btn-gala {
+  font-family: var(--farms-font-montserrat);
+  padding: 20px 80px;
+}
+@media only screen and (max-width: 768px) {
+  .gala-h2 {
+    font-size: 2rem;
+  }
+  .gala-h1 {
+    font-size: 6rem;
+  }
+  .btn-gala {
+    font-size: 26px;
+  }
+}
+
+
 
 /* 404 Page */
 .page-not-found-section {
-  padding-top: 200px; 
   background-color: var(--black);
   color: var(--tan);
 }

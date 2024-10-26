@@ -60,12 +60,6 @@ function onSubmit(selector) {
       $(selector)[0].reset();
     },
     error: function (response) {
-      /*if(response.responseJSON && response.responseJSON.nameValidationFailed){
-          $('#name').siblings('.required-error').show();
-      }
-      if(response.responseJSON && response.responseJSON.emailValidationFailed){
-          $('#email').siblings('.required-error').show();
-      }*/
       $(selector + ' .contact-form-failure').show();
       setTimeout(function () {
         $(selector + ' .contact-form-failure').fadeOut();
