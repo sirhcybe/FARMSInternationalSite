@@ -2,6 +2,13 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include('config.php');
 
+    // Debug log function
+    function log_error_message($message) {
+        $logFile = __DIR__ . '/error_log.txt';
+        $timestamp = date('Y-m-d H:i:s');
+        file_put_contents($logFile, "[$timestamp] $message\n", FILE_APPEND);
+    }
+
 	$url = 'https://www.google.com/recaptcha/api/siteverify';
 	$data = array(
 		'secret' => $config['recaptchaprivatekey'],
@@ -23,13 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $responseHtmlMsg = "Submission failed, please try emailing us at info@farmsinternational.com.";
     } else {
       // Your code here to handle a successful verification
-        $name = $_POST['name'];
-        $mailingAddress = $_POST['mailingaddress'];
-        $city = $_POST['city'];
-        $state = $_POST['state'];
-        $zip = $_POST['zip'];
+        $name = $_POST['name'] ?? '';
+        $mailingAddress = $_POST['mailingaddress'] ?? '';
+        $city = $_POST['city'] ?? '';
+        $state = $_POST['state'] ?? '';
+        $zip = $_POST['zip'] ?? '';
         $email = $_POST['email'];
-        $country = $_POST['country'];
+        $country = $_POST['country'] ?? '';
         $note = $_POST['note'];
 
         $subject = trim($note) != "" ? 'New Contact Form Submission': 'New Mail Newsletter Subscription';
@@ -112,6 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $responseJson = "{ \"success\": true }";
                 $responseHtmlMsg = "Submission successful!";
             } else {
+                log_error_message('Mail send failed: ' . $mail->ErrorInfo);
                 http_response_code(500);
                 $responseJson = "{ \"error\": \"$mail->ErrorInfo\" }";
                 $responseHtmlMsg = "Submission failed, please try emailing us at info@farmsinternational.com.";
