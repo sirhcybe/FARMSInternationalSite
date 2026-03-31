@@ -53,7 +53,6 @@ test.describe('Navigation', () => {
     await expect(nav.locator('a[href="#what-we-do"]')).toBeVisible();
     await expect(nav.locator('a[href="#projects"]')).toBeVisible();
     await expect(nav.locator('a[href="#coffee"]')).toBeVisible();
-    await expect(nav.locator('a[href="./gala.html"]')).toBeVisible();
     await expect(nav.locator('a[href="#contact"]')).toBeVisible();
   });
 
@@ -65,11 +64,6 @@ test.describe('Navigation', () => {
   test('mobile hamburger toggles nav menu', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 812 });
     await page.goto('/');
-    // Dismiss the gala banner so it doesn't overlay the toggler
-    const banner = page.locator('#banner');
-    if (await banner.isVisible()) {
-      await banner.locator('button, [onclick]').click();
-    }
     const toggler = page.locator('.navbar-toggler');
     await expect(toggler).toBeVisible();
     const menu = page.locator('.navbar-collapse');
@@ -116,25 +110,6 @@ test.describe('Page sections', () => {
     await expect(age).toBeAttached();
     const text = await age.textContent();
     expect(parseInt(text, 10)).toBeGreaterThan(0);
-  });
-});
-
-// ---------------------------------------------------------------------------
-// Promotional banner
-// ---------------------------------------------------------------------------
-test.describe('Gala announcement banner', () => {
-  test('banner is visible on load', async ({ page }) => {
-    await expect(page.locator('#banner')).toBeVisible();
-  });
-
-  test('banner contains gala link', async ({ page }) => {
-    await expect(page.locator('#banner a[href*="gala"]')).toBeVisible();
-  });
-
-  test('banner dismiss button hides the banner', async ({ page }) => {
-    const banner = page.locator('#banner');
-    await banner.locator('button, [onclick]').click();
-    await expect(banner).toBeHidden();
   });
 });
 
