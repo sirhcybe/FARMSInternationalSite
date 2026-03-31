@@ -2,7 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [master,repo-reorg]
+    branches: [master]
   workflow_dispatch: # allow manual trigger from GitHub UI
 
 jobs:
