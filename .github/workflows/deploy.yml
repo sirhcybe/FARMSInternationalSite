@@ -1,0 +1,52 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch: # allow manual trigger from GitHub UI
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Build (bundle + minify JS/CSS)
+        run: npm run build
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium firefox
+
+      - name: Run tests
+        run: npm test
+
+      - name: Deploy to DreamHost via SFTP
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+        run: |
+          sudo apt-get install -y lftp
+          lftp -e "
+            set sftp:auto-confirm yes;
+            set net:max-retries 3;
+            open -u $DEPLOY_USER,$DEPLOY_PASSWORD sftp://$DEPLOY_HOST;
+            mirror --reverse --delete --verbose \
+              --exclude='^\.git' \
+              --exclude='\.DS_Store' \
+              --exclude='^config\.php$' \
+              --exclude='^error_log\.txt$' \
+              ./src/ $DEPLOY_PATH;
+            quit
+          "
