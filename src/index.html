@@ -17,6 +17,14 @@
   <link href="vendor/fonts/droid.css" rel="stylesheet" type="text/css">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="dist/farms.1.4.min.css">
+  <!-- Google tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE9ZHJ520Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-HE9ZHJ520Q');
+  </script>
   <style>
     #banner {
       background: #ffd700;
@@ -102,39 +110,39 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'What We Do');"
+            <a class="nav-link js-scroll-trigger"
               href="#what-we-do">
               What We Do
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Where We Work');"
+            <a class="nav-link js-scroll-trigger"
               href="#projects">
               Where We Work
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Coffee');"
+            <a class="nav-link js-scroll-trigger"
               href="#coffee">
               Coffee
             </a>
           </li>
           <!--
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Coffee');"
+            <a class="nav-link js-scroll-trigger"
               href="./gala.html">
               Gala
             </a>
           </li>
           -->
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Contact Us');"
+            <a class="nav-link js-scroll-trigger"
               href="#contact">
               Contact Us
             </a>
           </li>
           <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger -center" onclick="ga('send', 'event', 'Link', 'Click', 'Resources');"
+            <a class="nav-link js-scroll-trigger -center"
             href="./resources.html">
               Resources
             </a>
@@ -147,16 +155,17 @@
             <ul class="dropdown-menu">
               <li>
                 <a class="aplos-donation-button nav-link js-scroll-trigger -use-cursor"
-                  onclick="ga('send', 'event', 'Link', 'Click', 'Online Donation');"
-                  data-widget-id="24E7EE7BBE9CF54658F113B3D811E098">
+                  data-widget-id="24E7EE7BBE9CF54658F113B3D811E098"
+                  data-track="donation" data-track-label="Online Donation (Nav)">
                   ONLINE DONATION
                 </a>
                 <script type="text/javascript"
                   src="https://cdn.aplos.com/widgets/donations/1.0.2/donations.min.js"></script>
               </li>
               <li>
-                <a class="nav-link js-scroll-trigger" onclick="ga('send', 'event', 'Link', 'Click', 'Crypto Donation');"
-                  href="https://platform.engiven.com/give/776/widget/554" target="_blank">
+                <a class="nav-link js-scroll-trigger"
+                  href="https://platform.engiven.com/give/776/widget/554" target="_blank"
+                  data-track="donation" data-track-label="Crypto Donation (Nav)">
                   CRYPTO DONATION
                 </a>
               </li>
@@ -197,7 +206,7 @@
           </p>
         </div>
         <div class="col-lg-6">
-          <div id="video" onclick="ga('send', 'event', 'Video', 'Play', 'Main Video');">
+          <div id="video" data-track-label="FARMS Main Video">
             <iframe src="https://player.vimeo.com/video/448968397" width="640" height="564" frameborder="0"
               allow="autoplay; fullscreen"></iframe>
           </div>
@@ -263,7 +272,7 @@
       <div class="row">
         <div class="col-md-3 newsletter-item">
           <a class="newsletter-link" href="newsletters/The Farms Process.pdf" target="_blank"
-            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Nuts and Bolts');">
+            data-track="pdf" data-track-label="FARMS Approach">
             <div class="card">
               <img class="card-img-top" src="img/TheFarmsProcess.webp" alt="FARMS Approach">
             </div>
@@ -274,7 +283,7 @@
         </div>
         <div class="col-md-3 newsletter-item">
           <a class="newsletter-link" href="https://us3.campaign-archive.com/home/?u=327bff531daf5aae34d2fe667&id=8269e92cdf" target="_blank"
-            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Most Recent Newsletters');">
+            data-track="outbound" data-track-label="Recent Newsletters Archive">
             <div class="card">
               <img class="card-img-top" src="img/MostRecent.webp" alt="Recent Newsletters">
             </div>
@@ -285,7 +294,7 @@
         </div>
         <div class="col-md-3 newsletter-item">
           <a class="newsletter-link" href="newsletters/FARMS FAQs.pdf" target="_blank"
-            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'FAQs');">
+            data-track="pdf" data-track-label="FARMS FAQs">
             <div class="card">
               <img class="card-img-top" src="img/FAQs.webp" alt="FAQs">
             </div>
@@ -296,7 +305,7 @@
         </div>
         <div class="col-md-3 newsletter-item">
           <a class="newsletter-link" href="newsletters/FARMS Giving Examples.pdf" target="_blank"
-            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Giving Examples');">
+            data-track="pdf" data-track-label="FARMS Giving Examples">
             <div class="card">
               <img class="card-img-top" src="img/Giving.webp" alt="Giving Examples">
             </div>
@@ -338,13 +347,15 @@
       </div>
       <div class="row two-col-row">
         <div class="col-md-6">
-          <button class="aplos-donation-button btn btn-primary" data-widget-id="24E7EE7BBE9CF54658F113B3D811E098">
+          <button class="aplos-donation-button btn btn-primary" data-widget-id="24E7EE7BBE9CF54658F113B3D811E098"
+            data-track="donation" data-track-label="Online Donation">
             ONLINE DONATION
           </button>
           <script type="text/javascript" src="https://cdn.aplos.com/widgets/donations/1.0.2/donations.min.js"></script>
         </div>
         <div class="col-md-6 -crypto-btn">
-          <a href="https://platform.engiven.com/give/776/widget/554" target="_blank" class="btn btn-primary">
+          <a href="https://platform.engiven.com/give/776/widget/554" target="_blank" class="btn btn-primary"
+            data-track="donation" data-track-label="Crypto Donation">
             CRYPTO DONATION
           </a>
         </div>
@@ -530,14 +541,14 @@
             profit from your purchase helps provide
             Christian farmers & entrepreneurs with opportunities to overcome poverty.
           </p>
-          <a class="btn btn-primary js-scroll-trigger btn-coffee" 
+          <a class="btn btn-primary js-scroll-trigger btn-coffee"
             href="https://coffeehelpingfarms.com/"
-            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Get Brewing');">
+            data-track="outbound" data-track-label="FARMS Coffee">
             Get Brewing
           </a>
         </div>
         <div class="col-lg-8 doc-div">
-          <div class="doc-iframe-container">
+          <div class="doc-iframe-container" data-track-label="FARMS Coffee Video">
             <iframe frameborder="0" src="https://www.youtube.com/embed/b1RceO4udjs"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
@@ -553,8 +564,7 @@
           <p>Serve FARMS coffee at your churches coffee bar!</p>
         </div>
         <div class="col-lg-5 request-info">
-          <a class="btn btn-secondary js-scroll-trigger btn-coffee-bar" 
-            onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Coffee Bar Info Email');"
+          <a class="btn btn-secondary js-scroll-trigger btn-coffee-bar"
             href="mailto:info@farmsinternational.com?subject=FARMS Coffee Bar Info Request&body=I am interested in learning more about serving FARMS coffee at my church.">
             Request Info
           </a>
@@ -568,7 +578,7 @@
         <div class="col-lg-12">
           <h2>Cafe Diego: The Cost of a Dream</h2>
           <p>Learn about the impact of direct trade partnerships</p>
-          <div class="doc-iframe-container">
+          <div class="doc-iframe-container" data-track-label="Cafe Diego Documentary">
             <iframe title="vimeo-player" src="https://player.vimeo.com/video/177505072" frameborder="0"
               allowfullscreen></iframe>
           </div>
@@ -607,8 +617,7 @@
                 Sorry there was an error. Please try again later or email us directly at
                 <a href="mailto:info@farmsinternational.com">info@farmsinternational.com</a>
               </p>
-              <button id="message-submit" name="submit" type="submit" class="btn btn-secondary btn-block"
-                onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form');">
+              <button id="message-submit" name="submit" type="submit" class="btn btn-secondary btn-block">
                 SUBMIT
               </button>
             </div>
@@ -678,7 +687,8 @@
                       </div>
                       <div class="form-group">
                         <input type="submit" class="btn btn-secondary" value="SUBSCRIBE" name="subscribe"
-                          id="mc-embedded-subscribe">
+                          id="mc-embedded-subscribe"
+                          data-track="newsletter-signup" data-track-label="Email Newsletter Subscribe">
                       </div>
                     </div>
                     <div class="col-lg-2"></div>
@@ -731,8 +741,7 @@
                       Sorry there was an error. Please try again later or email us directly at
                       <a href="mailto:info@farmsinternational.com">info@farmsinternational.com</a>
                     </p>
-                    <button id="mail-submit" name="submit" type="submit" class="btn btn-secondary btn-block"
-                      onclick="ga('send', 'event', 'Link', 'Click', 'Contact Form Submit');">
+                    <button id="mail-submit" name="submit" type="submit" class="btn btn-secondary btn-block">
                       Subscribe
                     </button>
                   </div>
@@ -765,20 +774,17 @@
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
-              <a href="https://twitter.com/FARMSDoingGood" data-show-count="false" target="_blank"
-                  onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Twitter');">
+              <a href="https://twitter.com/FARMSDoingGood" data-show-count="false" target="_blank">
                 <img src="img/icons/twitter.png" width="30" />
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://www.facebook.com/farmsinternational" target="_blank"
-                  onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Facebook');">
+              <a href="https://www.facebook.com/farmsinternational" target="_blank">
                 <img src="img/icons/facebook.png" width="30" />
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://www.instagram.com/farmsinternational" target="_blank"
-                  onclick="ga('send', 'event', 'Newsletter Link', 'Click', 'Instagram');">
+              <a href="https://www.instagram.com/farmsinternational" target="_blank">
                 <img src="img/icons/instagram.png" width="30" />
               </a>
             </li>
@@ -1168,15 +1174,6 @@
 
   <script src="dist/farms.1.4.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit" async defer></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-70612860-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-70612860-1');
-  </script>
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };

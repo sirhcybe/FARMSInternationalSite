@@ -47,6 +47,7 @@ jobs:
               --exclude='\.DS_Store' \
               --exclude='^config\.php$' \
               --exclude='^error_log\.txt$' \
+              --exclude='^brand-guide\.html$' \
               ./src/ $DEPLOY_PATH;
             quit
           "

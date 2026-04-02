@@ -1,6 +1,6 @@
 node_modules/
 vendor/
-dist/
+src/dist/
 src/config.php
 src/.DS_Store
 .DS_Store

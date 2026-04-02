@@ -58,6 +58,10 @@ function onSubmit(selector) {
       $(selector + ' .contact-form-button-group').show();
       $(selector + ' .contact-form-sending').hide();
       $(selector)[0].reset();
+      if (window.FARMS && window.FARMS.fireEvent) {
+        var formName = selector === '#email-form' ? 'Contact Form' : 'Mailing List Subscription';
+        window.FARMS.fireEvent('form_submit', { form_name: formName });
+      }
     },
     error: function (response) {
       $(selector + ' .contact-form-failure').show();
