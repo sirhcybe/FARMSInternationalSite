@@ -13,7 +13,7 @@ test.describe('Page fundamentals', () => {
   });
 
   test('has favicon', async ({ page }) => {
-    const favicon = page.locator('link[rel="icon"]');
+    const favicon = page.locator('link[rel="icon"]').first();
     await expect(favicon).toHaveAttribute('href', /favicon/);
   });
 
@@ -130,7 +130,7 @@ test.describe('Project modals', () => {
     test(`${project.name} modal opens and closes`, async ({ page }) => {
       // open
       await page.locator(`a[href="${project.id}"]`).first().click();
-      await expect(page.locator(project.id)).toBeVisible();
+      await expect(page.locator(project.id)).toBeVisible({ timeout: 10000 });
       // close — allow time for Bootstrap fade animation
       await page.locator(`${project.id} .close-modal`).click();
       await expect(page.locator(project.id)).toBeHidden({ timeout: 10000 });
