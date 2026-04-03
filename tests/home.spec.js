@@ -117,10 +117,15 @@ test.describe('Page sections', () => {
 // Where We Work map
 // ---------------------------------------------------------------------------
 test.describe('Where We Work', () => {
-  test('map image is present', async ({ page }) => {
-    const map = page.locator('#projects img[src*="where-we-work-map"]');
-    await map.scrollIntoViewIfNeeded();
-    await expect(map).toBeVisible();
+  test('interactive map is rendered', async ({ page }) => {
+    const container = page.locator('#farms-map-container');
+    await container.scrollIntoViewIfNeeded();
+    const svg = container.locator('svg#farms-world-map');
+    await expect(svg).toBeVisible({ timeout: 10000 });
+    // Verify highlighted countries exist
+    await expect(container.locator('path.highlighted').first()).toBeAttached();
+    // Verify region labels exist
+    await expect(container.locator('text.region-label').first()).toBeAttached();
   });
 });
 

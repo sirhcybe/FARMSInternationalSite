@@ -20,7 +20,7 @@
   <link href="vendor/fonts/montserrat.css" rel="stylesheet" type="text/css">
   <link href="vendor/fonts/droid.css" rel="stylesheet" type="text/css">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="dist/farms.1.4.min.css">
+  <link rel="stylesheet" href="dist/farms.ac6b0aff.min.css">
   <!-- Google tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE9ZHJ520Q"></script>
   <script>
@@ -412,9 +412,12 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12">
-          <img src="img/where-we-work-map.png" alt="Map showing FARMS International project regions: Caribbean, Eastern Europe, Africa, and SE Asia"
-            class="img-fluid" loading="lazy">
+        <div class="col-12" id="farms-map-container">
+          <!-- Interactive SVG map loaded by world-map.js -->
+          <noscript>
+            <img src="img/where-we-work-map.png" alt="Map showing FARMS International project regions: Caribbean, Eastern Europe, Africa, and SE Asia"
+              class="img-fluid">
+          </noscript>
         </div>
       </div>
     </div>
@@ -1128,7 +1131,7 @@
   -->
 
 
-  <script src="dist/farms.1.4.min.js"></script>
+  <script src="dist/farms.debfa2a7.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js?onload=captchaCallback&render=explicit" async defer></script>
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
