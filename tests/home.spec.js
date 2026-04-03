@@ -114,28 +114,14 @@ test.describe('Page sections', () => {
 });
 
 // ---------------------------------------------------------------------------
-// Project modals
+// Where We Work map
 // ---------------------------------------------------------------------------
-test.describe('Project modals', () => {
-  const projects = [
-    { id: '#projectmodal2', name: 'Bangladesh' },
-    { id: '#projectmodal3', name: 'Haiti' },
-    { id: '#projectmodal4', name: 'Moldova' },
-    { id: '#projectmodal5', name: 'India' },
-    { id: '#projectmodal6', name: 'Philippines' },
-    { id: '#projectmodal7', name: 'Thailand' },
-  ];
-
-  for (const project of projects) {
-    test(`${project.name} modal opens and closes`, async ({ page }) => {
-      // open
-      await page.locator(`a[href="${project.id}"]`).first().click();
-      await expect(page.locator(project.id)).toBeVisible({ timeout: 10000 });
-      // close — allow time for Bootstrap fade animation
-      await page.locator(`${project.id} .close-modal`).click();
-      await expect(page.locator(project.id)).toBeHidden({ timeout: 10000 });
-    });
-  }
+test.describe('Where We Work', () => {
+  test('map image is present', async ({ page }) => {
+    const map = page.locator('#projects img[src*="where-we-work-map"]');
+    await map.scrollIntoViewIfNeeded();
+    await expect(map).toBeVisible();
+  });
 });
 
 // ---------------------------------------------------------------------------
