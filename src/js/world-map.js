@@ -30,11 +30,14 @@
       labelY: 270
     },
     {
-      name: 'Asia',
-      codes: [
-        'PK', 'IN', 'NP', 'BT', 'BD', 'LK', 'MM', 'TH', 'LA', 'KH', 'VN',
-        'MY', 'ID', 'PH'
-      ],
+      name: 'South\nAsia',
+      codes: ['PK', 'IN', 'NP', 'BT', 'BD', 'LK'],
+      labelX: 650,
+      labelY: 200
+    },
+    {
+      name: 'SE Asia',
+      codes: ['MM', 'TH', 'LA', 'KH', 'VN', 'MY', 'ID', 'PH'],
       labelX: 790,
       labelY: 215
     }
