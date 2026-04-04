@@ -2,7 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [master]
+    branches: [master, staging]
   workflow_dispatch: # allow manual trigger from GitHub UI
 
 jobs:
@@ -30,12 +30,19 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Set deploy path
+        run: |
+          if [ "${{ github.ref_name }}" = "staging" ]; then
+            echo "TARGET_PATH=${{ secrets.DEPLOY_PATH_STAGING }}" >> $GITHUB_ENV
+          else
+            echo "TARGET_PATH=${{ secrets.DEPLOY_PATH }}" >> $GITHUB_ENV
+          fi
+
       - name: Deploy to DreamHost via SFTP
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
           DEPLOY_PASSWORD: ${{ secrets.DEPLOY_PASSWORD }}
-          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
         run: |
           sudo apt-get install -y lftp
           lftp -e "
@@ -48,6 +55,6 @@ jobs:
               --exclude='^config\.php$' \
               --exclude='^error_log\.txt$' \
               --exclude='^brand-guide\.html$' \
-              ./src/ $DEPLOY_PATH;
+              ./src/ $TARGET_PATH;
             quit
           "
