@@ -13,7 +13,7 @@
   var regions = [
     {
       name: 'Caribbean &\nCentral America',
-      codes: ['CU', 'SV'],
+      codes: ['CU', 'HN'],
       labelX: 200,
       labelY: 235
     },
@@ -25,14 +25,14 @@
     },
     {
       name: 'Africa',
-      codes: ['GH', 'CD', 'UG', 'KE', 'RW', 'BI', 'TZ', 'ZM', 'MW', 'ZW'],
+      codes: ['SL', 'CD', 'UG', 'KE', 'RW', 'BI', 'TZ', 'ZM', 'MW'],
       labelX: 510,
       labelY: 270
     },
     {
-      name: 'SE Asia',
+      name: 'Asia',
       codes: [
-        'IN', 'NP', 'BT', 'BD', 'LK', 'MM', 'TH', 'LA', 'KH', 'VN',
+        'PK', 'IN', 'NP', 'BT', 'BD', 'LK', 'MM', 'TH', 'LA', 'KH', 'VN',
         'MY', 'ID', 'PH'
       ],
       labelX: 790,
@@ -133,11 +133,11 @@
 
       // Country name lookup for tooltip
       var countryNames = {
-        'CU':'Cuba','SV':'El Salvador','MD':'Moldova',
-        'GH':'Ghana','CD':'DR Congo','UG':'Uganda','KE':'Kenya',
+        'CU':'Cuba','HN':'Honduras','MD':'Moldova',
+        'SL':'Sierra Leone','CD':'DR Congo','UG':'Uganda','KE':'Kenya',
         'RW':'Rwanda','BI':'Burundi','TZ':'Tanzania','ZM':'Zambia',
-        'MW':'Malawi','ZW':'Zimbabwe',
-        'IN':'India','NP':'Nepal','BT':'Bhutan','BD':'Bangladesh',
+        'MW':'Malawi',
+        'PK':'Pakistan','IN':'India','NP':'Nepal','BT':'Bhutan','BD':'Bangladesh',
         'LK':'Sri Lanka','MM':'Myanmar','TH':'Thailand','LA':'Laos',
         'KH':'Cambodia','VN':'Vietnam','MY':'Malaysia','ID':'Indonesia',
         'PH':'Philippines'
