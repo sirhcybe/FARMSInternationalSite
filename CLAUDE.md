@@ -6,12 +6,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 FARMS International nonprofit website — a static HTML/PHP site hosted on DreamHost shared hosting. Bootstrap 4 + jQuery frontend, PHP backend for form handling (PHPMailer + reCAPTCHA). Deployed via GitHub Actions SFTP.
 
+## Documentation
+
+`docs/` holds the detailed reference — read the relevant file before changing behavior, and update it in the same change:
+
+- `docs/functional-spec.md` — page-by-page behavior, element IDs, states
+- `docs/forms-and-backend.md` — validation, reCAPTCHA, AJAX + PHP contracts
+- `docs/analytics.md` — GA4 events and parameters
+- `docs/content-inventory.md` — link/asset/PDF/country tables
+- `docs/build-test-deploy.md` — pipeline, test suite, CI/CD, server setup
+- `docs/known-issues.md` — verified defects and quirks (check here before "fixing" surprising behavior)
+- `docs/test-matrix.md` — coverage traceability and gaps
+
 ## Commands
 
 ```bash
 npm install              # Install dependencies
 npm run build            # Bundle & minify JS/CSS into src/dist/ (esbuild)
-npm run dev              # Dev server at http://localhost:8080
+npm run dev              # Static dev server at http://localhost:8080 (no watch; re-run build after edits)
 npm test                 # Run Playwright tests (Chromium + Firefox, headless)
 npm run test:ui          # Playwright interactive UI mode
 npx playwright test tests/home.spec.js              # Run a single test file
@@ -22,6 +34,8 @@ npx playwright test tests/home.spec.js --grep "title"  # Run tests matching a pa
 
 ### Build Pipeline (build.mjs)
 esbuild bundles all vendor JS (jQuery, Bootstrap, plugins) and custom JS into a single `src/dist/farms.[hash].min.js`. Same for CSS into `src/dist/farms.[hash].min.css`. Content-hash filenames for cache busting. After bundling, the build script regex-replaces script/link references in all HTML files to point to the new hashed filenames.
+
+Custom JS files are concatenated in **alphabetical order** (`agency`, `analytics`, `farms`, `plugins`, `world-map`) into one script, so top-level `var` declarations are shared globals across files.
 
 ### Source Layout
 - `src/` — web root, everything here gets deployed
@@ -48,4 +62,4 @@ esbuild bundles all vendor JS (jQuery, Bootstrap, plugins) and custom JS into a 
 - Server credentials stored as GitHub repository secrets
 
 ### Testing
-Tests run against `http://localhost:8080` — Playwright auto-starts `http-server`. Tests cover page content, navigation, interactive map, forms, footer, and analytics script loading. Tests run on both Chromium and Firefox. In CI, failed tests retry once.
+Tests run against `http://localhost:8080` — Playwright auto-starts `http-server`. Tests cover page content, navigation, interactive map, forms, footer, and analytics script loading. 79 tests per browser project run on both Chromium and Firefox (158 total). In CI, failed tests retry once. `src/dist/` is gitignored, so `npm run build` must run before the suite on a fresh clone. See `docs/test-matrix.md` for what is and is not covered.
