@@ -24,7 +24,8 @@ test.describe('Page fundamentals', () => {
     // Ignore errors from third-party scripts (reCAPTCHA, analytics, donation widgets)
     const siteErrors = errors.filter(e =>
       !e.includes('recaptcha') && !e.includes('google') &&
-      !e.includes('aplos') && !e.includes('cdn.') &&
+      !e.includes('raisely') && !e.includes('cdn.') &&
+      !e.includes('requestStorageAccess') &&
       !e.includes('analytics') && !e.includes('CORS') &&
       !e.includes('net::') && !e.includes('NS_BINDING') &&
       !e.includes('youtube') && !e.includes('SameSite') &&
