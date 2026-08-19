@@ -209,10 +209,15 @@ section h3 {
 }
 
 /*************  TWO COLUMN ROW *************/
-@media only screen and (max-width: 768px) {
-  .-crypto-btn{
-    margin-top: 30px;
-  }
+.-crypto-btn{
+  margin-top: 30px;
+}
+
+/*************  RAISELY DONATION EMBED *************/
+/* The embed iframe is inline by default, which adds a line-box descender gap
+   beneath it. Block-level removes that dead space above the crypto button. */
+.raisely-donate iframe {
+  display: block;
 }
 
 /*************  THREE COLUMN ROW *************/

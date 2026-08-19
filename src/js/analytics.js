@@ -4,7 +4,7 @@
  * Tracks events via gtag() using data attributes. No inline onclick handlers.
  *
  * Supported data attributes:
- *   data-track="donation"          — donation button clicks (Aplos, Engiven)
+ *   data-track="donation"          — donation button clicks (Raisely, Engiven)
  *   data-track="pdf"               — PDF download link clicks
  *   data-track="outbound"          — curated external link clicks (complements GA4
  *                                    Enhanced Measurement; auto-detection removed to
