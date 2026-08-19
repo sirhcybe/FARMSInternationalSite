@@ -1,7 +1,11 @@
 const { test, expect } = require('@playwright/test');
 
 test.beforeEach(async ({ page }) => {
-  await page.goto('/');
+  // Not 'load': the Raisely donation embed pulls in Stripe frames, and waiting
+  // on them made unrelated tests time out under parallel load. Every assertion
+  // below auto-waits, so DOM readiness is enough. The console-error test does
+  // its own full-load navigation.
+  await page.goto('/', { waitUntil: 'domcontentloaded' });
 });
 
 // ---------------------------------------------------------------------------
@@ -17,22 +21,38 @@ test.describe('Page fundamentals', () => {
     await expect(favicon).toHaveAttribute('href', /favicon/);
   });
 
+  // Third-party embeds (reCAPTCHA, YouTube, the Raisely donation widget and the
+  // Stripe frames it loads) log errors we neither own nor can fix. Matching on
+  // message text alone proved brittle -- Raisely's wording varies and does not
+  // always name itself -- so ignore anything reported from outside our own
+  // origin first, and keep the text list for messages Firefox reports without
+  // a usable source URL.
+  const IGNORED_ERROR_TEXT = [
+    'recaptcha', 'google', 'raisely', 'cdn.', 'analytics', 'cors',
+    'net::', 'ns_binding', 'youtube', 'samesite', 'cookie', 'juggler',
+    'compute-pressure', 'permissions policy', 'requeststorageaccess',
+    'payment method',
+  ];
+
   test('loads without console errors', async ({ page }) => {
     const errors = [];
-    page.on('console', msg => { if (msg.type() === 'error') errors.push(msg.text()); });
+    page.on('console', msg => {
+      if (msg.type() !== 'error') return;
+      const location = msg.location();
+      errors.push({ text: msg.text(), url: (location && location.url) || '' });
+    });
     await page.goto('/');
-    // Ignore errors from third-party scripts (reCAPTCHA, analytics, donation widgets)
-    const siteErrors = errors.filter(e =>
-      !e.includes('recaptcha') && !e.includes('google') &&
-      !e.includes('raisely') && !e.includes('cdn.') &&
-      !e.includes('requestStorageAccess') &&
-      !e.includes('analytics') && !e.includes('CORS') &&
-      !e.includes('net::') && !e.includes('NS_BINDING') &&
-      !e.includes('youtube') && !e.includes('SameSite') &&
-      !e.includes('Cookie') && !e.includes('juggler') &&
-      !e.includes('compute-pressure') && !e.includes('Permissions policy')
-    );
-    expect(siteErrors).toHaveLength(0);
+
+    const ownOrigin = new URL(page.url()).origin;
+    const siteErrors = errors.filter(({ text, url }) => {
+      // Raised inside a third-party script or iframe, so not ours to fix.
+      if (url && !url.startsWith(ownOrigin)) return false;
+      const lower = text.toLowerCase();
+      return !IGNORED_ERROR_TEXT.some(pattern => lower.includes(pattern));
+    });
+    expect(siteErrors, `Unexpected console errors:
+${JSON.stringify(siteErrors, null, 2)}`)
+      .toHaveLength(0);
   });
 });
 
