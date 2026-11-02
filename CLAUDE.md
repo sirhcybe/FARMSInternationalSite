@@ -29,7 +29,7 @@ esbuild bundles all vendor JS (jQuery, Bootstrap, plugins) and custom JS into a 
   - `js/` — custom scripts: `agency.js` (scroll/nav), `analytics.js` (GA4 event tracking), `farms.js` (forms/validation), `world-map.js` (interactive SVG map), `plugins.js` (polyfills)
   - `css/farms.css` — custom styles
   - `vendor/` — third-party libs (Bootstrap 4, jQuery, Fancybox, Font Awesome)
-  - `contactsubmit.php`, `premiumsubmit.php` — form handlers (SMTP via PHPMailer)
+  - `contactsubmit.php` — form handler for the contact and mailing list forms (SMTP via PHPMailer)
   - `config.example.php` — template for server credentials (copy to `config.php`)
   - `newsletters/` — PDF archive
   - `img/world-map.svg` — interactive SVG map (177 countries)

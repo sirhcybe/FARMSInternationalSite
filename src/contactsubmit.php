@@ -4,9 +4,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Debug log function
     function log_error_message($message) {
-        $logFile = __DIR__ . '/error_log.txt';
-        $timestamp = date('Y-m-d H:i:s');
-        file_put_contents($logFile, "[$timestamp] $message\n", FILE_APPEND);
+        //Write to the PHP error log, which lives outside the web root
+        error_log($message);
     }
 
 	$url = 'https://www.google.com/recaptcha/api/siteverify';
@@ -97,7 +96,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Port = 587;
         //Whether to use SMTP authentication
         $mail->SMTPAuth = true;
-        $mail->SMTPAutoTLS = false;
+        //Require STARTTLS so the SMTP username and password are never sent in cleartext
+        $mail->SMTPSecure = "tls";
         //Username to use for SMTP authentication
         $mail->Username = $config['smtpemail'];
         //Password to use for SMTP authentication
